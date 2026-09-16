@@ -1,0 +1,3 @@
+PHASE 24 ACCEPTED
+Bounded synthetic Pub/Sub → managed Dataflow → BigQuery runtime proven with honest AT_LEAST_ONCE semantics, controlled failure/recovery, teardown, tests and privacy-safe evidence.
+Phase 25 NOT STARTED.

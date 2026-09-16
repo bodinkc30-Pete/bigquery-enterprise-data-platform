@@ -1,0 +1,8 @@
+﻿{
+    "phase":  8,
+    "status":  "PASS",
+    "active_manifest_rows":  8,
+    "corrected_object_sha256_match":  true,
+    "corrected_object_versions":  1,
+    "run_id":  "phase08-upstream-date-fix-v1"
+}

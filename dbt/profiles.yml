@@ -1,0 +1,11 @@
+project08_bigquery:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('DBT_BIGQUERY_PROJECT') }}"
+      dataset: dbt_phase09
+      location: asia-southeast3
+      threads: 4
+      priority: interactive

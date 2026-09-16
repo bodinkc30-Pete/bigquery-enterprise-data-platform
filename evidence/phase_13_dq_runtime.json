@@ -1,0 +1,34 @@
+{
+  "phase": 13,
+  "status": "PASS",
+  "metadata_checks": {
+    "schema_fields_exact": true,
+    "partition_field_detected_at": true,
+    "partition_type_day": true,
+    "clustering_exact": true
+  },
+  "live_run": {
+    "run_id": "phase13-live-20260910T060108Z",
+    "rule_count": 15,
+    "pass_count": 15,
+    "warn_count": 0,
+    "fail_count": 0
+  },
+  "controlled_failure_recovery": {
+    "run_id": "phase13-controlled-20260910T060115Z",
+    "fail_affected_rows": 1,
+    "recovered_affected_rows": 0,
+    "validated": true
+  },
+  "audit_write": {
+    "rows_before": 15,
+    "rows_after": 32,
+    "rows_written": 17,
+    "expected_rows_written": 17,
+    "validated": true
+  },
+  "privacy": {
+    "raw_company_values_in_public_evidence": false,
+    "project_id_exposed": false
+  }
+}

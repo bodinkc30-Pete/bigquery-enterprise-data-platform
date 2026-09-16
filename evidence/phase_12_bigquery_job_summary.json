@@ -1,0 +1,65 @@
+{
+  "phase": 12,
+  "status": "PASS",
+  "provenance": "UNIQUE_QUERY_MARKERS",
+  "checks": {
+    "five_probe_jobs_traced": true,
+    "all_jobs_done": true,
+    "all_error_expectations_match": true
+  },
+  "stages": {
+    "compatible_destination_projection": {
+      "found": true,
+      "state": "DONE",
+      "job_type": "QUERY",
+      "statement_type": "SCRIPT",
+      "expected_error": false,
+      "error_present": false,
+      "bytes_processed": 4,
+      "bytes_billed": 10485760
+    },
+    "missing_column_blocked": {
+      "found": true,
+      "state": "DONE",
+      "job_type": "QUERY",
+      "statement_type": "SCRIPT",
+      "expected_error": true,
+      "error_present": true,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "renamed_column_blocked": {
+      "found": true,
+      "state": "DONE",
+      "job_type": "QUERY",
+      "statement_type": "SCRIPT",
+      "expected_error": true,
+      "error_present": true,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "datatype_change_blocked": {
+      "found": true,
+      "state": "DONE",
+      "job_type": "QUERY",
+      "statement_type": "SCRIPT",
+      "expected_error": true,
+      "error_present": true,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "nested_structure_blocked": {
+      "found": true,
+      "state": "DONE",
+      "job_type": "QUERY",
+      "statement_type": "SCRIPT",
+      "expected_error": true,
+      "error_present": true,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    }
+  },
+  "traced_job_count": 5,
+  "expected_error_jobs": 4,
+  "unexpected_error_jobs": 0
+}

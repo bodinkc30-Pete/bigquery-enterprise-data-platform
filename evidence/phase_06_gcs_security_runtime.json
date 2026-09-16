@@ -1,0 +1,17 @@
+﻿{
+    "phase":  6,
+    "status":  "PASS",
+    "location":  "ASIA-SOUTHEAST3",
+    "storage_class":  "STANDARD",
+    "uniform_bucket_level_access":  true,
+    "public_access_prevention":  "enforced",
+    "versioning_enabled":  true,
+    "soft_delete_retention_seconds":  0,
+    "lifecycle_config_present":  true,
+    "pipeline_object_creator_binding_count":  1,
+    "public_iam_binding_count":  0,
+    "objects_present":  10,
+    "versions_present":  10,
+    "anonymous_http_status":  403,
+    "public_access_denied":  true
+}

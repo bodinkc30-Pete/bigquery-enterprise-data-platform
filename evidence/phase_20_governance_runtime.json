@@ -1,0 +1,94 @@
+{
+  "phase": 20,
+  "status": "PASS",
+  "checks": {
+    "asset_registry_exact_48": true,
+    "all_444_columns_classified": true,
+    "pii_and_financial_classifications_present": true,
+    "masking_metadata_present_not_enforced": true,
+    "lineage_exact_51": true,
+    "lineage_layer_counts_exact": true,
+    "source_to_mart_paths_proven": true,
+    "native_metadata_32_of_32": true,
+    "baseline_governance_gate_clean": true,
+    "controlled_failure_detected": true,
+    "controlled_failure_recovered": true,
+    "invalid_test_rows_removed": true,
+    "nine_marker_jobs_captured": true,
+    "marker_jobs_done_error_free": true,
+    "asset_ownership_complete": true,
+    "accepted_order_rows_preserved": true,
+    "accepted_payment_rows_preserved": true,
+    "accepted_payment_amount_preserved": true,
+    "prior_histories_preserved": true,
+    "phase21_absent": true
+  },
+  "check_count": 20,
+  "governance": {
+    "asset_count": 48,
+    "bigquery_asset_count": 32,
+    "external_asset_count": 16,
+    "column_count": 444,
+    "pii_columns": 12,
+    "financial_columns": 47,
+    "masking_required_columns": 12
+  },
+  "lineage": {
+    "edge_count": 51,
+    "source_to_gcs": 8,
+    "gcs_to_raw": 8,
+    "raw_to_staging": 8,
+    "dbt_dependencies": 27,
+    "source_to_mart_paths": {
+      "orders_to_commerce_mart": true,
+      "creator_payment_to_payment_mart": true,
+      "campaign_to_marketing_mart": true
+    },
+    "manifest_version": "a23e87e9bdd8"
+  },
+  "native_bigquery_metadata": {
+    "governed_table_count": 32,
+    "labels_and_descriptions_complete": true
+  },
+  "failure_recovery": {
+    "baseline": {
+      "invalid_asset_count": 0,
+      "orphan_lineage_count": 0
+    },
+    "controlled_failure": {
+      "invalid_asset_count": 1,
+      "orphan_lineage_count": 1
+    },
+    "recovery": {
+      "invalid_asset_count": 0,
+      "orphan_lineage_count": 0
+    },
+    "controlled_rows_remaining": {
+      "asset_rows": 0,
+      "column_rows": 0,
+      "lineage_rows": 0
+    }
+  },
+  "job_evidence": {
+    "marker_count": 9,
+    "all_done_error_free": true
+  },
+  "integrity": {
+    "order_rows": 5249,
+    "payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "phase21_artifact_count": 0,
+  "security_boundary": "METADATA_ONLY_IN_PHASE20",
+  "privacy": {
+    "project_id_exposed": false,
+    "service_account_exposed": false,
+    "raw_business_values_exposed": false,
+    "real_bank_data_exposed": false
+  }
+}

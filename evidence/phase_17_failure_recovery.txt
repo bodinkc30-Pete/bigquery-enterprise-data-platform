@@ -1,0 +1,13 @@
+PHASE 17 - BIGQUERY PERFORMANCE ENGINEERING - FAILURE / RECOVERY
+
+1. Baseline inspection command failed before BigQuery execution because PowerShell SQL quoting lost the terminating quote. No cloud/data mutation occurred. Recovery: moved SQL execution to Python subprocess argument lists.
+2. A follow-up probe used alias `rows`, which BigQuery parsed as a reserved keyword and rejected. Recovery: renamed the alias to `row_count`; query and dry run then succeeded.
+3. An inline Python dry-run comparison was intercepted by PowerShell because `COUNT(*)` was parsed before reaching Python. No cloud/data mutation occurred. Recovery: created canonical `phase17_performance_design_probe.py` and executed SQL only through subprocess argument lists.
+4. Controlled performance regressions are intentional and read-only: partition-filter misalignment and excessive column projection. Recovery is query rewrite to native partition filtering and required-column projection.
+5. Phase 17 does not mutate accepted CORE/MART/AUDIT/CONTROL tables and does not create persistent benchmark tables.
+6. First actual-job runtime produced cache_hit=true for all five marker queries even though the shorthand `--nouse_cache` was supplied. This invalidated the partition actual-scan comparison: anti-pattern and optimized bytes both appeared as 360. Query-plan records still showed the anti-pattern reading substantially more records, but the run was correctly rejected. Diagnosis: use the explicit CLI form `--use_cache=false`. Recovery requires rerunning all five marker jobs and proving cache_hit=false before acceptance.
+- BigQuery baseline probe initially used reserved alias `rows`; parser rejected it. Diagnosed as SQL syntax, renamed alias to `row_count`, reran successfully.
+- PowerShell command transport interpreted SQL `*` and quotes before Python received them. Recovered by moving performance probes into canonical Python subprocess scripts.
+- First runtime validator misread BigQuery string `"false"` as truthy via `bool("false")`; raw job metadata proved cache was disabled. Added explicit boolean normalization.
+- Partition dry-run predicted 125,976 vs 360 bytes, while actual no-cache runtime processed 360 vs 360 bytes. Diagnosed as BigQuery runtime/storage pruning. Acceptance was corrected to require dry-run scan reduction plus actual query-plan work reduction, not a false actual-byte claim.
+- Clustering predicate alignment is proven against live metadata, but no scan-reduction claim is made on the 5,249-row accepted dataset because it is too small to guarantee multiple cluster blocks.

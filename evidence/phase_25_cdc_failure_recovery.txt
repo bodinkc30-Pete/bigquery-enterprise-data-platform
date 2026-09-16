@@ -1,0 +1,15 @@
+Phase 25 Step 25.11 CDC controlled failure/recovery
+
+Initial CDC runtime resumed the bounded Datastream stream and applied the INSERT and UPDATE mutations sequentially.
+INSERT syn-order-006 replicated successfully to BigQuery.
+UPDATE syn-order-005 committed in Spanner, but the first runtime hit the bounded BigQuery visibility deadline while BigQuery still showed PENDING/version 1.
+The runtime finally block paused the stream; no DELETE was issued after the UPDATE visibility timeout.
+A read-only recovery probe later proved BigQuery had caught up to PAID/version 2 and source/destination both reconciled at 6 rows / 697,500 satang.
+The first DELETE-only recovery attempt failed before mutation because gcloud spanner rows delete does not accept --data for primary-key deletion.
+Installed CLI help confirmed the required syntax is --keys=[KEY,...].
+The failed DELETE attempt left source and destination unchanged at 6 rows / 697,500 satang.
+The recovery script was patched to --keys=syn-order-003 and rerun once.
+DELETE committed in Spanner, became absent in BigQuery after 787.040 seconds, and final source/destination reconciled at 5 rows / 687,600 satang with max event_version 2.
+Final canonical reconciliation verified INSERT/UPDATE metadata presence, non-decreasing Datastream source timestamps, source/destination fingerprint equality, and stream state PAUSED.
+No accepted Bangkok business dataset was mutated; only isolated synthetic Phase 25 assets were used.
+No raw company data, PII, real bank data, billing upgrade, paid fallback, or Phase 26 work occurred.

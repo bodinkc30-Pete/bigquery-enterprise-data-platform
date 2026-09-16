@@ -1,0 +1,17 @@
+﻿{
+    "phase":  7,
+    "status":  "PASS",
+    "jobs_sampled":  100,
+    "load_jobs":  17,
+    "query_jobs":  83,
+    "all_jobs_done":  true,
+    "expected_failure_job_count":  1,
+    "unexpected_error_job_count":  0,
+    "controlled_failure":  {
+                               "job_type":  "LOAD",
+                               "destination_table":  "_phase07_failure_probe",
+                               "reason":  "invalid",
+                               "message_category":  "OTHER"
+                           },
+    "query_bytes_processed_sample":  6692434
+}

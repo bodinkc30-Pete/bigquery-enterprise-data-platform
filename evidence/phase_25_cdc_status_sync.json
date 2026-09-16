@@ -1,0 +1,15 @@
+{
+  "phase": 25,
+  "status": "IN_PROGRESS",
+  "runtime_checkpoint": "CDC_CRUD_VERIFIED_RECOVERY_TEARDOWN_PENDING",
+  "operations_verified": [
+    "INSERT",
+    "UPDATE",
+    "DELETE"
+  ],
+  "final_rows": 5,
+  "final_amount_satang_sum": 687600,
+  "final_max_version": 2,
+  "stream_state": "PAUSED",
+  "phase26_status": "NOT_STARTED"
+}

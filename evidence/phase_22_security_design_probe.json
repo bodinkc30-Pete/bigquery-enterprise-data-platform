@@ -1,0 +1,45 @@
+{
+  "phase": 22,
+  "status": "PASS",
+  "checks": {
+    "contract_phase22": true,
+    "phase21_accepted": true,
+    "organization_visible": true,
+    "project_has_no_org_ancestor": true,
+    "access_context_api_disabled": true,
+    "cloud_mutation_forbidden": true,
+    "project_reparent_forbidden": true,
+    "api_enable_forbidden": true,
+    "restricted_services_exact": true,
+    "dry_run_first": true,
+    "ingress_default_deny": true,
+    "egress_default_deny": true,
+    "private_access_pattern": true,
+    "phase23_absent": true,
+    "billing_upgrade_forbidden": true,
+    "billing_mutation_forbidden": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true
+  },
+  "check_count": 18,
+  "capability": {
+    "organization_visible": true,
+    "project_has_org_ancestor": false,
+    "access_context_manager_api_enabled": false
+  },
+  "design": {
+    "restricted_services": [
+      "bigquery.googleapis.com",
+      "storage.googleapis.com"
+    ],
+    "dry_run_first": true,
+    "private_api_endpoint": "restricted.googleapis.com"
+  },
+  "phase23_status": "NOT_STARTED",
+  "phase23_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "organization_id_exposed": false,
+    "principal_email_exposed": false
+  }
+}

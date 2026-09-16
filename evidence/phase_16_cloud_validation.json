@@ -1,0 +1,75 @@
+{
+  "phase": 16,
+  "status": "PASS",
+  "checks": {
+    "pipeline_run_partition": true,
+    "pipeline_run_clustering": true,
+    "pipeline_run_schema_nonempty": true,
+    "pipeline_step_partition": true,
+    "pipeline_step_clustering": true,
+    "pipeline_step_schema_nonempty": true,
+    "incident_partition": true,
+    "incident_clustering": true,
+    "incident_schema_nonempty": true,
+    "cost_metric_partition": true,
+    "cost_metric_clustering": true,
+    "cost_metric_schema_nonempty": true,
+    "metric_live": true,
+    "alert_policy_live": true
+  },
+  "table_metadata": {
+    "pipeline_run": {
+      "field_count": 18,
+      "partition_field": "observed_at",
+      "partition_type": "DAY",
+      "clustering": [
+        "status",
+        "sla_status",
+        "is_controlled_test"
+      ],
+      "deletion_protection": false
+    },
+    "pipeline_step": {
+      "field_count": 14,
+      "partition_field": "observed_at",
+      "partition_type": "DAY",
+      "clustering": [
+        "step_name",
+        "status",
+        "sla_status"
+      ],
+      "deletion_protection": false
+    },
+    "incident": {
+      "field_count": 13,
+      "partition_field": "detected_at",
+      "partition_type": "DAY",
+      "clustering": [
+        "status",
+        "severity",
+        "incident_type"
+      ],
+      "deletion_protection": false
+    },
+    "cost_metric": {
+      "field_count": 8,
+      "partition_field": "captured_at",
+      "partition_type": "DAY",
+      "clustering": [
+        "job_marker",
+        "is_controlled_test"
+      ],
+      "deletion_protection": false
+    }
+  },
+  "logging_metric": {
+    "live": true,
+    "metric_kind": "DELTA",
+    "value_type": "INT64"
+  },
+  "alert_policy": {
+    "live": true,
+    "enabled": true,
+    "condition_type": "LOG_MATCH"
+  }
+}

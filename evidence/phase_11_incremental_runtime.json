@@ -1,0 +1,98 @@
+{
+  "phase": 11,
+  "status": "PASS",
+  "lookback_days": 7,
+  "explicit_backfill_start_date": "2025-01-01",
+  "checks": {
+    "pre_run_gate_pass": true,
+    "four_incremental_merge_models_configured": true,
+    "duplicate_source_key_failure_detected": true,
+    "late_arriving_within_lookback_recovered": true,
+    "explicit_backfill_probe_recovered": true,
+    "probe_reruns_idempotent": true,
+    "first_incremental_run_4_models_pass": true,
+    "dbt_tests_62_pass": true,
+    "second_incremental_run_4_models_pass": true,
+    "explicit_backfill_run_4_models_pass": true,
+    "baseline_preserved_after_first_merge": true,
+    "unchanged_rerun_idempotent": true,
+    "explicit_backfill_idempotent_on_current_data": true,
+    "core_fingerprints_preserved": true,
+    "all_mart_grains_unique": true,
+    "mart_physical_design_preserved": true,
+    "no_persistent_probe_tables": true
+  },
+  "first_incremental_run": {
+    "total": 4,
+    "success": 4,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "dbt_test_summary": {
+    "total": 62,
+    "success": 62,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "second_incremental_run": {
+    "total": 4,
+    "success": 4,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "explicit_backfill_run": {
+    "total": 4,
+    "success": 4,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "mart_row_counts": {
+    "mart_commerce_daily": 354,
+    "mart_marketing_daily": 366,
+    "mart_creator_daily": 625,
+    "mart_payment_daily": 393
+  },
+  "grain_duplicate_groups": {
+    "mart_commerce_daily": 0,
+    "mart_marketing_daily": 0,
+    "mart_creator_daily": 0,
+    "mart_payment_daily": 0
+  },
+  "physical_design": {
+    "mart_table_count": 4,
+    "partitioned_mart_count": 4,
+    "clustered_mart_count": 2,
+    "partition_fields": {
+      "mart_commerce_daily": "date",
+      "mart_creator_daily": "date",
+      "mart_marketing_daily": "date",
+      "mart_payment_daily": "post_date"
+    },
+    "cluster_fields": {
+      "mart_commerce_daily": [],
+      "mart_creator_daily": [
+        "creator_key"
+      ],
+      "mart_marketing_daily": [],
+      "mart_payment_daily": [
+        "payment_status",
+        "payment_cycle",
+        "payment_type"
+      ]
+    },
+    "extra_tables": []
+  },
+  "mart_fingerprint_differences_from_phase10_baseline": 0,
+  "mart_row_count_differences_from_phase10_baseline": 0,
+  "core_fingerprint_differences": 0,
+  "late_arrival_probe": {
+    "final_row_count": 4,
+    "late_arriving_rows": 1,
+    "explicit_backfill_rows": 1,
+    "duplicate_rows": 0
+  }
+}

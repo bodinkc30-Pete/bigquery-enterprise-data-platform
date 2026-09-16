@@ -1,0 +1,10 @@
+PHASE 19 FAILURE / RECOVERY
+
+1. Design preflight compile passed, but the accepted-table count query used alias `rows`, which BigQuery parsed as a reserved keyword and rejected.
+2. The failed query was read-only; no benchmark dataset/table or accepted business data was mutated.
+3. Recovery: rename the alias to `row_count`, rerun the entire prebuild design gate, and proceed only if all checks pass.
+
+4. Post-runtime review found a marker-attribution bug: scale markers such as 10000/100000/1000000 are string prefixes of larger scale markers.
+5. The first public runtime JSON was preserved privately and not accepted. The runtime parser was patched to match the exact comment token `/* marker */`.
+6. Recovery rebuilt public metrics only from already-captured BigQuery job history and exact private result files; the 50M benchmark tables were NOT rebuilt and no duplicate benchmark cost was incurred.
+7. Exact remapping recovered 24/24 Phase 19 markers and 18/18 benchmark jobs; semantic equality, storage/cost guards, distribution checks, and teardown all passed.

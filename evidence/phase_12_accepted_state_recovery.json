@@ -1,0 +1,44 @@
+{
+  "phase": 12,
+  "status": "PASS",
+  "recovery_scope": "RESTORE_AND_VERIFY_ACCEPTED_PHASE11_STATE",
+  "diagnosis": "INFORMATION_SCHEMA_OBSERVATION_INCONSISTENCY",
+  "actor_attribution": "NOT_PROVEN",
+  "checks": {
+    "core_run_12_pass": true,
+    "core_tests_pass": true,
+    "mart_run_4_pass": true,
+    "full_dbt_tests_62_pass": true,
+    "authoritative_baseline_32_pass": true,
+    "local_schemas_28_match": true,
+    "metadata_inconsistency_diagnosed": true
+  },
+  "dbt_summaries": {
+    "core_run": {
+      "total": 12,
+      "pass": 12,
+      "fail": 0
+    },
+    "core_test": {
+      "total": 44,
+      "pass": 44,
+      "fail": 0
+    },
+    "mart_run": {
+      "total": 4,
+      "pass": 4,
+      "fail": 0
+    },
+    "full_test": {
+      "total": 62,
+      "pass": 62,
+      "fail": 0
+    }
+  },
+  "live_table_counts": {
+    "raw": 8,
+    "staging": 8,
+    "core": 12,
+    "mart": 4
+  }
+}

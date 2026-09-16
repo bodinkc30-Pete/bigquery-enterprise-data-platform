@@ -1,0 +1,48 @@
+{
+  "phase": 24,
+  "status": "PASS",
+  "streaming_mode": "AT_LEAST_ONCE",
+  "checks": {
+    "managed_job_running_observed": true,
+    "source_valid_messages_exact_11": true,
+    "validation_subscription_received": true,
+    "invalid_event_deadlettered": true,
+    "corrected_event_recovered": true,
+    "atleast_once_rows_meet_source_target": true,
+    "distinct_event_ids_exact_11": true,
+    "intentional_duplicate_observed": true,
+    "duplicate_semantics_observed": true,
+    "timestamps_verified": true,
+    "late_event_verified": true,
+    "near_real_time_under_20_minutes": true,
+    "job_cancelled_after_proof": true,
+    "cleanup_complete": true,
+    "accepted_integrity_preserved": true,
+    "runtime_error_empty": true,
+    "billing_privacy_locked": true,
+    "phase25_absent": true
+  },
+  "check_count": 18,
+  "runtime": {
+    "row_count": 23,
+    "distinct_event_ids": 11,
+    "duplicate_keys": 10,
+    "duplicate_extra_rows": 12,
+    "intentional_duplicate_rows": 4,
+    "corrected_rows": 1,
+    "late_rows": 2,
+    "deadletter_rows_before_cleanup": 1,
+    "end_to_end_seconds": 232.97,
+    "worker_count": 1,
+    "max_workers": 1
+  },
+  "integrity": {
+    "core_amount": "860004.99",
+    "core_rows": "685",
+    "dq_rows": "32",
+    "mart_amount": "860004.99",
+    "mart_rows": "685",
+    "reconciliation_rows": "28"
+  },
+  "phase25_artifact_count": 0
+}

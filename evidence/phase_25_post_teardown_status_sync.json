@@ -1,0 +1,8 @@
+{
+  "phase": 25,
+  "status": "IN_PROGRESS",
+  "runtime_checkpoint": "TEARDOWN_VERIFIED_CLOSURE_PENDING",
+  "post_teardown_checks": 15,
+  "terraform_zero_drift": true,
+  "phase26_status": "NOT_STARTED"
+}

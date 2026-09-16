@@ -1,0 +1,31 @@
+version: 2
+sources:
+  - name: staging
+    database: "{{ env_var('DBT_BIGQUERY_PROJECT') }}"
+    schema: staging
+    description: Accepted Phase 7 typed staging tables; portfolio-safe synthetic data only.
+    tables:
+      - name: stg_orders
+      - name: stg_shop_daily
+      - name: stg_campaign_daily
+      - name: stg_live_daily
+      - name: stg_product_card_daily
+      - name: stg_product_sku
+      - name: stg_creator
+      - name: stg_creator_payment
+
+  - name: financial_ops_synth
+    database: "{{ env_var('DBT_BIGQUERY_PROJECT') }}"
+    schema: financial_ops_synth
+    description: Accepted Phase 26 fully synthetic financial-operations source; read-only in Phase 27.
+    tables:
+      - name: customers
+      - name: accounts
+      - name: merchants
+      - name: transactions
+      - name: payment_events
+      - name: refunds
+      - name: reversals
+      - name: settlement_batches
+      - name: settlement_items
+      - name: daily_control_totals

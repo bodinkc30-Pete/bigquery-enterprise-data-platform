@@ -1,0 +1,50 @@
+{
+  "phase": 27,
+  "step": "27_BOUNDED_COST",
+  "status": "PASS",
+  "checks": {
+    "runtime_16_pass": true,
+    "failure_recovery_10_pass": true,
+    "contract_cost_guards_locked": true,
+    "dry_run_nonzero": true,
+    "dry_run_below_bound": true,
+    "probe_done_without_error": true,
+    "probe_cache_disabled": true,
+    "processed_below_bound": true,
+    "billed_below_bound": true,
+    "storage_four_tables": true,
+    "storage_rows_match_runtime": true,
+    "storage_bounded_under_1_gib": true,
+    "budget_baseline_pass": true,
+    "budget_alerts_present": true,
+    "budget_not_hard_cap": true,
+    "actual_invoice_not_claimed": true
+  },
+  "check_count": 16,
+  "passed": 16,
+  "dry_run_bytes": 42550,
+  "maximum_bytes_billed": 100000000,
+  "probe_processed_bytes": 42550,
+  "probe_billed_bytes": 10485760,
+  "storage": {
+    "table_count": 4,
+    "total_logical_bytes": 158356,
+    "total_rows": 2168
+  },
+  "budget_guardrail": {
+    "currency": "THB",
+    "monthly_budget_amount": 350,
+    "alert_thresholds": [
+      0.5,
+      0.8,
+      1.0
+    ],
+    "hard_cap": false
+  },
+  "actual_invoice_unknown": true,
+  "billing_export_used": false,
+  "billing_mutation_performed": false,
+  "accepted_platform_mutated": false,
+  "project_id_exposed": false,
+  "phase28_status": "NOT_STARTED"
+}

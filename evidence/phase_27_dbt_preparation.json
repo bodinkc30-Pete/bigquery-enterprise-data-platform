@@ -1,0 +1,30 @@
+{
+  "phase": 27,
+  "step": "27.3C_DBT_PREPARATION",
+  "status": "PASS",
+  "checks": {
+    "isolated_dbt_exists": true,
+    "dbt_parse_pass": true,
+    "dbt_compile_pass": true,
+    "exact_four_models": true,
+    "all_incremental": true,
+    "all_merge": true,
+    "all_schema_fail": true,
+    "all_target_financial_mart": true,
+    "phase27_tests_present": true,
+    "source_phase26_present": true
+  },
+  "check_count": 10,
+  "passed": 10,
+  "model_count": 4,
+  "test_count": 37,
+  "models": [
+    "mart_financial_ops_daily",
+    "mart_reconciliation_daily",
+    "mart_settlement_daily",
+    "mart_transaction_status_daily"
+  ],
+  "cloud_table_build_performed": false,
+  "project_id_exposed": false,
+  "phase28_status": "NOT_STARTED"
+}

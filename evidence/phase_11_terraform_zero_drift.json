@@ -1,0 +1,8 @@
+﻿{
+    "phase":  11,
+    "status":  "PASS",
+    "fmt_check_pass":  true,
+    "validate_pass":  true,
+    "plan_exit":  0,
+    "zero_drift":  true
+}

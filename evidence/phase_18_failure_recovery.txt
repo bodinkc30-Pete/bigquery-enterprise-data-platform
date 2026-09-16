@@ -1,0 +1,19 @@
+PHASE 18 — COST ENGINEERING — FAILURE / RECOVERY EVIDENCE
+
+1. Prebuild artifact check found no Phase 18 files; no duplicate work was overwritten.
+2. Design probe verified the live THB 350 Project 08 budget, 50/80/100 alert thresholds, target table, pricing-reference boundary, and Phase 19 absence.
+3. First cost-runtime attempt executed only read-only/guarded query probes, then failed while reading INFORMATION_SCHEMA because Windows bq.cmd truncated a multiline SQL argument after the first line.
+4. Diagnosis: the server received SELECT job_id... without the FROM clause; this is command-transport failure, not BigQuery data failure.
+5. Recovery: normalize the INFORMATION_SCHEMA SQL to a single line before passing it to bq.cmd, then rerun the read-only lab.
+6. No accepted CORE/MART/DQ/reconciliation data was mutated by this incident.
+7. After single-line transport remediation, the cost runtime passed with four marker jobs present in INFORMATION_SCHEMA.
+8. The 1,000,000-byte maximum-bytes-billed guard rejected the full-scan probe as designed; the rejected job recorded zero billed bytes.
+9. Recovery with a 10 MiB limit succeeded with query cache disabled.
+10. Wide versus narrow projection reduced processed bytes by 94.78%, but both were billed at the same 10 MiB minimum. Phase 18 therefore records 0% billed-byte reduction for this small accepted dataset rather than overstating savings.
+11. Runtime integrity revalidated 5,249 order rows, 685 payment rows, 860,004.99 payment amount, 32 DQ rows, 28 reconciliation rows, and three Phase 16 pipeline runs.
+12. Pre-sync Phase 18 targeted tests passed 20/20, but full regression exposed a stale Phase 17 test that required Phase 18 artifacts to remain absent forever.
+13. Diagnosis: current-filesystem absence is only valid at Phase 17 closure time. Historical Phase 17 closure evidence already immutably proves Phase 18 artifact count was zero at that closure.
+14. Recovery: the Phase 17 regression now validates `phase_17_closure_verification.json` for historical absence instead of forbidding legitimate Phase 18 work.
+15. Historical Phase 17 closure evidence itself was not modified.
+
+4. Acceptance Sync compile gate caught a missing newline at a chunk boundary before any canonical mutation. A first surgical PowerShell match used the wrong escaping and safely failed its uniqueness guard; the exact boundary was then inspected, patched once, recompiled successfully, and Acceptance Sync completed with exit 0.

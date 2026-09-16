@@ -1,0 +1,278 @@
+{
+  "phase": 19,
+  "status": "PASS",
+  "checks": {
+    "exact_marker_mapping_24": true,
+    "eighteen_benchmark_jobs": true,
+    "benchmark_jobs_done_error_free": true,
+    "benchmark_cache_disabled": true,
+    "semantic_equivalence": true,
+    "three_tables_50m": true,
+    "physical_designs_exact": true,
+    "distribution_exact": true,
+    "partition_reduction_observed": true,
+    "cluster_reduction_observed": true,
+    "storage_guard": true,
+    "billed_guard": true,
+    "guard_reject_zero_billed": true,
+    "guard_recovery_success": true,
+    "dataset_teardown_absent": true,
+    "accepted_integrity": true,
+    "prior_histories": true,
+    "phase20_absent": true
+  },
+  "check_count": 18,
+  "synthetic_rows_per_design": 50000000,
+  "scale_levels_rows": [
+    10000,
+    100000,
+    1000000,
+    5000000,
+    10000000,
+    50000000
+  ],
+  "benchmark_job_count": 18,
+  "all_marker_job_count": 24,
+  "storage_bytes": {
+    "lab_a_unpartitioned": 5706388891,
+    "lab_b_range_partitioned": 5706388891,
+    "lab_c_partitioned_clustered": 5706388891
+  },
+  "total_storage_bytes": 17119166673,
+  "total_phase19_billed_bytes": 28376563712,
+  "partition_improved_scales": [
+    10000,
+    100000,
+    1000000,
+    5000000,
+    10000000
+  ],
+  "cluster_improved_scales": [
+    10000,
+    100000,
+    1000000,
+    5000000,
+    10000000,
+    50000000
+  ],
+  "scale_results": [
+    {
+      "scale_rows": 10000,
+      "result_rows": 5000,
+      "aggregate_hash": "6b2cafc8e27123fc",
+      "processed_bytes": {
+        "unpartitioned": 1495000000,
+        "partitioned": 29899970,
+        "partitioned_clustered": 14999970
+      },
+      "billed_bytes": {
+        "unpartitioned": 1495269376,
+        "partitioned": 30408704,
+        "partitioned_clustered": 15728640
+      },
+      "slot_ms": {
+        "unpartitioned": 3216,
+        "partitioned": 124,
+        "partitioned_clustered": 57
+      },
+      "client_elapsed_ms": {
+        "unpartitioned": 2116.32,
+        "partitioned": 2124.61,
+        "partitioned_clustered": 1959.08
+      },
+      "partition_scan_reduction_pct": 98.0,
+      "cluster_scan_reduction_pct": 49.83
+    },
+    {
+      "scale_rows": 100000,
+      "result_rows": 50000,
+      "aggregate_hash": "0efcdb5e06d43913",
+      "processed_bytes": {
+        "unpartitioned": 1495000000,
+        "partitioned": 29899970,
+        "partitioned_clustered": 14999970
+      },
+      "billed_bytes": {
+        "unpartitioned": 1495269376,
+        "partitioned": 30408704,
+        "partitioned_clustered": 15728640
+      },
+      "slot_ms": {
+        "unpartitioned": 3572,
+        "partitioned": 119,
+        "partitioned_clustered": 103
+      },
+      "client_elapsed_ms": {
+        "unpartitioned": 2045.26,
+        "partitioned": 1993.09,
+        "partitioned_clustered": 1989.05
+      },
+      "partition_scan_reduction_pct": 98.0,
+      "cluster_scan_reduction_pct": 49.83
+    },
+    {
+      "scale_rows": 1000000,
+      "result_rows": 500000,
+      "aggregate_hash": "e925eda12b9e3bba",
+      "processed_bytes": {
+        "unpartitioned": 1495000000,
+        "partitioned": 59799970,
+        "partitioned_clustered": 22499220
+      },
+      "billed_bytes": {
+        "unpartitioned": 1495269376,
+        "partitioned": 60817408,
+        "partitioned_clustered": 23068672
+      },
+      "slot_ms": {
+        "unpartitioned": 3054,
+        "partitioned": 154,
+        "partitioned_clustered": 154
+      },
+      "client_elapsed_ms": {
+        "unpartitioned": 2028.83,
+        "partitioned": 2052.46,
+        "partitioned_clustered": 1920.47
+      },
+      "partition_scan_reduction_pct": 96.0,
+      "cluster_scan_reduction_pct": 62.38
+    },
+    {
+      "scale_rows": 5000000,
+      "result_rows": 2500000,
+      "aggregate_hash": "e0d177c1715a4160",
+      "processed_bytes": {
+        "unpartitioned": 1495000000,
+        "partitioned": 179399970,
+        "partitioned_clustered": 89999970
+      },
+      "billed_bytes": {
+        "unpartitioned": 1495269376,
+        "partitioned": 180355072,
+        "partitioned_clustered": 90177536
+      },
+      "slot_ms": {
+        "unpartitioned": 3994,
+        "partitioned": 550,
+        "partitioned_clustered": 365
+      },
+      "client_elapsed_ms": {
+        "unpartitioned": 2138.2,
+        "partitioned": 2040.47,
+        "partitioned_clustered": 1841.82
+      },
+      "partition_scan_reduction_pct": 88.0,
+      "cluster_scan_reduction_pct": 49.83
+    },
+    {
+      "scale_rows": 10000000,
+      "result_rows": 5000000,
+      "aggregate_hash": "e20b0c26b46ac158",
+      "processed_bytes": {
+        "unpartitioned": 1495000000,
+        "partitioned": 328899970,
+        "partitioned_clustered": 164999970
+      },
+      "billed_bytes": {
+        "unpartitioned": 1495269376,
+        "partitioned": 329252864,
+        "partitioned_clustered": 165675008
+      },
+      "slot_ms": {
+        "unpartitioned": 3856,
+        "partitioned": 1349,
+        "partitioned_clustered": 671
+      },
+      "client_elapsed_ms": {
+        "unpartitioned": 2121.81,
+        "partitioned": 2123.82,
+        "partitioned_clustered": 1878.53
+      },
+      "partition_scan_reduction_pct": 78.0,
+      "cluster_scan_reduction_pct": 49.83
+    },
+    {
+      "scale_rows": 50000000,
+      "result_rows": 25000000,
+      "aggregate_hash": "35fab6b5e160ec36",
+      "processed_bytes": {
+        "unpartitioned": 1495000000,
+        "partitioned": 1495000000,
+        "partitioned_clustered": 750000000
+      },
+      "billed_bytes": {
+        "unpartitioned": 1495269376,
+        "partitioned": 1495269376,
+        "partitioned_clustered": 750780416
+      },
+      "slot_ms": {
+        "unpartitioned": 6798,
+        "partitioned": 4804,
+        "partitioned_clustered": 4589
+      },
+      "client_elapsed_ms": {
+        "unpartitioned": 2289.69,
+        "partitioned": 2129.01,
+        "partitioned_clustered": 2117.31
+      },
+      "partition_scan_reduction_pct": 0.0,
+      "cluster_scan_reduction_pct": 49.83
+    }
+  ],
+  "distribution": {
+    "channel_mix_pct": {
+      "SHOP": 50,
+      "LIVE": 30,
+      "ADS": 15,
+      "OTHER": 5
+    },
+    "status_mix_pct": {
+      "COMPLETED": 70,
+      "SHIPPED": 12,
+      "CANCELLED": 8,
+      "REFUNDED": 5,
+      "PENDING": 5
+    },
+    "refund_rate_pct": 5.0,
+    "null_rate_pct": 2.0,
+    "duplicate_business_key_rate_pct": 1.0,
+    "late_arriving_rate_pct": 3.0303
+  },
+  "guardrail": {
+    "reject_limit_bytes": 1000000,
+    "rejected": true,
+    "rejected_billed_bytes": 0,
+    "recovery_limit_bytes": 10737418240,
+    "recovery_success": true
+  },
+  "benchmark_dataset": {
+    "ephemeral": true,
+    "prebuild_absent": true,
+    "post_teardown_absent": true
+  },
+  "integrity": {
+    "order_rows": 5249,
+    "payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "truth_boundary": {
+    "original_accepted_rows": 5249,
+    "original_called_big_data": false,
+    "scale_dataset_synthetic": true,
+    "runtime_latency_monotonic_claimed": false,
+    "marker_prefix_collision_repaired": true
+  },
+  "phase20_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "job_ids_exposed": false,
+    "query_text_exposed": false,
+    "raw_company_data_exposed": false,
+    "real_bank_data_exposed": false
+  }
+}

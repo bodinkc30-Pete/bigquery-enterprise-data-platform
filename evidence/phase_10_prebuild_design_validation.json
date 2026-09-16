@@ -1,0 +1,15 @@
+{
+  "phase": 10,
+  "status": "FAIL",
+  "checks": {
+    "core_12_tables_live": true,
+    "fact_order_item_live": true,
+    "order_amount_consistent_within_order": false,
+    "mart_dataset_absent_before_phase10_build": true
+  },
+  "core_table_count": 12,
+  "order_count": 5188,
+  "multi_item_order_count": 61,
+  "inconsistent_order_amount_count": 61,
+  "design_note": "Order-level order_amount must be aggregated through one row per order before daily rollup; item-level additive measures stay at order-item grain."
+}

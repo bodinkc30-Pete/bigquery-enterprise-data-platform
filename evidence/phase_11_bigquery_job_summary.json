@@ -1,0 +1,71 @@
+{
+  "phase": 11,
+  "status": "PASS",
+  "checks": {
+    "incremental_run_1_job_count": true,
+    "incremental_run_1_all_done": true,
+    "incremental_run_1_no_db_errors": true,
+    "incremental_run_1_merge_present": true,
+    "full_test_job_count": true,
+    "full_test_all_done": true,
+    "full_test_no_db_errors": true,
+    "full_test_select_present": true,
+    "incremental_run_2_job_count": true,
+    "incremental_run_2_all_done": true,
+    "incremental_run_2_no_db_errors": true,
+    "incremental_run_2_merge_present": true,
+    "explicit_backfill_job_count": true,
+    "explicit_backfill_all_done": true,
+    "explicit_backfill_no_db_errors": true,
+    "explicit_backfill_merge_present": true
+  },
+  "stages": {
+    "incremental_run_1": {
+      "job_count": 8,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 396634,
+      "bytes_billed": 230686720,
+      "statement_types": {
+        "CREATE_TABLE_AS_SELECT": 4,
+        "MERGE": 4
+      }
+    },
+    "full_test": {
+      "job_count": 62,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 166383,
+      "bytes_billed": 188743680,
+      "statement_types": {
+        "SELECT": 62
+      }
+    },
+    "incremental_run_2": {
+      "job_count": 8,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 396634,
+      "bytes_billed": 230686720,
+      "statement_types": {
+        "CREATE_TABLE_AS_SELECT": 4,
+        "MERGE": 4
+      }
+    },
+    "explicit_backfill": {
+      "job_count": 8,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 1936464,
+      "bytes_billed": 188743680,
+      "statement_types": {
+        "CREATE_TABLE_AS_SELECT": 4,
+        "MERGE": 4
+      }
+    }
+  },
+  "total_job_count": 86,
+  "total_error_job_count": 0,
+  "merge_job_count": 12,
+  "provenance": "dbt_invocation_id"
+}

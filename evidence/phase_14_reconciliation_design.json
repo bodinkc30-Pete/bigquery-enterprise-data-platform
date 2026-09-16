@@ -1,0 +1,41 @@
+{
+  "phase": 14,
+  "status": "PASS",
+  "checks": {
+    "payment_id_unique": true,
+    "source_reference_unique": true,
+    "negative_payment_rows_zero": true,
+    "zero_value_records_preserved": true,
+    "accepted_domains_only": true,
+    "global_count_reconciles": true,
+    "global_amount_reconciles": true,
+    "grain_count_reconciles": true,
+    "grain_amount_reconciles": true,
+    "control_dataset_absent_prebuild": true,
+    "eight_controls_defined": true,
+    "six_controlled_failures_defined": true,
+    "phase15_not_implemented": true,
+    "real_bank_data_forbidden": true
+  },
+  "baseline": {
+    "payment_rows": 685,
+    "positive_rows": 454,
+    "zero_rows": 231,
+    "negative_rows": 0,
+    "zero_paid_rows": 231,
+    "zero_nonpaid_rows": 0,
+    "core_amount": 860004.99
+  },
+  "global_reconciliation": {
+    "core_amount": 860004.99,
+    "core_count": 685,
+    "mart_amount": 860004.99,
+    "mart_count": 685
+  },
+  "grain_reconciliation": {
+    "amount_mismatch_groups": 0,
+    "control_groups": 393,
+    "count_mismatch_groups": 0
+  },
+  "control_store_prebuild": "ABSENT"
+}

@@ -1,0 +1,49 @@
+{
+  "phase": 19,
+  "status": "PASS",
+  "checks": {
+    "contract_phase19": true,
+    "design_status": true,
+    "canonical_prebuild_status": true,
+    "benchmark_dataset_absent": true,
+    "scale_ladder_exact": true,
+    "max_scale_50m": true,
+    "three_designs": true,
+    "synthetic_only": true,
+    "distribution_totals": true,
+    "budget_live_exact": true,
+    "original_dataset_not_called_big_data": true,
+    "cost_guards_positive": true,
+    "ephemeral_required": true,
+    "phase20_absent": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true
+  },
+  "scale_levels_rows": [
+    10000,
+    100000,
+    1000000,
+    5000000,
+    10000000,
+    50000000
+  ],
+  "max_scale_rows": 50000000,
+  "physical_designs": [
+    "lab_a_unpartitioned",
+    "lab_b_range_partitioned",
+    "lab_c_partitioned_clustered"
+  ],
+  "budget": {
+    "monthly_thb": 350,
+    "live_match_count": 1,
+    "hard_cap": false
+  },
+  "accepted_source_rows": 5249,
+  "benchmark_dataset_prebuild_absent": true,
+  "phase20_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "billing_account_exposed": false,
+    "raw_company_data_exposed": false
+  }
+}

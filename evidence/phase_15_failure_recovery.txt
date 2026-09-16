@@ -1,0 +1,27 @@
+PHASE 15 - MANAGED AIRFLOW / CLOUD COMPOSER - FAILURE & RECOVERY EVIDENCE
+
+1. Prebuild Cloud Composer and Compute APIs were disabled. Interactive auto-enable prompts were explicitly declined during inspection; no cloud mutation occurred until Terraform design validation passed.
+2. Terraform provider v7 rejected google_project_service.check_if_service_has_usage_on_destroy. The unsupported argument was removed before any Phase 15 apply.
+3. The first Terraform file edit encountered a transient Windows file lock. The attempted edit did not land; the file was re-read and changed surgically.
+4. Provider validation showed a triggerer block requires cpu and memory_gb even with count zero. Explicit triggerer configuration was removed and the Composer 3 Small preset default was used instead.
+5. Contract/provider alignment helper commands hit Python quoting errors before writing the intended Terraform/probe changes. These failures were detected before cloud mutation and the required service-agent IAM binding was added with simpler file operations.
+6. A foundation terraform plan invocation hit Windows/PowerShell native argument parsing. No apply occurred from that failed invocation; arguments were passed separately and a saved plan was produced.
+7. Foundation apply exceeded the remote transport timeout. It was not reissued blindly: Terraform state and live Google Cloud IAM/API state were inspected first and proved all 17 foundation resources had been applied.
+8. gcloud SDK 583 did not provide a composer image-versions subcommand. Supported Composer 3 images were queried through the live Composer REST endpoint, selecting the current creation-enabled default exact image.
+9. Environment creation also exceeded the remote transport timeout. Live Composer state showed the single intended environment in CREATING state with one CREATE operation, so no duplicate create was issued. The original operation later completed and the environment became RUNNING.
+10. Immediately after DAG upload, Airflow DAG storage contained the file but the first DAG list had not registered it yet. Import errors were empty. A later scheduler read showed the DAG registered successfully; no premature run was triggered.
+11. The first controlled-conf transport stripped JSON quotes across PowerShell -> gcloud -> Airflow, producing JSONDecodeError. Run history confirmed no DAG run was created. Baseline success was then triggered without conf, using the DAG default force_fail=False.
+12. Controlled failure transport was recovered by invoking gcloud with a Python subprocess argument list, preserving {"force_fail":true}. The DAG failed only at controlled_gate; all four BigQuery gates succeeded and finalize became upstream_failed as expected.
+13. Recovery used the same corrected argument transport with force_fail=false. The recovery DAG run and all six tasks succeeded.
+14. BigQuery job-provenance capture initially failed because Windows bq.cmd handling of multiline query text truncated SQL before FROM. Diagnostic queries proved INFORMATION_SCHEMA.JOBS_BY_PROJECT and job_id were valid. The capture was recovered by sending single-line SQL through Python subprocess.
+15. Runtime evidence parsing initially selected Composer CLI timestamp log lines beginning with '[' as JSON. The parser was hardened to accept only lines that successfully parse as JSON lists; no DAG rerun was required.
+16. A teardown precheck reused PowerShell's reserved $PID variable, causing the read-only Composer list to use an invalid project number. No mutation occurred. The variable was renamed to $projectId before the teardown plan.
+17. Teardown used a saved Terraform plan with exactly 0 add / 0 change / 1 destroy. The Composer environment deletion completed successfully and live verification confirmed environment count zero while the 17 foundation resources remained managed.
+18. Contract status synchronization first used a line-anchored PowerShell regex against whole-file text and correctly failed its guard before editing. Exact occurrence replacement was then used; status became IMPLEMENTED_NOT_ACCEPTED.
+
+Acceptance/closure recovery:
+- Acceptance Sync construction initially produced chunk-boundary syntax (`]}section_lines` / `]}acceptance_lines`). `py_compile` failed before the sync script executed, so no canonical acceptance status was mutated by the failed version.
+- The first surgical rewrite then encountered a temporary Windows file lock. A bounded retry-safe rewrite succeeded, the script compiled, and Acceptance Sync completed with `SYNC_EXIT=0`.
+- Post-sync validation then passed 20/20 Phase 15 targeted tests and 156/156 full Project 08 regression tests.
+- Initial final-closure BigQuery integrity query referenced non-existent `mart.mart_payment_daily.payment_amount`; live schema inspection identified the correct column `total_payment_amount`. The failed query was read-only, no data changed, and the closure verifier was patched before rerun.
+- Two exact-text patch attempts were safely blocked before mutation by their guards because Windows/PowerShell command transport altered backtick-bearing patterns; a line-specific guarded patch then succeeded.

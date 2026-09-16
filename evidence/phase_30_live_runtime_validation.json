@@ -1,0 +1,49 @@
+{
+  "phase": 30,
+  "step": "30B_FRESH_LIVE_RUNTIME",
+  "status": "PASS",
+  "checks": {
+    "gcs_live_objects_at_least_phase06_baseline": true,
+    "raw_exact_8_tables": true,
+    "staging_exact_8_tables": true,
+    "core_exact_12_tables": true,
+    "mart_exact_4_tables": true,
+    "accepted_commerce_integrity": true,
+    "financial_source_exact_10_tables": true,
+    "financial_source_rows_24890": true,
+    "financial_mart_exact_4_tables": true,
+    "financial_mart_rows_2168": true,
+    "financial_reconciliation_zero_anomalies": true,
+    "financial_settlement_zero_anomalies": true
+  },
+  "check_count": 12,
+  "passed": 12,
+  "gcs_live_object_count": 50,
+  "bigquery_table_counts": {
+    "raw": 8,
+    "staging": 8,
+    "core": 12,
+    "mart": 4,
+    "financial_ops_synth": 10,
+    "financial_mart_synth": 4
+  },
+  "accepted_commerce_integrity": {
+    "core_payment_amount": "860004.99",
+    "core_payment_rows": 685,
+    "dq_rows": 32,
+    "mart_payment_amount": "860004.99",
+    "mart_payment_rows": 685,
+    "reconciliation_rows": 28
+  },
+  "financial_source_total_rows": 24890,
+  "financial_mart_total_rows": 2168,
+  "financial_reconciliation_anomalies": 0,
+  "financial_settlement_anomalies": 0,
+  "query_maximum_bytes_billed": 500000000,
+  "validation_mode": "READ_ONLY",
+  "cloud_mutation_performed": false,
+  "raw_company_data_used": false,
+  "real_bank_data_used": false,
+  "project_id_exposed": false,
+  "bucket_name_exposed": false
+}

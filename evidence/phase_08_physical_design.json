@@ -1,0 +1,98 @@
+﻿{
+    "phase":  8,
+    "status":  "PASS",
+    "core_table_count":  12,
+    "fact_table_count":  6,
+    "partitioned_fact_count":  6,
+    "clustered_fact_count":  2,
+    "tables":  [
+                   {
+                       "table":  "dim_channel",
+                       "partition_field":  null,
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "dim_creator",
+                       "partition_field":  null,
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "dim_date",
+                       "partition_field":  null,
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "dim_payment_method",
+                       "partition_field":  null,
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "dim_product",
+                       "partition_field":  null,
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "dim_sku",
+                       "partition_field":  null,
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "fact_campaign_daily",
+                       "partition_field":  "date",
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "fact_creator_payment",
+                       "partition_field":  "post_date",
+                       "clustering_fields":  [
+                                                 "creator_key",
+                                                 "payment_status",
+                                                 "payment_cycle"
+                                             ]
+                   },
+                   {
+                       "table":  "fact_live_daily",
+                       "partition_field":  "date",
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "fact_order_item",
+                       "partition_field":  "order_date",
+                       "clustering_fields":  [
+                                                 "channel_key",
+                                                 "sku_key",
+                                                 "order_status"
+                                             ]
+                   },
+                   {
+                       "table":  "fact_product_card_daily",
+                       "partition_field":  "date",
+                       "clustering_fields":  {
+
+                                             }
+                   },
+                   {
+                       "table":  "fact_shop_daily",
+                       "partition_field":  "date",
+                       "clustering_fields":  {
+
+                                             }
+                   }
+               ]
+}

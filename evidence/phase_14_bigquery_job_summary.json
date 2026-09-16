@@ -1,0 +1,79 @@
+{
+  "phase": 14,
+  "status": "PASS",
+  "provenance": "UNIQUE_QUERY_MARKERS",
+  "checks": {
+    "seven_markers_traced": true,
+    "latest_jobs_done": true,
+    "latest_jobs_error_free": true,
+    "statement_types_match": true
+  },
+  "stages": {
+    "phase14_rec_before_count": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "expected_statement_type": "SELECT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "phase14_rec_live_controls": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "expected_statement_type": "SELECT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "phase14_rec_live_insert": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "INSERT",
+      "expected_statement_type": "INSERT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "phase14_rec_controlled_fail": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "expected_statement_type": "SELECT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "phase14_rec_controlled_recovery": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "expected_statement_type": "SELECT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "phase14_rec_controlled_insert": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "INSERT",
+      "expected_statement_type": "INSERT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    },
+    "phase14_rec_after_count": {
+      "found": true,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "expected_statement_type": "SELECT",
+      "error_present": false,
+      "bytes_processed": 0,
+      "bytes_billed": 0
+    }
+  },
+  "traced_job_count": 7,
+  "latest_unexpected_error_jobs": 0,
+  "historical_marker_error_jobs_observed": 1
+}

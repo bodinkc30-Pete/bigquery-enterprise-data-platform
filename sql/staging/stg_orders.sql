@@ -1,0 +1,28 @@
+CREATE OR REPLACE TABLE `{{PROJECT_ID}}.staging.stg_orders` AS
+SELECT
+  `order_id` AS `order_id`,
+  `order_status` AS `order_status`,
+  `sku_id` AS `sku_id`,
+  `product_id` AS `product_id`,
+  `product_name` AS `product_name`,
+  SAFE_CAST(`quantity` AS INT64) AS `quantity`,
+  SAFE_CAST(`unit_original_price` AS NUMERIC) AS `unit_original_price`,
+  SAFE_CAST(`subtotal_before_discount` AS NUMERIC) AS `subtotal_before_discount`,
+  SAFE_CAST(`total_discount` AS NUMERIC) AS `total_discount`,
+  SAFE_CAST(`subtotal_after_discount` AS NUMERIC) AS `subtotal_after_discount`,
+  SAFE_CAST(`order_amount` AS NUMERIC) AS `order_amount`,
+  SAFE_CAST(`refund_amount` AS NUMERIC) AS `refund_amount`,
+  SAFE_CAST(`created_at` AS TIMESTAMP) AS `created_at`,
+  `payment_method` AS `payment_method`,
+  `fulfillment_type` AS `fulfillment_type`,
+  `shipping_provider` AS `shipping_provider`,
+  `order_channel` AS `order_channel`,
+  `creator_token` AS `creator_token`,
+  `buyer_token` AS `buyer_token`,
+  `region_code` AS `region_code`,
+  `package_token` AS `package_token`,
+  CURRENT_TIMESTAMP() AS `_ingested_at`,
+  'orders_synthetic.csv' AS `_source_file`,
+  'phase07-bootstrap-v1' AS `_run_id`,
+  TO_HEX(SHA256(CONCAT(COALESCE(`order_id`, ''), COALESCE(`order_status`, ''), COALESCE(`sku_id`, ''), COALESCE(`product_id`, ''), COALESCE(`product_name`, ''), COALESCE(`quantity`, ''), COALESCE(`unit_original_price`, ''), COALESCE(`subtotal_before_discount`, ''), COALESCE(`total_discount`, ''), COALESCE(`subtotal_after_discount`, ''), COALESCE(`order_amount`, ''), COALESCE(`refund_amount`, ''), COALESCE(`created_at`, ''), COALESCE(`payment_method`, ''), COALESCE(`fulfillment_type`, ''), COALESCE(`shipping_provider`, ''), COALESCE(`order_channel`, ''), COALESCE(`creator_token`, ''), COALESCE(`buyer_token`, ''), COALESCE(`region_code`, ''), COALESCE(`package_token`, '')))) AS `_record_hash`
+FROM `{{PROJECT_ID}}.raw.orders`;

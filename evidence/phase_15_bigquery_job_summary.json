@@ -1,0 +1,28 @@
+{
+  "phase": 15,
+  "status": "PASS",
+  "checks": {
+    "traced_job_count_12": true,
+    "marker_counts_3_each": true,
+    "all_jobs_done": true,
+    "all_select_statements": true,
+    "composer_identity_match": true
+  },
+  "traced_job_count": 12,
+  "expected_job_count": 12,
+  "marker_counts": {
+    "core": 3,
+    "mart": 3,
+    "dq": 3,
+    "reconciliation": 3
+  },
+  "run_count": 3,
+  "unexpected_error_jobs": 0,
+  "total_bytes_processed": 3711,
+  "total_bytes_billed": 31457280,
+  "privacy": {
+    "job_ids_exposed": false,
+    "project_id_exposed": false,
+    "service_account_email_exposed": false
+  }
+}

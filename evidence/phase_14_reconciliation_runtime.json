@@ -1,0 +1,37 @@
+{
+  "phase": 14,
+  "status": "PASS",
+  "metadata_checks": {
+    "schema_fields_exact": true,
+    "partition_detected_at": true,
+    "partition_day": true,
+    "clustering_exact": true
+  },
+  "live_controls": {
+    "control_count": 8,
+    "matched_count": 8,
+    "mismatched_count": 0
+  },
+  "controlled_failure_recovery": {
+    "scenario_count": 6,
+    "detected_count": 6,
+    "recovered_count": 6
+  },
+  "result_write": {
+    "rows_before": 8,
+    "rows_after": 28,
+    "rows_written": 20,
+    "expected_rows_written": 20,
+    "validated": true
+  },
+  "zero_value_policy": {
+    "zero_rows": 231,
+    "preserved": true,
+    "automatic_failure": false
+  },
+  "privacy": {
+    "raw_company_values_in_public_evidence": false,
+    "real_bank_data_used": false,
+    "project_id_exposed": false
+  }
+}

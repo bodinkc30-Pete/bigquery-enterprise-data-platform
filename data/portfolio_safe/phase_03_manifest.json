@@ -1,0 +1,57 @@
+{
+  "phase": 3,
+  "generation_mode": "DETERMINISTIC_SYNTHETIC_FROM_LOCAL_AGGREGATE_PATTERNS",
+  "seed": 20260909,
+  "raw_identity_preserved": "NO",
+  "cloud_upload_performed": "NO",
+  "datasets": [
+    {
+      "dataset": "campaign_daily_synthetic.csv",
+      "rows": 366,
+      "columns": 7,
+      "sha256": "0f14d494fb6ec9989f3ae640fc881daa265d6c9604a377922a933bfd034bf304"
+    },
+    {
+      "dataset": "creator_payment_synthetic.csv",
+      "rows": 685,
+      "columns": 9,
+      "sha256": "6729de5bd5a7d6381b0c75660e34aacebb322a6b533976a3283e99477d88f05d"
+    },
+    {
+      "dataset": "creator_synthetic.csv",
+      "rows": 88,
+      "columns": 8,
+      "sha256": "7962755a26ccf98416099b6ace7be8d8f95e33d3a20719733992840b28975cc5"
+    },
+    {
+      "dataset": "live_daily_synthetic.csv",
+      "rows": 224,
+      "columns": 18,
+      "sha256": "e87f197b15b2d06bff68590669bba2270df7c095ac533bd81b7c3db943abb1c4"
+    },
+    {
+      "dataset": "orders_synthetic.csv",
+      "rows": 5249,
+      "columns": 21,
+      "sha256": "48a62557bc10c9a3b2de753ff034ddf3d66cccdbad1608f7db0f5b0dcc2cd9a1"
+    },
+    {
+      "dataset": "product_card_daily_synthetic.csv",
+      "rows": 30,
+      "columns": 16,
+      "sha256": "144333121f6e33faca96c86397b34d1766fc75f62aafab45cda5cb08754aca75"
+    },
+    {
+      "dataset": "product_sku_synthetic.csv",
+      "rows": 15,
+      "columns": 7,
+      "sha256": "5300faca7d05d28478a3b351531c6f1d7fb76afc33206f51d5d50e055f7eb8a3"
+    },
+    {
+      "dataset": "shop_daily_synthetic.csv",
+      "rows": 273,
+      "columns": 18,
+      "sha256": "e56a2653b08de06605d08fb8ef6e0791fae53ba9a290620dcadf7fa570bc9b18"
+    }
+  ]
+}

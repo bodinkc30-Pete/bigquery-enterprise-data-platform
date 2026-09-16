@@ -1,0 +1,70 @@
+{
+  "phase": 22,
+  "status": "PASS",
+  "checks": {
+    "baseline_design_valid": true,
+    "baseline_matrix_all_pass": true,
+    "controlled_failure_detected": true,
+    "controlled_failure_changes_outcome": true,
+    "recovery_design_valid": true,
+    "recovery_matrix_all_pass": true,
+    "recovery_matches_baseline": true,
+    "config_file_unchanged": true
+  },
+  "check_count": 8,
+  "baseline_matrix": {
+    "trusted_analyst_ingress": {
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "matched_rule": "trusted_analyst"
+    },
+    "untrusted_analyst_ingress": {
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "matched_rule": "default_deny"
+    },
+    "pipeline_service_ingress": {
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "matched_rule": "pipeline_runtime"
+    },
+    "arbitrary_identity_ingress": {
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "matched_rule": "default_deny"
+    },
+    "approved_bigquery_egress": {
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "matched_rule": "approved_bigquery_storage"
+    },
+    "arbitrary_egress": {
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "matched_rule": "default_deny"
+    },
+    "public_endpoint_without_controls": {
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "matched_rule": "private_path_guard"
+    }
+  },
+  "controlled_failure": {
+    "mutation": "INGRESS_DEFAULT_DENY_TO_ALLOW_IN_MEMORY",
+    "detected": true,
+    "unsafe_arbitrary_identity_outcome": "ALLOW"
+  },
+  "recovery": {
+    "status": "PASS",
+    "matrix_restored": true
+  },
+  "cloud_mutation": false,
+  "phase23_status": "NOT_STARTED"
+}

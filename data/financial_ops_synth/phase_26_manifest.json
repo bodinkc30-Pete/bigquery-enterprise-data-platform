@@ -1,0 +1,72 @@
+{
+  "phase": 26,
+  "generation_mode": "FULLY_SYNTHETIC_NO_COMPANY_SOURCE",
+  "seed": 20260914,
+  "source_dependencies": [],
+  "raw_company_identity_preserved": "NO",
+  "cloud_upload_performed": "NO",
+  "table_count": 10,
+  "total_rows": 24890,
+  "tables": [
+    {
+      "table": "customers",
+      "rows": 300,
+      "columns": 6,
+      "sha256": "f2210d47f608c0470fb72425641fd0d04250eb92d9f88b740b683fe7b264e98a"
+    },
+    {
+      "table": "accounts",
+      "rows": 450,
+      "columns": 6,
+      "sha256": "2e79f9498161f1ff52f6edb527a22de6ec280c36b5315b0170dd555ee5d4b228"
+    },
+    {
+      "table": "merchants",
+      "rows": 80,
+      "columns": 6,
+      "sha256": "b0904a4fceb65765916369b7ba8b2e181d254ae8f8db2c5f9c55c4ac730ac177"
+    },
+    {
+      "table": "transactions",
+      "rows": 5000,
+      "columns": 9,
+      "sha256": "b7c7173212483310fc8e5892ff3e3640c12a5e63ba22a9887dd67c4e1a25d4df"
+    },
+    {
+      "table": "payment_events",
+      "rows": 14268,
+      "columns": 8,
+      "sha256": "f0754806ffb4467a87822d8d62ea0762999d18cfa286e8ddc4a8af2084f168a7"
+    },
+    {
+      "table": "refunds",
+      "rows": 300,
+      "columns": 7,
+      "sha256": "7109c842a85eebadbdd039b58524caa533eaf33c9a692daff31db79fc2e8f001"
+    },
+    {
+      "table": "reversals",
+      "rows": 120,
+      "columns": 7,
+      "sha256": "283551e6289e2a020ba72e0eab648a3d9fd0cca58925645b218a12ddadcc5aeb"
+    },
+    {
+      "table": "settlement_batches",
+      "rows": 180,
+      "columns": 9,
+      "sha256": "f259d7b63fce923f90952ed7bb02927ee4e23ae72f8f930a3e64eb7e61786667"
+    },
+    {
+      "table": "settlement_items",
+      "rows": 3998,
+      "columns": 10,
+      "sha256": "0f1d818f6137c7fcd9affcb19b3931f474515e01dd469e729895a186e5c7b3f8"
+    },
+    {
+      "table": "daily_control_totals",
+      "rows": 194,
+      "columns": 11,
+      "sha256": "1494ee8ce7c3f66a99c7f4f47dca24609ca88334e0ef989a596aa6afaa70a644"
+    }
+  ]
+}

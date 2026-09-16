@@ -1,0 +1,27 @@
+{
+  "phase": 25,
+  "step": "25.7_STRICT_FREE_TIER_GUARD",
+  "status": "PASS",
+  "policy": "STRICT_FREE_TIER_ONLY",
+  "limits": {
+    "spanner_instance_type": "FREE_INSTANCE",
+    "spanner_storage_gib_max": 10,
+    "datastream_cdc_gib_monthly_max": 100,
+    "datastream_backfill_gib_monthly_max": 500,
+    "bigquery_storage_gib_monthly_max": 10,
+    "bigquery_on_demand_query_tib_monthly_max": 1,
+    "phase25_source_rows_max": 100
+  },
+  "forbidden": {
+    "paid_spanner_upgrade": true,
+    "bigquery_reservation": true,
+    "paid_datastream_overage": true,
+    "cloud_sql_fallback": true,
+    "billing_setting_mutation": true,
+    "raw_company_data": true,
+    "real_bank_data": true
+  },
+  "runtime_rule": "STOP_BEFORE_ANY_STEP_THAT_CAN_EXCEED_FREE_TIER",
+  "billing_hold": "RETRACTED_INVALID_SCREENSHOT",
+  "public_identifiers_exposed": false
+}

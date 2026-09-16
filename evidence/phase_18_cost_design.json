@@ -1,0 +1,56 @@
+{
+  "phase": 18,
+  "status": "PASS",
+  "checks": {
+    "contract_phase18": true,
+    "design_status": true,
+    "canonical_prebuild_status": true,
+    "target_rows_expected": true,
+    "budget_live_exact": true,
+    "budget_not_hard_cap": true,
+    "pricing_reference_exact": true,
+    "pricing_is_estimate_only": true,
+    "wide_dry_gt_narrow": true,
+    "full_scan_nonzero": true,
+    "max_fail_limit_below_billing_min": true,
+    "phase19_absent": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true
+  },
+  "budget": {
+    "live_match_count": 1,
+    "currency": "THB",
+    "monthly_amount": 350,
+    "alert_thresholds": [
+      0.5,
+      0.8,
+      1.0
+    ],
+    "hard_cap": false
+  },
+  "target": {
+    "row_count": 5249,
+    "benchmark_date": "2026-08-13"
+  },
+  "dry_run_bytes": {
+    "wide": 8903,
+    "narrow": 465,
+    "full": 3112501
+  },
+  "nominal_reference_cost_usd": {
+    "wide": 5.0608e-08,
+    "narrow": 2.643e-09,
+    "full": 1.769252e-05
+  },
+  "pricing": {
+    "reference_usd_per_tib": 6.25,
+    "free_tier_reference_tib": 1,
+    "estimate_only": true
+  },
+  "phase19_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "billing_account_exposed": false,
+    "query_text_exposed": false
+  }
+}

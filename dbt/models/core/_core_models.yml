@@ -1,0 +1,463 @@
+version: 2
+models:
+- name: dim_channel
+  description: Conformed commerce channel dimension.
+  columns:
+  - name: channel_key
+    data_tests:
+    - not_null
+    - unique
+  config:
+    meta:
+      grain:
+      - channel_key
+      primary_entity: commerce_channel
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_orders
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - channel_name
+      key_measures: []
+      timezone: NOT_APPLICABLE
+      currency: NOT_APPLICABLE
+      exclusions:
+      - Null order channels are excluded.
+      freshness_requirement: Refresh with accepted staging batch; no production SLA
+        claimed.
+- name: dim_creator
+  description: Conformed synthetic creator dimension.
+  columns:
+  - name: creator_key
+    data_tests:
+    - not_null
+    - unique
+  config:
+    meta:
+      grain:
+      - creator_key
+      primary_entity: creator
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_creator
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC_SENSITIVE_DERIVED
+      key_dimensions:
+      - creator_token
+      - historical_sales_band
+      - audience_gender_segment
+      - audience_age_segment
+      - pet_segment
+      key_measures:
+      - follower_count
+      - engagement_rate
+      - synthetic_budget
+      timezone: NOT_APPLICABLE
+      currency: UNSPECIFIED_IN_SOURCE
+      exclusions:
+      - Synthetic/tokenized creator attributes only; no raw identity or PII.
+      freshness_requirement: Refresh with accepted staging batch; no production SLA
+        claimed.
+- name: dim_date
+  description: Conformed business date dimension from accepted staging business dates.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+  config:
+    meta:
+      grain:
+      - date_key
+      primary_entity: business_date
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_orders
+      - staging.stg_shop_daily
+      - staging.stg_campaign_daily
+      - staging.stg_live_daily
+      - staging.stg_product_card_daily
+      - staging.stg_creator_payment
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - date
+      - year
+      - quarter
+      - month
+      - day_of_week
+      key_measures: []
+      timezone: BUSINESS_DATE_NO_TIMEZONE
+      currency: NOT_APPLICABLE
+      exclusions:
+      - Observed accepted business dates only; not a generated continuous calendar.
+      freshness_requirement: Refresh with accepted staging batch; no production SLA
+        claimed.
+- name: dim_payment_method
+  description: Conformed payment-method dimension.
+  columns:
+  - name: payment_method_key
+    data_tests:
+    - not_null
+    - unique
+  config:
+    meta:
+      grain:
+      - payment_method_key
+      primary_entity: payment_method
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_orders
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - payment_method
+      key_measures: []
+      timezone: NOT_APPLICABLE
+      currency: NOT_APPLICABLE
+      exclusions:
+      - Null payment methods are excluded.
+      freshness_requirement: Refresh with accepted staging batch; no production SLA
+        claimed.
+- name: dim_product
+  description: Conformed product dimension.
+  columns:
+  - name: product_key
+    data_tests:
+    - not_null
+    - unique
+  config:
+    meta:
+      grain:
+      - product_key
+      primary_entity: product
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_product_sku
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - product_id
+      - product_name
+      - status
+      key_measures:
+      - sku_count
+      timezone: NOT_APPLICABLE
+      currency: NOT_APPLICABLE
+      exclusions:
+      - No raw company identifiers or private source values.
+      freshness_requirement: Refresh with accepted staging batch; no production SLA
+        claimed.
+- name: dim_sku
+  description: Conformed SKU dimension with product relationship.
+  columns:
+  - name: sku_key
+    data_tests:
+    - not_null
+    - unique
+  - name: product_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_product')
+          field: product_key
+  config:
+    meta:
+      grain:
+      - sku_key
+      primary_entity: sku
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_product_sku
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - sku_id
+      - product_id
+      - product_name
+      - status
+      key_measures: []
+      timezone: NOT_APPLICABLE
+      currency: NOT_APPLICABLE
+      exclusions:
+      - No raw company identifiers or private source values.
+      freshness_requirement: Refresh with accepted staging batch; no production SLA
+        claimed.
+- name: fact_campaign_daily
+  description: Daily aggregate campaign fact; no campaign dimension because no source
+    business key exists.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  config:
+    meta:
+      grain:
+      - date_key
+      primary_entity: campaign_daily_aggregate
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_campaign_daily
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - date
+      - currency
+      key_measures:
+      - ad_spend
+      - sku_orders
+      - cost_per_order
+      - gross_revenue
+      - roi
+      timezone: BUSINESS_DATE_NO_TIMEZONE
+      currency: ROW_LEVEL_FIELD:currency
+      exclusions:
+      - Daily aggregate only; no campaign dimension or business key is inferred.
+      freshness_requirement: Daily portfolio refresh target; no production SLA claimed.
+- name: fact_creator_payment
+  description: Synthetic creator-payment fact using corrected 2026 payment dates.
+  columns:
+  - name: payment_key
+    data_tests:
+    - not_null
+    - unique
+  - name: date_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: creator_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_creator')
+          field: creator_key
+  config:
+    meta:
+      grain:
+      - payment_key
+      primary_entity: creator_payment
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_creator_payment
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC_SENSITIVE_DERIVED
+      key_dimensions:
+      - post_date
+      - creator_key
+      - payment_cycle
+      - payment_status
+      - payment_type
+      key_measures:
+      - payment_amount
+      timezone: BUSINESS_DATE_NO_TIMEZONE
+      currency: UNSPECIFIED_IN_SOURCE
+      exclusions:
+      - Synthetic payment operations only; no real bank account or PII; corrected
+        accepted 2026 post dates.
+      freshness_requirement: Refresh with accepted payment staging batch; no production
+        SLA claimed.
+- name: fact_live_daily
+  description: Daily LIVE commerce performance fact.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  config:
+    meta:
+      grain:
+      - date_key
+      primary_entity: live_daily
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_live_daily
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - date
+      key_measures:
+      - live_gmv
+      - direct_live_gmv
+      - indirect_live_gmv
+      - display_gpm
+      - live_streams
+      - gmv_live_streams
+      - attributed_units
+      - direct_units
+      - indirect_units
+      - customers
+      - live_ctr
+      - live_ctor
+      - live_views
+      - avg_watch_duration
+      timezone: BUSINESS_DATE_NO_TIMEZONE
+      currency: UNSPECIFIED_IN_SOURCE
+      exclusions:
+      - Daily aggregate only; source currency is not inferred.
+      freshness_requirement: Daily portfolio refresh target; no production SLA claimed.
+- name: fact_order_item
+  description: Order-item fact at one row per order_id and sku_id.
+  columns:
+  - name: order_item_key
+    data_tests:
+    - not_null
+    - unique
+  - name: date_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: sku_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_sku')
+          field: sku_key
+  - name: product_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_product')
+          field: product_key
+  - name: channel_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_channel')
+          field: channel_key
+  - name: creator_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_creator')
+          field: creator_key
+  - name: payment_method_key
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_payment_method')
+          field: payment_method_key
+  config:
+    meta:
+      grain:
+      - order_id
+      - sku_key
+      primary_entity: order_item
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_orders
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC_SENSITIVE_DERIVED
+      key_dimensions:
+      - order_date
+      - order_status
+      - channel_key
+      - sku_key
+      - product_key
+      - creator_key
+      - payment_method_key
+      - fulfillment_type
+      - shipping_provider
+      - region_code
+      key_measures:
+      - quantity
+      - unit_original_price
+      - subtotal_before_discount
+      - total_discount
+      - subtotal_after_discount
+      - order_amount
+      - refund_amount
+      timezone: UNSPECIFIED_IN_SOURCE
+      currency: UNSPECIFIED_IN_SOURCE
+      exclusions:
+      - Portfolio-safe/tokenized order-item data only; source currency and timezone
+        are not inferred.
+      freshness_requirement: Refresh with accepted order staging batch; no production
+        SLA claimed.
+- name: fact_product_card_daily
+  description: Daily product-card funnel fact.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  config:
+    meta:
+      grain:
+      - date_key
+      primary_entity: product_card_daily
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_product_card_daily
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - date
+      key_measures:
+      - views
+      - clicks
+      - customers
+      - sku_orders
+      - product_card_gmv
+      - checkout_cart_rate
+      - viewers
+      - add_to_cart_clicks
+      - unique_clicks
+      - cart_customers
+      - click_to_cart_rate
+      - view_to_click_rate
+      - view_to_checkout_rate
+      - click_to_checkout_rate
+      - content_gmv
+      timezone: BUSINESS_DATE_NO_TIMEZONE
+      currency: UNSPECIFIED_IN_SOURCE
+      exclusions:
+      - Daily aggregate only; source currency is not inferred.
+      freshness_requirement: Daily portfolio refresh target; no production SLA claimed.
+- name: fact_shop_daily
+  description: Daily shop performance fact.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  config:
+    meta:
+      grain:
+      - date_key
+      primary_entity: shop_daily
+      owner: data_engineering_portfolio
+      source_lineage:
+      - staging.stg_shop_daily
+      sensitive_classification: PORTFOLIO_SAFE_SYNTHETIC
+      key_dimensions:
+      - date
+      key_measures:
+      - gmv
+      - orders
+      - customers
+      - units_sold
+      - refund_amount
+      - sku_orders
+      - revenue
+      - page_views
+      - visitors
+      - conversion_rate
+      - aov
+      - live_creator_gmv
+      - video_affiliate_gmv
+      timezone: BUSINESS_DATE_NO_TIMEZONE
+      currency: UNSPECIFIED_IN_SOURCE
+      exclusions:
+      - Daily aggregate only; source currency is not inferred.
+      freshness_requirement: Daily portfolio refresh target; no production SLA claimed.

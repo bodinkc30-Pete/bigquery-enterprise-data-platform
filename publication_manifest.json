@@ -1,0 +1,1048 @@
+{
+  "purpose": "SANITIZED_PUBLIC_PORTFOLIO_SNAPSHOT",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-16T08:57:55.440967+00:00",
+  "history_included": false,
+  "private_runtime_included": false,
+  "raw_company_data_included": false,
+  "real_bank_data_included": false,
+  "file_count": 259,
+  "files": [
+    {
+      "path": ".github/workflows/public-ci.yml",
+      "sha256": "5500d4cec4d96e612df9c163f33871bfd3cebfa0bdb151d95efa222c4cfb1b45"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b97ec0abc0fbe40e4cde16b9acad6ffc9a113d0c8234bc901282b4d7a8eea6a2"
+    },
+    {
+      "path": "data/financial_ops_synth/accounts.csv",
+      "sha256": "2e79f9498161f1ff52f6edb527a22de6ec280c36b5315b0170dd555ee5d4b228"
+    },
+    {
+      "path": "data/financial_ops_synth/customers.csv",
+      "sha256": "f2210d47f608c0470fb72425641fd0d04250eb92d9f88b740b683fe7b264e98a"
+    },
+    {
+      "path": "data/financial_ops_synth/daily_control_totals.csv",
+      "sha256": "1494ee8ce7c3f66a99c7f4f47dca24609ca88334e0ef989a596aa6afaa70a644"
+    },
+    {
+      "path": "data/financial_ops_synth/merchants.csv",
+      "sha256": "b0904a4fceb65765916369b7ba8b2e181d254ae8f8db2c5f9c55c4ac730ac177"
+    },
+    {
+      "path": "data/financial_ops_synth/payment_events.csv",
+      "sha256": "f0754806ffb4467a87822d8d62ea0762999d18cfa286e8ddc4a8af2084f168a7"
+    },
+    {
+      "path": "data/financial_ops_synth/phase_26_manifest.json",
+      "sha256": "5596fcf8ba82f85e00748ad556028ee2853442db4cc7907dd0d3c9726c9405b4"
+    },
+    {
+      "path": "data/financial_ops_synth/refunds.csv",
+      "sha256": "7109c842a85eebadbdd039b58524caa533eaf33c9a692daff31db79fc2e8f001"
+    },
+    {
+      "path": "data/financial_ops_synth/reversals.csv",
+      "sha256": "283551e6289e2a020ba72e0eab648a3d9fd0cca58925645b218a12ddadcc5aeb"
+    },
+    {
+      "path": "data/financial_ops_synth/settlement_batches.csv",
+      "sha256": "f259d7b63fce923f90952ed7bb02927ee4e23ae72f8f930a3e64eb7e61786667"
+    },
+    {
+      "path": "data/financial_ops_synth/settlement_items.csv",
+      "sha256": "0f1d818f6137c7fcd9affcb19b3931f474515e01dd469e729895a186e5c7b3f8"
+    },
+    {
+      "path": "data/financial_ops_synth/transactions.csv",
+      "sha256": "b7c7173212483310fc8e5892ff3e3640c12a5e63ba22a9887dd67c4e1a25d4df"
+    },
+    {
+      "path": "data/portfolio_safe/campaign_daily_synthetic.csv",
+      "sha256": "0f14d494fb6ec9989f3ae640fc881daa265d6c9604a377922a933bfd034bf304"
+    },
+    {
+      "path": "data/portfolio_safe/creator_payment_synthetic.csv",
+      "sha256": "6729de5bd5a7d6381b0c75660e34aacebb322a6b533976a3283e99477d88f05d"
+    },
+    {
+      "path": "data/portfolio_safe/creator_synthetic.csv",
+      "sha256": "7962755a26ccf98416099b6ace7be8d8f95e33d3a20719733992840b28975cc5"
+    },
+    {
+      "path": "data/portfolio_safe/live_daily_synthetic.csv",
+      "sha256": "e87f197b15b2d06bff68590669bba2270df7c095ac533bd81b7c3db943abb1c4"
+    },
+    {
+      "path": "data/portfolio_safe/orders_synthetic.csv",
+      "sha256": "48a62557bc10c9a3b2de753ff034ddf3d66cccdbad1608f7db0f5b0dcc2cd9a1"
+    },
+    {
+      "path": "data/portfolio_safe/phase_03_manifest.json",
+      "sha256": "3da393ac7e0252b2b0d8845881030f894f4e494690eb7f861a0ed6d68c0aff1e"
+    },
+    {
+      "path": "data/portfolio_safe/product_card_daily_synthetic.csv",
+      "sha256": "144333121f6e33faca96c86397b34d1766fc75f62aafab45cda5cb08754aca75"
+    },
+    {
+      "path": "data/portfolio_safe/product_sku_synthetic.csv",
+      "sha256": "5300faca7d05d28478a3b351531c6f1d7fb76afc33206f51d5d50e055f7eb8a3"
+    },
+    {
+      "path": "data/portfolio_safe/shop_daily_synthetic.csv",
+      "sha256": "e56a2653b08de06605d08fb8ef6e0791fae53ba9a290620dcadf7fa570bc9b18"
+    },
+    {
+      "path": "dbt/dbt_project.yml",
+      "sha256": "8e81f21573777cb97a4f92f0da8c4e9eeeaf4d404281394feea7489359ed2c3a"
+    },
+    {
+      "path": "dbt/macros/generate_schema_name.sql",
+      "sha256": "814917def939ba7eae58bbf55a1a9e14d1aac014a0346a054328b524698020cc"
+    },
+    {
+      "path": "dbt/macros/phase11_incremental_window.sql",
+      "sha256": "5e26f01c76fcd0fac80f99131a92b23db8eb5bfbe382abd349a7ec5eb8a9213b"
+    },
+    {
+      "path": "dbt/macros/phase27_incremental_window.sql",
+      "sha256": "70086e416fbc8441430c523b75c4eb36840e267125c4413b1c80f8737b95a9ee"
+    },
+    {
+      "path": "dbt/models/core/_core_models.yml",
+      "sha256": "14db459235ee729da0158f6732b265d9e2ae195009113aff681e0ac7e2f3fc31"
+    },
+    {
+      "path": "dbt/models/core/dim_channel.sql",
+      "sha256": "2b260211335bae96dd315dd0417b7ec9124df596525ed9190b79687870efa635"
+    },
+    {
+      "path": "dbt/models/core/dim_creator.sql",
+      "sha256": "ceade11a21f674b9217fef733621801a5b563a012aaaa70bca7386f964337c02"
+    },
+    {
+      "path": "dbt/models/core/dim_date.sql",
+      "sha256": "e069d76cecc175df3a792d0600b80bdc2e294ade26019f280b926323382134cc"
+    },
+    {
+      "path": "dbt/models/core/dim_payment_method.sql",
+      "sha256": "22125619d198486b4d68073f913e0bc97f42f969ef88232ef36296c8f1e75a6f"
+    },
+    {
+      "path": "dbt/models/core/dim_product.sql",
+      "sha256": "5b350e1eae7f880f6c260a7139660fd6baa8bdbd44187d684f90fbddbe450900"
+    },
+    {
+      "path": "dbt/models/core/dim_sku.sql",
+      "sha256": "cb657ba6e3abf36b587ff134aa855d297f3fdb90636a8dd37849876b79a9dbc0"
+    },
+    {
+      "path": "dbt/models/core/fact_campaign_daily.sql",
+      "sha256": "b6cf94b6712d4449bd32c60bce5e0f0406b43198c5a7023bc0c3cacb26c6101b"
+    },
+    {
+      "path": "dbt/models/core/fact_creator_payment.sql",
+      "sha256": "8ffcde3bbc5fe8c9debe3558f72d13949903bd08c10bc5e2cf5d8e6dc2886e86"
+    },
+    {
+      "path": "dbt/models/core/fact_live_daily.sql",
+      "sha256": "1432523a21cdfb3b1dfdb08fde18ab9610012d3021548133b63e29fade02b682"
+    },
+    {
+      "path": "dbt/models/core/fact_order_item.sql",
+      "sha256": "041090606c71869243b77f96bc1ef475b5b98eeb12ea2a5d4f580d946cdeb16d"
+    },
+    {
+      "path": "dbt/models/core/fact_product_card_daily.sql",
+      "sha256": "fadfee6cf6234f0cd6fd63f0f0db2d35afc59c4f97d743bd2e3f78d3ec3d9da9"
+    },
+    {
+      "path": "dbt/models/core/fact_shop_daily.sql",
+      "sha256": "715148a05f05fa5e0a733aa2ba2bc2f71588af6531733b1e7740d91bb53057c2"
+    },
+    {
+      "path": "dbt/models/financial_marts/_financial_models.yml",
+      "sha256": "29c32add30fca514cf727dae72de6ccf367b5ded25660c515cd5fafdfb846ac4"
+    },
+    {
+      "path": "dbt/models/financial_marts/mart_financial_ops_daily.sql",
+      "sha256": "f4f1ffe35daef8208db62494bec0822af3c4381e8b593b6e350a06a8a4e5449f"
+    },
+    {
+      "path": "dbt/models/financial_marts/mart_reconciliation_daily.sql",
+      "sha256": "1ed9d3528ca7b43d82c91e5b751910f70b930bbb3287e8755363a79cada0414d"
+    },
+    {
+      "path": "dbt/models/financial_marts/mart_settlement_daily.sql",
+      "sha256": "a03fd9777d40ea33a119f5e9a6193c827c3014237c7a458c883dc3c5ccf894af"
+    },
+    {
+      "path": "dbt/models/financial_marts/mart_transaction_status_daily.sql",
+      "sha256": "e01eda26b142ad145d34e561a26f69f1cf43f9f67b2ce1e31ba6cb6e80c20499"
+    },
+    {
+      "path": "dbt/models/marts/_mart_models.yml",
+      "sha256": "d7000daebb7dfbc05b7b051b15c67d571f23ab4ea7b07d85fdb59d93574296fc"
+    },
+    {
+      "path": "dbt/models/marts/mart_commerce_daily.sql",
+      "sha256": "30dc3a9312ab87f6f08b2d331caf8daf08debb59e5645e0c452b718e80132bdb"
+    },
+    {
+      "path": "dbt/models/marts/mart_creator_daily.sql",
+      "sha256": "bcc07f6c57e4da42f8e1576594337091089d49db446dfdaf765eee7f516211b8"
+    },
+    {
+      "path": "dbt/models/marts/mart_marketing_daily.sql",
+      "sha256": "608a4e57b4aa4f347a19e39d4f0ddc0c024dbb020696242fa6f67b57813f6a9a"
+    },
+    {
+      "path": "dbt/models/marts/mart_payment_daily.sql",
+      "sha256": "e47530bfc79d87d0e1219571f8c08e95b179864a6b0f8d5431b07bfaf8b1b3a1"
+    },
+    {
+      "path": "dbt/models/sources.yml",
+      "sha256": "aafd7a7c5adea822bc8d48c47273cc5607500ed44ce3dd201cd5c9c1f87c6ce5"
+    },
+    {
+      "path": "dbt/profiles.yml",
+      "sha256": "0b8ad9e4af4333f9ee19a9e03031dd5845687cfe7e65fc5ad2c5e13144e752f7"
+    },
+    {
+      "path": "dbt/requirements.txt",
+      "sha256": "63805682c7629adfd696dffbfb444f6b127afceff8809ff2108dbf2417101766"
+    },
+    {
+      "path": "dbt/tests/controlled_failure_probe.sql",
+      "sha256": "f64c2c15b8c4a932cc2e9936d7d2c4574c9c4bd1f41788d0377a07870a0ed89e"
+    },
+    {
+      "path": "dbt/tests/creator_payment_date_guard.sql",
+      "sha256": "15a73b944e714be09eacdd684f8102110b456bf3d2020e281679833570761314"
+    },
+    {
+      "path": "dbt/tests/phase10_controlled_failure_probe.sql",
+      "sha256": "2f50113514be4f4a4c2419462547f087543d1fcd068b403df08f3375c33e2ce3"
+    },
+    {
+      "path": "dbt/tests/phase10_mart_creator_grain.sql",
+      "sha256": "042ea316672ccabfb702a27c6d27bcc3ecc4285bed24c35c0971df3c3b07d7b5"
+    },
+    {
+      "path": "dbt/tests/phase10_mart_payment_grain.sql",
+      "sha256": "948bc48b4cd773dd7ea206a27ba9cc8bfc5887d793ed706bbf8e5a1738253e1c"
+    },
+    {
+      "path": "dbt/tests/phase10_payment_reconciliation.sql",
+      "sha256": "b51ce8d018f42b7753b8620a09aeeca52c0b83da1ee6d781d135bb7ca964b115"
+    },
+    {
+      "path": "dbt/tests/phase27_currency_guard.sql",
+      "sha256": "22630531899e861bdc981f5b580c8e934f72d609d81c9ef344b71ec5f3a2538b"
+    },
+    {
+      "path": "dbt/tests/phase27_financial_ops_grain.sql",
+      "sha256": "63c6a645862e53aff5db7adc96ad9ceca1ab96537c03b17f30330dbfb37a14dd"
+    },
+    {
+      "path": "dbt/tests/phase27_reconciliation_all_matched.sql",
+      "sha256": "e8ce9d9b87d5f9a3bd6aa4fbbf5b35a984aedda9152846d071aabd1d7e0d06a2"
+    },
+    {
+      "path": "dbt/tests/phase27_reconciliation_grain.sql",
+      "sha256": "93d2b2e328901cc07f57bc9e4acd2ff40fb6b69295e910b4bc16d22dead192c5"
+    },
+    {
+      "path": "dbt/tests/phase27_settlement_all_matched.sql",
+      "sha256": "54edf0fc5cdb75fb949ed18003de8920984411275c59aa8a1dba90fd0e31f94b"
+    },
+    {
+      "path": "dbt/tests/phase27_settlement_grain.sql",
+      "sha256": "412e60a3ae3955803d4e035a0a0e1fc7d1c949ad68a6a6f35c1ce987a8babe57"
+    },
+    {
+      "path": "dbt/tests/phase27_transaction_status_grain.sql",
+      "sha256": "91f32d4fb8e30977ed583e239a518b6a992a69af71c4aa867ff04561385a75f5"
+    },
+    {
+      "path": "evidence/phase_06_gcs_security_runtime.json",
+      "sha256": "f5ca6250ee5430cc9e1d062e41e3cc15fdd2af7e4283b110305bd31cc7071f2a"
+    },
+    {
+      "path": "evidence/phase_06_idempotency.json",
+      "sha256": "fddb9b4c6b64ed489efd712da5e0d391410d83c31c3be473fc626700389d1be9"
+    },
+    {
+      "path": "evidence/phase_06_upload_verification.json",
+      "sha256": "0dadcbddf9f0638fcef84b234ea6b1aa97340a01bb6ae9e881267a1735335a07"
+    },
+    {
+      "path": "evidence/phase_07_bigquery_job_summary.json",
+      "sha256": "bdf3dd5c9af6c5fff9262c495981091381264db50e3377249f255b5ff598f974"
+    },
+    {
+      "path": "evidence/phase_07_bigquery_runtime.json",
+      "sha256": "5e9d1dd704691e0ca02609741c660b2219aff0b7775c585b5c9179e4ec5b073c"
+    },
+    {
+      "path": "evidence/phase_07_terraform_zero_drift.json",
+      "sha256": "78e692a4f7ba36213ea7651246a60ea599523bd7e1fe559c8b501e03195b4e4f"
+    },
+    {
+      "path": "evidence/phase_08_core_runtime.json",
+      "sha256": "fbd35a67dd59f3055909e8918790bf04a5524f4f45bfe7a107dcb27365ccf9d6"
+    },
+    {
+      "path": "evidence/phase_08_failure_recovery_runtime.json",
+      "sha256": "d3b706a414d2da84d15c30b7ec0bc20e69e880a34b28afcc9c5be0c21e8b7fc3"
+    },
+    {
+      "path": "evidence/phase_08_physical_design.json",
+      "sha256": "60996c134d5ef7d8e5669edaa703aebba79f384a7b2c5f93a0f6c6b5c788a559"
+    },
+    {
+      "path": "evidence/phase_08_terraform_zero_drift.json",
+      "sha256": "fec4e08582829950391f7e237b5599f2441e3ba9e70a6394b640a1844de46146"
+    },
+    {
+      "path": "evidence/phase_08_upstream_date_remediation_validation.json",
+      "sha256": "1d5ce25dcf921ba09589db28fa765151dbc8ef19a9cdf1b80aacb3791ac1dc17"
+    },
+    {
+      "path": "evidence/phase_08_upstream_gcs_remediation.json",
+      "sha256": "4d76966e952eb51e8935afd1df8e8be0694441ec8ae36cd9e6e8599213a41d36"
+    },
+    {
+      "path": "evidence/phase_09_dbt_runtime.json",
+      "sha256": "39cdf6b8c7959a72fff4f4104a682f268e2899e4c6156516988c0d339d855979"
+    },
+    {
+      "path": "evidence/phase_09_semantic_contract_validation.json",
+      "sha256": "1f8de2f2cbc42b8f8419e7a1a18afa1ab14908b84d6b21e8387465b7594e95e5"
+    },
+    {
+      "path": "evidence/phase_10_bigquery_job_summary.json",
+      "sha256": "2eec02092093bbfc1f4ff43ecb5ee06d28cdcb3739e182fae04a95a2b8067092"
+    },
+    {
+      "path": "evidence/phase_10_design_validation.json",
+      "sha256": "cf12c305a6bd2fc3365be43e931b15012b4aa6d387189d428e8e4460c48e28f4"
+    },
+    {
+      "path": "evidence/phase_10_mart_runtime.json",
+      "sha256": "85f943eee8ff5cc2e4561b9c845e8fbfdf42250060ef2590b257063427b02818"
+    },
+    {
+      "path": "evidence/phase_10_prebuild_design_validation.json",
+      "sha256": "905044fc22bdadddbf2b1ed6ba7dc13922e4fb4c97fddf9c3519c38ca1e136b4"
+    },
+    {
+      "path": "evidence/phase_10_semantic_context_validation.json",
+      "sha256": "66e0d13bd3bec1f24ffe6fe86e9c71569ed7dc606a88c81aec5508336088fb67"
+    },
+    {
+      "path": "evidence/phase_10_terraform_zero_drift.json",
+      "sha256": "8aeff8a005d5c301509ec32a70bde62cbf2742abdf0de6b7a420ad2266daa85a"
+    },
+    {
+      "path": "evidence/phase_11_bigquery_job_summary.json",
+      "sha256": "39818632a3074031f8a0d0cddb1110dc9094ab0f151b0b26643632ed71407b78"
+    },
+    {
+      "path": "evidence/phase_11_incremental_runtime.json",
+      "sha256": "d1ec6101eb94742fb740c8871f9190ec71d879b7717beef704e7a4dff64bc49d"
+    },
+    {
+      "path": "evidence/phase_11_terraform_zero_drift.json",
+      "sha256": "b1a7e39839b1c4c766326be8a584b47f7485dba310292984c6c0d6366eb55049"
+    },
+    {
+      "path": "evidence/phase_12_accepted_state_recovery.json",
+      "sha256": "e34f3a9cb3b8c31890c18759f22cfcdebb392787bdc0a82a526bfabc6a055e5b"
+    },
+    {
+      "path": "evidence/phase_12_bigquery_job_summary.json",
+      "sha256": "b3c96781f8252fcd2a9b9ed32aa45de43b59ba6371969d038441d2ba5293db4b"
+    },
+    {
+      "path": "evidence/phase_12_metadata_consistency_diagnosis.json",
+      "sha256": "4912f2a272298c6ebc6f9ce39fa58d1357764b7013903e96cac7aa0c83a750b1"
+    },
+    {
+      "path": "evidence/phase_12_schema_baseline_validation.json",
+      "sha256": "ca5cfd31c23641c64d2b63f81c613f6e75543daa8f9e8e412ba7f9219b804335"
+    },
+    {
+      "path": "evidence/phase_12_schema_evolution_lab.json",
+      "sha256": "a316fb99e34909da21f3e47a3fba54024e71abb84f96563c3460eb6dfde885b4"
+    },
+    {
+      "path": "evidence/phase_12_terraform_zero_drift.json",
+      "sha256": "a614bd59cf6b14f790637871a736136952092f2bbfe48d0de6c814cce607971f"
+    },
+    {
+      "path": "evidence/phase_13_bigquery_job_summary.json",
+      "sha256": "d2b58867032f779b67cd2360509118c9c911c92d3ecd3d858ab8fa111847fddd"
+    },
+    {
+      "path": "evidence/phase_13_dq_design_probe.json",
+      "sha256": "5a6f483ac70586f77375c1eb3eb124b2d1d5d216bb40e4da3aa01d0c6f5bf50f"
+    },
+    {
+      "path": "evidence/phase_13_dq_runtime.json",
+      "sha256": "fcc9167c892f7d1c02932736177941b42c0acddbf166e5ff6eeaea4b70ff56af"
+    },
+    {
+      "path": "evidence/phase_13_terraform_zero_drift.json",
+      "sha256": "f4b1725884b5e8c9797559dc356f1d816e1f3fdb07fde50fa529ec6c336ed02e"
+    },
+    {
+      "path": "evidence/phase_14_bigquery_job_summary.json",
+      "sha256": "a9b8d99a6fcf13c457847d1ee7895b2c443d0652d9feb997c7f06b2aa2f2f443"
+    },
+    {
+      "path": "evidence/phase_14_reconciliation_design.json",
+      "sha256": "19f943b69c51158e2429f7299c3fc0c008dcd8610e79f7104d5aaa1e2d70581d"
+    },
+    {
+      "path": "evidence/phase_14_reconciliation_runtime.json",
+      "sha256": "015fcd53b95062915a5db96f160621dd55ca8bd2b19b3633b042aea1eff4c0f1"
+    },
+    {
+      "path": "evidence/phase_14_terraform_zero_drift.json",
+      "sha256": "a848e6d6e8cf76dd742a9689df7306c8010568930ede3e7f94723071cdd79297"
+    },
+    {
+      "path": "evidence/phase_15_bigquery_job_summary.json",
+      "sha256": "7cf0e4568d7b733803087ba51f37fb3fe176d8a04fba7d86adbd903ac6c181db"
+    },
+    {
+      "path": "evidence/phase_15_composer_design.json",
+      "sha256": "01ebf8b155995af671357e11ba26cbf4a6da5bb95075f92e07129e011ec91f05"
+    },
+    {
+      "path": "evidence/phase_15_composer_runtime.json",
+      "sha256": "20129a4aa23985b7b21b36f86ce51e83585698a4eb6b8525784d192ab805d142"
+    },
+    {
+      "path": "evidence/phase_15_composer_teardown.json",
+      "sha256": "c97c0ba306b322d5524a82f5a62e237a34be666a14d73515f1ada58b36b6093e"
+    },
+    {
+      "path": "evidence/phase_15_failure_recovery.txt",
+      "sha256": "09ee1fbfe97174c6ed046f442d26054b75d87fd34b0f6192b735b27e4257385d"
+    },
+    {
+      "path": "evidence/phase_15_image_selection.json",
+      "sha256": "818a64d80e7523bd26e565f4093a346a374943e26c7ca73cc73908de6dabdd7c"
+    },
+    {
+      "path": "evidence/phase_15_terraform_zero_drift.json",
+      "sha256": "b927fe1b6e3dfa886e8f35532b134ccbbb5bcd47813f0d141b28363fcc920f17"
+    },
+    {
+      "path": "evidence/phase_16_cloud_validation.json",
+      "sha256": "0b69317d139aa972dba13966b06515aded1dddc5ceaab5677c9eb1ad2b37719f"
+    },
+    {
+      "path": "evidence/phase_16_failure_recovery.txt",
+      "sha256": "43a6306bb50a57024fd65452e3b5c96caa4c399ff8d0f1d291d8cb6d7ba379e9"
+    },
+    {
+      "path": "evidence/phase_16_observability_design.json",
+      "sha256": "dbab4bea283d807f6e6f4b0beb8851ba0b5274f6dda357ef2a267ad769bdfc23"
+    },
+    {
+      "path": "evidence/phase_16_observability_runtime.json",
+      "sha256": "69f7f88744d7ee7a6dc884355d7a7f26682e29560d4a1f89a61be96786b7d4b6"
+    },
+    {
+      "path": "evidence/phase_16_terraform_zero_drift.json",
+      "sha256": "e64600cdcb1662eb58fec88a05a51ef0d4de2f47c381fc90f1ceb136c0691b5d"
+    },
+    {
+      "path": "evidence/phase_17_closure_verification.json",
+      "sha256": "4f9eb1d8592ea7b7c7b617b77100d07c0223a7a6202dd0a0993c1753e3a55cb4"
+    },
+    {
+      "path": "evidence/phase_17_failure_recovery.txt",
+      "sha256": "66686a9ea7c05efb8274b282148f978caaa97ffa31afa61a3f6458921e05363f"
+    },
+    {
+      "path": "evidence/phase_17_performance_design.json",
+      "sha256": "a44bd26011244766a78181bf8b0fa4412c3bb6ce113e86d10c54072f95b9a632"
+    },
+    {
+      "path": "evidence/phase_17_performance_runtime.json",
+      "sha256": "2d361daf70bac9662adcd7beb175079345a381dfdebe9c953dbc80f677a7f9e3"
+    },
+    {
+      "path": "evidence/phase_17_terraform_zero_drift.json",
+      "sha256": "4a6aaef98039ea11840cb3ba4e3818eef9d3f3bf44df1aacaaa605a09b1c2eb2"
+    },
+    {
+      "path": "evidence/phase_18_cost_design.json",
+      "sha256": "f8e5dc7a3bc0cb10809020780dddf8dd81f1612b75c87f791aacacbf9ec4eb78"
+    },
+    {
+      "path": "evidence/phase_18_cost_runtime.json",
+      "sha256": "ecc2f56dcd81d93d9f95e61f0a929de68008f18efc0f6b0a12a622827c4d2e7a"
+    },
+    {
+      "path": "evidence/phase_18_failure_recovery.txt",
+      "sha256": "53d34ce03b9f6238cd3e06a600310be3f7f494aebc83510deb92b6092cf26ee8"
+    },
+    {
+      "path": "evidence/phase_18_terraform_zero_drift.json",
+      "sha256": "635da75ce5c1af194b8caecd8cd395ead9446e04ceeb8045e2debf0401e70221"
+    },
+    {
+      "path": "evidence/phase_19_benchmark_design.json",
+      "sha256": "7636343516df0d937bc35897825eecc16a5a2669571e62b12e8611da6fcefef0"
+    },
+    {
+      "path": "evidence/phase_19_benchmark_runtime.json",
+      "sha256": "8d93c48b6541d0cf471ad368e754fd339b3af1ee820e7c01f4913085c214f3ad"
+    },
+    {
+      "path": "evidence/phase_19_failure_recovery.txt",
+      "sha256": "5fb47f0af6eecff37b1f458167b7ee454a8ca6929002ded032b559076a28eaa4"
+    },
+    {
+      "path": "evidence/phase_19_terraform_zero_drift.json",
+      "sha256": "d2f6b0b785588dc1b00ab13e04631164befb890c7e588d920e1ef6bf85a430a8"
+    },
+    {
+      "path": "evidence/phase_20_closure_verification.json",
+      "sha256": "75e4d822b3f31d73d8f51f72864506ac67fdfa1479803522bf53b892a3b50ad5"
+    },
+    {
+      "path": "evidence/phase_20_failure_recovery.txt",
+      "sha256": "c6609b4966ca35b77cadea41e77deb8811c5a0798dddabcb122cc8ecdd3d51f0"
+    },
+    {
+      "path": "evidence/phase_20_governance_design.json",
+      "sha256": "2af8fc54649f583f4352d884fa7f27317f619d8e53081725b14adc453001138f"
+    },
+    {
+      "path": "evidence/phase_20_governance_runtime.json",
+      "sha256": "302ccef21c6ec71ee43d166c6103c4f5bcc22e10caf51ec0ebe7e85ff8a73d4f"
+    },
+    {
+      "path": "evidence/phase_20_terraform_zero_drift.json",
+      "sha256": "b09dcadffb35365cd06739584d07a1d7965c1d5b7a686bf9fb2191b9cc3d3755"
+    },
+    {
+      "path": "evidence/phase_21_acceptance.txt",
+      "sha256": "72097964d8e678496b2f12a872be99ed54321bbfb742ce1f4a3d9217751704f5"
+    },
+    {
+      "path": "evidence/phase_21_closure_verification.json",
+      "sha256": "0c53717b90b824ab45de07385a8108218241d8793438cc312b1759590d2c20ba"
+    },
+    {
+      "path": "evidence/phase_21_failure_recovery.txt",
+      "sha256": "913f256623df2367e6cbd2bcfa11d927475f84b09f49cac816eaa337532e7b4e"
+    },
+    {
+      "path": "evidence/phase_21_security_design.json",
+      "sha256": "94f9f5891b96d7848eb73084c72f7446e2f6541b6a797ac71d9486f655df0e66"
+    },
+    {
+      "path": "evidence/phase_21_security_runtime.json",
+      "sha256": "7c8032b672a8a074056edf55a0e0199afbfef6b83cfb39d84d1a86cf2ff9230d"
+    },
+    {
+      "path": "evidence/phase_21_terraform_zero_drift.json",
+      "sha256": "9ba2475ab37e3e3b01866b387288dbc63909ac7f6ac02ad9ae17649f8cba285a"
+    },
+    {
+      "path": "evidence/phase_22_acceptance.txt",
+      "sha256": "d473a4caa077ffac9019f6eb646e11a1c76699e71192d44fd5840e2a6553dcc5"
+    },
+    {
+      "path": "evidence/phase_22_closure_verification.json",
+      "sha256": "b24942151e0d8f08cc8fdf3d48d32d734c4118cbb7938939deb2bf4c5a38caba"
+    },
+    {
+      "path": "evidence/phase_22_failure_recovery.txt",
+      "sha256": "a95940bbbb695730d2fde3ad7107a717e4a299ff13fc5172820321d5da22938f"
+    },
+    {
+      "path": "evidence/phase_22_policy_simulation.json",
+      "sha256": "e668649d7c9c3db87bcd8416da830e42e634c2ca2f72d7a61f8c883c42311af6"
+    },
+    {
+      "path": "evidence/phase_22_security_design_probe.json",
+      "sha256": "721180b0322eca18417edbab3436fbba97a57cc390c189b0ea42675bb1b57f2b"
+    },
+    {
+      "path": "evidence/phase_22_terraform_static_validation.json",
+      "sha256": "f460b44f97c6586137546741e7146e95a5aa996eeb8501c45c1d7ef7db17f748"
+    },
+    {
+      "path": "evidence/phase_23_acceptance.txt",
+      "sha256": "473bf4d4bede7d11cfb47dee02044429fb13477c120ce7649acfdfdb81c70c71"
+    },
+    {
+      "path": "evidence/phase_23_failure_design.json",
+      "sha256": "17caa2af87ff0d4d51e70a09017d1efb4d096db99decd9b425e09a0e7b778f0e"
+    },
+    {
+      "path": "evidence/phase_23_failure_runtime.json",
+      "sha256": "1b05d71e79f659c5b4d72a357dd41b2e3238168a4beeae5a9baa6073a3853f29"
+    },
+    {
+      "path": "evidence/phase_23_terraform_zero_drift.json",
+      "sha256": "27c3ea54c5715cda3b634d5edfd6f9c265f3a362b215114c6edf95f72adaf6a7"
+    },
+    {
+      "path": "evidence/phase_24_acceptance.txt",
+      "sha256": "190c49edc0a9d91e08d80259dda7f40a8b66b85e1df28a92f8ac46a3d268087d"
+    },
+    {
+      "path": "evidence/phase_24_streaming_runtime_final.json",
+      "sha256": "724ab9b421fe86aca0d98e00769e75d2916f4e16299c6317c80f2f206ffbc36e"
+    },
+    {
+      "path": "evidence/phase_24_teardown_plan_validation.json",
+      "sha256": "6b959bc734deca5a34a0c2fca4f76eba2f7d9afeee3dfd43481c781f9e91d222"
+    },
+    {
+      "path": "evidence/phase_24_terraform_zero_drift.json",
+      "sha256": "dab26bb74609848fd4b8d184ac95f1e696f79987c90c4bf2a10dd9d06ca20efa"
+    },
+    {
+      "path": "evidence/phase_25_acceptance.txt",
+      "sha256": "1a1bfc82b4b4b2f6c579a52eeae7ebd99f27eda83346e0ca2701ea18aa67c6cf"
+    },
+    {
+      "path": "evidence/phase_25_backfill_failure_recovery.txt",
+      "sha256": "4b5f952b92b2ec375f7d06021566d8567c0f17415e9f6ceb49c6bfd60c72c046"
+    },
+    {
+      "path": "evidence/phase_25_backfill_runtime.json",
+      "sha256": "8df0f6514f439f04efad05a99599ad96d4231e1d5dd05d61729253be225c903f"
+    },
+    {
+      "path": "evidence/phase_25_cdc_delete_recovery.json",
+      "sha256": "acc74b7c06611cab8d8bdd0ff2a3e173413417a804a857665570e0640db90828"
+    },
+    {
+      "path": "evidence/phase_25_cdc_failure_recovery.txt",
+      "sha256": "9d4f10a8d455c4b8102df8b08060a95aabbee687d5d189fb284cb1dec4ae7da8"
+    },
+    {
+      "path": "evidence/phase_25_cdc_runtime.json",
+      "sha256": "57c4cb817bf5c6b7bdd0e88e8c46de011422d5dbf5df0f96ed16527e27e58b19"
+    },
+    {
+      "path": "evidence/phase_25_cdc_status_sync.json",
+      "sha256": "e0f90137ecfb9520abb6aa88f7f1525d75866d606c7b1d38c445d179adb16992"
+    },
+    {
+      "path": "evidence/phase_25_free_tier_guard.json",
+      "sha256": "cc55db3731aaf63c856230b9fdd2619a832288183d5a6d50f90f72424c7bca81"
+    },
+    {
+      "path": "evidence/phase_25_post_teardown_status_sync.json",
+      "sha256": "0a34cfba580fa89bdd10b6b382e48ca5ba3e923088512ed77c9ce5e6f609f6c6"
+    },
+    {
+      "path": "evidence/phase_25_post_teardown_verification.json",
+      "sha256": "47083819cf1e961307478c7c86c98360cbe0e8aa59c00b014465dce3811f1e1a"
+    },
+    {
+      "path": "evidence/phase_25_screenshot_validation.json",
+      "sha256": "ae267686ff1a0a35e1e9e7cfb2f53c8373d5dee78d65e28406e63a64a430e702"
+    },
+    {
+      "path": "evidence/phase_25_teardown_plan_validation.json",
+      "sha256": "2b4e4437268dec65fdeac3b63ccfb38579088bcca4fa804b5a58d99d6f21da89"
+    },
+    {
+      "path": "evidence/phase_25_teardown_runtime.json",
+      "sha256": "8f34e44b5ce0ba68e86b4a1e30429bd8f94a1dbb9696bbaddd8ca958a3fbdbac"
+    },
+    {
+      "path": "evidence/phase_26_bigquery_load_recovery.json",
+      "sha256": "08c024b51558234b867d85fbe259eb04735315b327863119ab9f4adec3ea93fd"
+    },
+    {
+      "path": "evidence/phase_26_bigquery_runtime_validation.json",
+      "sha256": "7bd72e034fa37357c987146ad1517b21c1d31c2be44730d6eccfb669ba11d4b6"
+    },
+    {
+      "path": "evidence/phase_26_generator_validation.json",
+      "sha256": "94e59752e97476cc425b4cb0617a0f3025824e8feac09d80a00ca4d8c096481a"
+    },
+    {
+      "path": "evidence/phase_27_build_preflight.json",
+      "sha256": "e11b8551e450771fe5b0886267c602c227d98d3cc841c8a9ccff13d63d7613a6"
+    },
+    {
+      "path": "evidence/phase_27_closure_verification.json",
+      "sha256": "f0ead0548befd102f1f9b2e8891a6713dab3ebf15b26dbd2050f2112a5fad733"
+    },
+    {
+      "path": "evidence/phase_27_cost_guard.json",
+      "sha256": "dc17fbec27ef651dca9a7e53cb289dd07f0bcf33ab0ad29ff740e67f78e18d88"
+    },
+    {
+      "path": "evidence/phase_27_dataset_runtime_verification.json",
+      "sha256": "4da835069914f4bc5fcd7d4f92db9bd0f6be1f2bf5004821cd63771692d552c0"
+    },
+    {
+      "path": "evidence/phase_27_dbt_preparation.json",
+      "sha256": "3ceb4cca4a59ec0068a86b3ef10d9dd608a5df3a0397784eaf494acc8f865892"
+    },
+    {
+      "path": "evidence/phase_27_design_validation.json",
+      "sha256": "24668f3e1d1f4c808a20c02e73e90f9c47749ab05151da405d9ae299b1d8fbf1"
+    },
+    {
+      "path": "evidence/phase_27_failure_recovery.json",
+      "sha256": "07eab5ca80c77ab9011df9e962412e91be54d0b96f80f3151b0e29a5fda003f9"
+    },
+    {
+      "path": "evidence/phase_27_runtime_validation.json",
+      "sha256": "209a7616dcd8a6b98d908f303a205db0bd16ac5025ab706932c04269526343f1"
+    },
+    {
+      "path": "evidence/phase_27_terraform_plan_validation.json",
+      "sha256": "e04b79e61687a8ad33b667edb883dc526de27f4b692ac9981645a70bb2607f75"
+    },
+    {
+      "path": "evidence/phase_28_closure_verification.json",
+      "sha256": "156c57755c264850421070a6a636c104e6a1567689bb86e046f5739155301e2f"
+    },
+    {
+      "path": "evidence/phase_28_design_validation.json",
+      "sha256": "b739e9f4b4f672e69a295996361cc7b90fd398c50d76cdd10dfcd3f0f6357460"
+    },
+    {
+      "path": "evidence/phase_29_closure_verification.json",
+      "sha256": "84aa968115147508f046af5ddfb4cb53caa8effa5d8eed88f697c52de0561244"
+    },
+    {
+      "path": "evidence/phase_29_design_validation.json",
+      "sha256": "7d1455a4de4db4211efe26b412e51c7e220d20e83d4c74fcdba49dcb62c1bf4c"
+    },
+    {
+      "path": "evidence/phase_30_design_validation.json",
+      "sha256": "4830e9adde8785c1786a5d9f2a6cbbd77ca69bf1ec054f6d132a1df23b245a8f"
+    },
+    {
+      "path": "evidence/phase_30_live_runtime_validation.json",
+      "sha256": "7635afca64a3c0da668e7bf57cac29017a810c44cc2ba2d59650048caed28765"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "sha256": "f4f81f08ff4264844bb40e2e1a047077b2f8c006ecbd9d85aa2d9d40c6e8f744"
+    },
+    {
+      "path": "README.md",
+      "sha256": "baba92e250d234ee48983fee68a35244fff48a221aa0a847179957da158812c9"
+    },
+    {
+      "path": "sql/audit/phase13_dq_rules.sql",
+      "sha256": "bb6c352a0a1db6ac6297f01186d485d78302625591b41f7519c6f635c6a138e3"
+    },
+    {
+      "path": "sql/core/dim_channel.sql",
+      "sha256": "4742d2fc67756d844cd94d2e917070b5c404bc8dc26cb909afabdd56e867fc17"
+    },
+    {
+      "path": "sql/core/dim_creator.sql",
+      "sha256": "faa95f4ee480b7ab15e81b019a954a1b1fa329567c5e8d6bb717212736dd2dd6"
+    },
+    {
+      "path": "sql/core/dim_date.sql",
+      "sha256": "4502fc59f8f9961488b069fe17934fe3d5ed35ca1a2906ee3925c1822b6c58f8"
+    },
+    {
+      "path": "sql/core/dim_payment_method.sql",
+      "sha256": "695ccdedb7b049d0b2177cae41b6fc2f687ac632637aba2dd01e63b777b6d717"
+    },
+    {
+      "path": "sql/core/dim_product.sql",
+      "sha256": "1f11a2a62ca7499fef2f48a98fe5985c9187290761f5fe9ae74aed00c060d1db"
+    },
+    {
+      "path": "sql/core/dim_sku.sql",
+      "sha256": "ecc9db584ea49cbbbd77a448e316a8120180e8a3ca893e40cd89986ece3d17b5"
+    },
+    {
+      "path": "sql/core/fact_campaign_daily.sql",
+      "sha256": "9dae3f5e82200d0237db33eedf537452732d6c3539021427cbc124f5ab532cf6"
+    },
+    {
+      "path": "sql/core/fact_creator_payment.sql",
+      "sha256": "353e663073473613e3401f76b466deda2ee02413667655140574f9e284697b82"
+    },
+    {
+      "path": "sql/core/fact_live_daily.sql",
+      "sha256": "66e0e7abe67107046c4ce36ed172e7d7147986737510425c6243718719e054e7"
+    },
+    {
+      "path": "sql/core/fact_order_item.sql",
+      "sha256": "a5d863f49bce4cf1606af01abf9a177fc1437f1abe7ea2e805c786d3b5f75c49"
+    },
+    {
+      "path": "sql/core/fact_product_card_daily.sql",
+      "sha256": "daa3308c59ec08ce06c351b5b24dcdc4db55618bdd2eb38f476f6c806b571ee4"
+    },
+    {
+      "path": "sql/core/fact_shop_daily.sql",
+      "sha256": "74c56a65558657f555fa845b410be7a7532cbde2a5cb512c2b85fe5caf24e6dd"
+    },
+    {
+      "path": "sql/phase11/controlled_duplicate_failure.sql",
+      "sha256": "ee026fa0eb705ec74a2a57a6868911fb846e4fa952d94a495fa1e3b16c1a1530"
+    },
+    {
+      "path": "sql/phase11/late_arriving_recovery.sql",
+      "sha256": "7a13565dd684a6381ba31ffeaf2a1f28c0d1ad9752565df9809eab0feada50de"
+    },
+    {
+      "path": "sql/phase18/wasteful_query_detection.sql",
+      "sha256": "a79b66b854681db198e6500e694832dfec50c7901232c6b48b29fc7c406e80d1"
+    },
+    {
+      "path": "sql/phase19/synthetic_50m_generator.sql",
+      "sha256": "3a921bc4c9d697771d1ba29de91cb24d5d4c0830446017646d89530eff8d34bc"
+    },
+    {
+      "path": "sql/phase25/spanner_source_schema.sql",
+      "sha256": "82ea914de2eecb0c4007673f93921af8c5731828d04f13ba128af9618db0d739"
+    },
+    {
+      "path": "sql/staging/stg_campaign_daily.sql",
+      "sha256": "cafbe9adea833beb5719a31f71331f9d38d7a109dc09bcd203ca7ef0428510db"
+    },
+    {
+      "path": "sql/staging/stg_creator.sql",
+      "sha256": "ac3cfe06cacfdaa5cb949e34f497b107a22b20e539f0b2fc6afb65ce142f9efb"
+    },
+    {
+      "path": "sql/staging/stg_creator_payment.sql",
+      "sha256": "2e15f41fc6f2bb8d83b1fb176dce12cdfaa414fcf02b8f3993a7d2aff80ce5f0"
+    },
+    {
+      "path": "sql/staging/stg_live_daily.sql",
+      "sha256": "bb4d19fc9a85cb2485c3f60c3659758526a1d0a147c307a176a18e03b38f3caf"
+    },
+    {
+      "path": "sql/staging/stg_orders.sql",
+      "sha256": "d649add8ee1d105d64d49adc46055f1f49c2c9595c0c51148f543486869384b9"
+    },
+    {
+      "path": "sql/staging/stg_product_card_daily.sql",
+      "sha256": "e9651bb4ba93b0006ce72f0fd395846ceba08fe4eca48094004aae9fd4bc2943"
+    },
+    {
+      "path": "sql/staging/stg_product_sku.sql",
+      "sha256": "0f985159e06a20392cbd6b1bed03c335e866c6b5c6bb4aaf39afdc316b745097"
+    },
+    {
+      "path": "sql/staging/stg_shop_daily.sql",
+      "sha256": "fb0ef94e97f589f8380ad30aa71142022fc84528971d3243e0b1ad5feb404fcb"
+    },
+    {
+      "path": "src/generators/phase26_financial_synth_generator.py",
+      "sha256": "73771d325a61e6fce245fc19447c76a1c7e212a19195d2bfb37a83ce4a49dd4e"
+    },
+    {
+      "path": "src/generators/portfolio_safe_generator.py",
+      "sha256": "f1fde5d6b80377d9b2da184825767e3f3fe1fa868246b53a1169fc05312b665f"
+    },
+    {
+      "path": "src/privacy/phase03_privacy_validator.py",
+      "sha256": "c68c9525c10cbbc17b8f0c2c63412edced8c1611f0bd6e1fe9dc05feee17f86a"
+    },
+    {
+      "path": "src/validation/phase26_financial_synth_validator.py",
+      "sha256": "e89d0a1a4d2bc5feb783ff7dd9c54711e84bbc8649fc0430336a9bd7cda115e0"
+    },
+    {
+      "path": "terraform/.terraform.lock.hcl",
+      "sha256": "456d7cd88d38392a53f4d8bce32f22b66443f4abb3ec89feef8ea6323cd927ca"
+    },
+    {
+      "path": "terraform/main.tf",
+      "sha256": "2da5e66c64c2938fbc391b57d649badf8d5a0438a85829562a2e01bb385c9f61"
+    },
+    {
+      "path": "terraform/outputs.tf",
+      "sha256": "0bd752264e79fecbce07180e9119ca486271b4e1609897ac61c680c178681b2e"
+    },
+    {
+      "path": "terraform/phase06_gcs.tf",
+      "sha256": "7ab0cdb6ddbd9046ceadbe7fd08156aa13db201d646f4673be95f0c214dc5425"
+    },
+    {
+      "path": "terraform/phase06_gcs_outputs.tf",
+      "sha256": "e2ac8e6b911f7db10d33addfa1d200a235d7227d47c6757e80d4b9ade8a704aa"
+    },
+    {
+      "path": "terraform/phase06_gcs_variables.tf",
+      "sha256": "35bd7d63afbcbd766e8344b5a628c785f551f9b061b1c7a8abcf8915e19c4ef1"
+    },
+    {
+      "path": "terraform/phase07_bigquery.tf",
+      "sha256": "5ce7a30bb0740a640c2d3391334f79b4319b29edbeda24a61357e683d2c78e9b"
+    },
+    {
+      "path": "terraform/phase07_bigquery_outputs.tf",
+      "sha256": "38ae3269ec34aff84e003bbcb7832db899ce380df972fc38053be1298185c813"
+    },
+    {
+      "path": "terraform/phase07_bigquery_variables.tf",
+      "sha256": "713b945ab33966b000633d97689e003e0ad82299c5dc90559870dc69f1d7f995"
+    },
+    {
+      "path": "terraform/phase08_core.tf",
+      "sha256": "a1d1fa86ac4534d364fbb8e3886a021bfcd27cd6292b37c53c7490269ea1d2af"
+    },
+    {
+      "path": "terraform/phase08_core_outputs.tf",
+      "sha256": "b1857b7bad69d33d624ed5c96d4e0d37a58cef397bdf015e44c0c6ed475fcbbf"
+    },
+    {
+      "path": "terraform/phase08_core_variables.tf",
+      "sha256": "e5276acae217c95591d639fe4debb7e6fa8b28e283dcc3727fe88b6c922b4b84"
+    },
+    {
+      "path": "terraform/phase10_mart.tf",
+      "sha256": "a9cb5dd5fdca14d00c027a09fcb74ed947233eee6cc603ba8783caa48e1e91e4"
+    },
+    {
+      "path": "terraform/phase10_mart_outputs.tf",
+      "sha256": "0ae7ca61569dc67306bcbafcc46df3982db72cd82e2165ea99dcc2faf00d8138"
+    },
+    {
+      "path": "terraform/phase10_mart_variables.tf",
+      "sha256": "df9467e09bfa2904b6aa97ee5ca18aec9bd6ba2a03601a7eeb88bbafbeb1ea35"
+    },
+    {
+      "path": "terraform/phase13_audit.tf",
+      "sha256": "68c5772fe9acb32f02f900e43a46020190d6368757a94d5d9d5e8abf18775395"
+    },
+    {
+      "path": "terraform/phase13_audit_outputs.tf",
+      "sha256": "28af31e391edb9df04d0979542ae0d94489e9ba7df38440ab0922ed57ecddb8b"
+    },
+    {
+      "path": "terraform/phase13_audit_variables.tf",
+      "sha256": "fb8c96a04e42acb384596c676ae4985a34e1b9eb6cad33b416aed0e1d744c2d2"
+    },
+    {
+      "path": "terraform/phase14_control.tf",
+      "sha256": "794da874da5accb0354f8a45db25e07b87d25a2449da8baab6bb9d6be51a3eb0"
+    },
+    {
+      "path": "terraform/phase14_control_outputs.tf",
+      "sha256": "65e34e0816ec1fa476991f656740707d545f206e575095866280e3c64e541de1"
+    },
+    {
+      "path": "terraform/phase14_control_variables.tf",
+      "sha256": "0e36f9a8949b52184db522422042ca663eaecaa8fa307701e84593d2bdfa2076"
+    },
+    {
+      "path": "terraform/phase15_composer.tf",
+      "sha256": "4ed5bf2ee05fe3ba8f570de70aec82a1d4e295a3dc4092959de62818567720fb"
+    },
+    {
+      "path": "terraform/phase15_composer_outputs.tf",
+      "sha256": "872a4a88d792110aeabff3da857ab367cbcca38407bd79a61ffd97ae876aa884"
+    },
+    {
+      "path": "terraform/phase15_composer_variables.tf",
+      "sha256": "813672f72db869be98d3c5f4d47e7fb9e1d2e2364f371b5ec510c5eddcab4e7c"
+    },
+    {
+      "path": "terraform/phase16_observability.tf",
+      "sha256": "bad0811ad158b5976dc801793fee51a1c53a2750c53387116c62917eded9a8dc"
+    },
+    {
+      "path": "terraform/phase16_observability_variables.tf",
+      "sha256": "e33dbd98320c0aaa7ab697f2478734a0ab0d3a3d26f77c380923aaa40bb87bca"
+    },
+    {
+      "path": "terraform/phase20_governance.tf",
+      "sha256": "216c6d6b1daf6e500b7080c4420bd811c601ffe9ca7f5dc9c2e31f19940e9c39"
+    },
+    {
+      "path": "terraform/phase20_governance_variables.tf",
+      "sha256": "ff35b23e9487f6819a3616d852582932cf14e7b94ceb064e583b7c8eac9035b9"
+    },
+    {
+      "path": "terraform/phase21_security.tf",
+      "sha256": "947c4941acaeb95efff5948881a0eed0378c9df43bfb1f3511b4fe735446bd75"
+    },
+    {
+      "path": "terraform/phase21_security_variables.tf",
+      "sha256": "2bdac3103ad994ffd7e63b8c3fd93142faa2fd1d58d04fd751e9fee9b6460edc"
+    },
+    {
+      "path": "terraform/phase22_enterprise_security.tf",
+      "sha256": "4fceac73452ab0c3352b8e0e588dc6481481257ea52bef823f3bbe64173f9007"
+    },
+    {
+      "path": "terraform/phase22_enterprise_security_variables.tf",
+      "sha256": "275a72cb1839cc19379861b1b33948d32a5ca8183517a323e0d275f1a2098f38"
+    },
+    {
+      "path": "terraform/phase24_streaming.tf",
+      "sha256": "72bded926d6cb131d92d47e81074e8229f765e8fe5db7269abe124dc3d3f2641"
+    },
+    {
+      "path": "terraform/phase24_streaming_variables.tf",
+      "sha256": "6a53360fdcf8008fdd12ec5a83c9546d16ec020e6d17ed3f39c02617f57b2b9d"
+    },
+    {
+      "path": "terraform/phase26_financial_ops.tf",
+      "sha256": "61130587135caf5a476127136dbb1f8471a96468632e8d7dd337e6f6bd8631f5"
+    },
+    {
+      "path": "terraform/phase26_financial_ops_variables.tf",
+      "sha256": "99f76db01ef18d6dd22f41bfa435192961ded26c1abcd1b2bf18dd99c709cf2b"
+    },
+    {
+      "path": "terraform/phase27_financial_mart.tf",
+      "sha256": "0543c2c2502c2553e6a28884694bad6ed7d291d693edb96982658ae4c3056bac"
+    },
+    {
+      "path": "terraform/phase27_financial_mart_variables.tf",
+      "sha256": "4f00066ff9a43d645b5d6ecd25627529313678b1ccddc5ecd8a19fe0e89e9ebf"
+    },
+    {
+      "path": "terraform/providers.tf",
+      "sha256": "a60a038a12ff8ab17621dfdeb9672da47b12eff2a860d94eae560caba1ae27d5"
+    },
+    {
+      "path": "terraform/README.md",
+      "sha256": "749dd4b8825a0d31ec964dea9d7a5f28d0cf22a76730f0b10de8e0fac630626c"
+    },
+    {
+      "path": "terraform/terraform.tfvars.example",
+      "sha256": "208bba9d260997e621ba228d3fb63eed7819b2224df37d3f6e2f2131e6132686"
+    },
+    {
+      "path": "terraform/variables.tf",
+      "sha256": "f2bab759662626b108b6c955dac001ba053f54b22acdfde4b3661092cf66cd9f"
+    },
+    {
+      "path": "terraform/versions.tf",
+      "sha256": "1c8cf7c92b492dc6ec052bac1a0059906d3d544aa937a87876c5070ced35d698"
+    },
+    {
+      "path": "tools/publication_guard.py",
+      "sha256": "865eca8912b4ab072f0b31fd09e5bb19cf6104a7fd52bd840a09af7d2eab1910"
+    }
+  ]
+}

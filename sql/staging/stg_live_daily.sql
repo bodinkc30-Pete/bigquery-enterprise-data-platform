@@ -1,0 +1,25 @@
+CREATE OR REPLACE TABLE `{{PROJECT_ID}}.staging.stg_live_daily` AS
+SELECT
+  SAFE_CAST(`date` AS DATE) AS `date`,
+  SAFE_CAST(`live_gmv` AS NUMERIC) AS `live_gmv`,
+  SAFE_CAST(`direct_live_gmv` AS NUMERIC) AS `direct_live_gmv`,
+  SAFE_CAST(`indirect_live_gmv` AS NUMERIC) AS `indirect_live_gmv`,
+  SAFE_CAST(`display_gpm` AS NUMERIC) AS `display_gpm`,
+  SAFE_CAST(`live_streams` AS INT64) AS `live_streams`,
+  SAFE_CAST(`gmv_live_streams` AS INT64) AS `gmv_live_streams`,
+  SAFE_CAST(`attributed_units` AS INT64) AS `attributed_units`,
+  SAFE_CAST(`direct_units` AS INT64) AS `direct_units`,
+  SAFE_CAST(`indirect_units` AS INT64) AS `indirect_units`,
+  SAFE_CAST(`attributed_sku_orders` AS INT64) AS `attributed_sku_orders`,
+  SAFE_CAST(`direct_sku_orders` AS INT64) AS `direct_sku_orders`,
+  SAFE_CAST(`indirect_sku_orders` AS INT64) AS `indirect_sku_orders`,
+  SAFE_CAST(`customers` AS INT64) AS `customers`,
+  SAFE_CAST(`live_ctr` AS NUMERIC) AS `live_ctr`,
+  SAFE_CAST(`live_ctor` AS NUMERIC) AS `live_ctor`,
+  SAFE_CAST(`live_views` AS INT64) AS `live_views`,
+  SAFE_CAST(`avg_watch_duration` AS NUMERIC) AS `avg_watch_duration`,
+  CURRENT_TIMESTAMP() AS `_ingested_at`,
+  'live_daily_synthetic.csv' AS `_source_file`,
+  'phase07-bootstrap-v1' AS `_run_id`,
+  TO_HEX(SHA256(CONCAT(COALESCE(`date`, ''), COALESCE(`live_gmv`, ''), COALESCE(`direct_live_gmv`, ''), COALESCE(`indirect_live_gmv`, ''), COALESCE(`display_gpm`, ''), COALESCE(`live_streams`, ''), COALESCE(`gmv_live_streams`, ''), COALESCE(`attributed_units`, ''), COALESCE(`direct_units`, ''), COALESCE(`indirect_units`, ''), COALESCE(`attributed_sku_orders`, ''), COALESCE(`direct_sku_orders`, ''), COALESCE(`indirect_sku_orders`, ''), COALESCE(`customers`, ''), COALESCE(`live_ctr`, ''), COALESCE(`live_ctor`, ''), COALESCE(`live_views`, ''), COALESCE(`avg_watch_duration`, '')))) AS `_record_hash`
+FROM `{{PROJECT_ID}}.raw.live_daily`;

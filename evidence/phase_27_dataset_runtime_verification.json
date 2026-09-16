@@ -1,0 +1,43 @@
+{
+  "phase": 27,
+  "step": "27.3B_DATASET_RUNTIME_VERIFY",
+  "status": "PASS",
+  "checks": {
+    "preflight_15_pass": true,
+    "plan_validation_17_pass": true,
+    "phase26_closure_28_pass": true,
+    "apply_complete": true,
+    "target_dataset_live": true,
+    "target_location_bangkok": true,
+    "target_safe_labels": true,
+    "target_tables_zero_pre_dbt": true,
+    "phase26_exact_row_counts_preserved": true,
+    "accepted_commerce_integrity_preserved": true,
+    "terraform_state_exact_phase27_dataset": true,
+    "terraform_post_apply_zero_drift": true,
+    "phase28_not_started": true,
+    "credential_file_removed": true
+  },
+  "check_count": 14,
+  "passed": 14,
+  "target_dataset": "financial_mart_synth",
+  "target_region": "asia-southeast3",
+  "target_table_count_pre_dbt": 0,
+  "phase26_source_table_count": 10,
+  "phase26_source_total_rows": 24890,
+  "accepted_integrity": {
+    "core_rows": 685,
+    "core_amount": "860004.99",
+    "mart_rows": 685,
+    "mart_amount": "860004.99",
+    "dq_rows": 32,
+    "reconciliation_rows": 28
+  },
+  "terraform_state_phase27_resource_count": 1,
+  "terraform_zero_drift": true,
+  "cloud_dataset_created": true,
+  "mart_tables_created": false,
+  "phase28_status": "NOT_STARTED",
+  "project_id_exposed": false,
+  "credential_exposed": false
+}

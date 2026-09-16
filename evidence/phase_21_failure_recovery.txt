@@ -1,0 +1,12 @@
+Phase 21 Failure / Recovery Evidence
+
+1. Contract/script chunk-boundary syntax issues were caught by compile/YAML parse gates before Cloud mutation.
+2. Initial Terraform plan was add-only, but fmt-check failed after file generation; configuration was formatted and replanned before apply.
+3. Initial apply partially succeeded, then native BigQuery Data Policy creation returned ORGANIZATION_REQUIRED. Existing successful resources were inspected in Terraform state before any retry.
+4. Native Dynamic Data Masking was not falsely claimed as implemented. It was reclassified as ENTERPRISE_DESIGN_LAB_UNSUPPORTED, while Policy Tag column security remained implemented.
+5. Recovery Terraform plan from partial state was constrained to 6 add / 0 change / 0 destroy: two security-lab tables and four row-access policies.
+6. First security-table population was rejected because the operator did not have full table access under active row policies. No partial insert occurred.
+7. Recovery used temporary TRUE row policies scoped only to the operator during population, then removed them immediately after synthetic rows were loaded.
+8. First recovery population retry hit the known Windows bq.cmd multiline SQL transport issue. SQL was normalized to one line; the idempotent retry then passed.
+9. Final access tests proved keyless impersonation, least privilege, row filtering, protected-column denial, finance unmasked access, SQL masked projection, direct CORE denial, security-event persistence, and Cloud Audit Log visibility.
+10. Billing was not upgraded or changed during Phase 21.

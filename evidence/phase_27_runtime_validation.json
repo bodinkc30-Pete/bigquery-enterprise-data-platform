@@ -1,0 +1,127 @@
+{
+  "phase": 27,
+  "step": "27_RUNTIME_IDEMPOTENCY_RECONCILIATION",
+  "status": "PASS",
+  "checks": {
+    "run1_4_models_37_tests": true,
+    "run2_4_models_37_tests": true,
+    "fingerprints_match_4_of_4": true,
+    "exact_four_live_tables": true,
+    "physical_design_exact": true,
+    "all_marts_nonempty": true,
+    "six_controls_present": true,
+    "six_controls_all_matched": true,
+    "settlement_reporting_reconciles": true,
+    "currency_grain_guard": true,
+    "mart_grain_unique": true,
+    "financial_ops_matches_daily_controls": true,
+    "transaction_status_reporting_reconciles": true,
+    "phase26_source_integrity_preserved": true,
+    "accepted_commerce_integrity_preserved": true,
+    "phase28_absent": true
+  },
+  "check_count": 16,
+  "passed": 16,
+  "mart_rows": {
+    "mart_financial_ops_daily": 194,
+    "mart_transaction_status_daily": 644,
+    "mart_settlement_daily": 180,
+    "mart_reconciliation_daily": 1150
+  },
+  "mart_total_rows": 2168,
+  "fingerprints_before": {
+    "mart_financial_ops_daily": {
+      "row_count": 194,
+      "fingerprint": "9905160652873569157"
+    },
+    "mart_transaction_status_daily": {
+      "row_count": 644,
+      "fingerprint": "-218352536749639558656"
+    },
+    "mart_settlement_daily": {
+      "row_count": 180,
+      "fingerprint": "28079519390987229655"
+    },
+    "mart_reconciliation_daily": {
+      "row_count": 1150,
+      "fingerprint": "59089966142161942133"
+    }
+  },
+  "fingerprints_after": {
+    "mart_financial_ops_daily": {
+      "row_count": 194,
+      "fingerprint": "9905160652873569157"
+    },
+    "mart_transaction_status_daily": {
+      "row_count": 644,
+      "fingerprint": "-218352536749639558656"
+    },
+    "mart_settlement_daily": {
+      "row_count": 180,
+      "fingerprint": "28079519390987229655"
+    },
+    "mart_reconciliation_daily": {
+      "row_count": 1150,
+      "fingerprint": "59089966142161942133"
+    }
+  },
+  "fingerprint_matches": 4,
+  "reconciliation_control_count": 6,
+  "reconciliation_anomalies": 0,
+  "settlement_anomalies": 0,
+  "currency_anomalies": 0,
+  "grain_duplicates": 0,
+  "ops_reconciliation_anomalies": 0,
+  "transaction_status_anomalies": 0,
+  "physical_design": {
+    "mart_financial_ops_daily": {
+      "partition": "business_date",
+      "clustering": [
+        "currency"
+      ],
+      "rows": 194,
+      "bytes": 14938
+    },
+    "mart_transaction_status_daily": {
+      "partition": "business_date",
+      "clustering": [
+        "currency",
+        "transaction_status"
+      ],
+      "rows": 644,
+      "bytes": 25288
+    },
+    "mart_settlement_daily": {
+      "partition": "settlement_date",
+      "clustering": [
+        "currency"
+      ],
+      "rows": 180,
+      "bytes": 22680
+    },
+    "mart_reconciliation_daily": {
+      "partition": "business_date",
+      "clustering": [
+        "currency",
+        "control_name",
+        "control_status"
+      ],
+      "rows": 1150,
+      "bytes": 95450
+    }
+  },
+  "phase26_rows": 24890,
+  "accepted_integrity": {
+    "core_amount": "860004.99",
+    "core_rows": 685,
+    "dq_rows": 32,
+    "mart_amount": "860004.99",
+    "mart_rows": 685,
+    "reconciliation_rows": 28
+  },
+  "raw_company_data_used": false,
+  "real_bank_data_used": false,
+  "accepted_platform_mutated": false,
+  "project_id_exposed": false,
+  "phase28_status": "NOT_STARTED"
+}

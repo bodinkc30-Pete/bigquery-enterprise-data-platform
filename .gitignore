@@ -1,0 +1,15 @@
+﻿__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+dbt/target/
+dbt/logs/
+dbt/.user.yml
+terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+evidence/private_runtime/
+PROJECT_08_BIGQUERY_ENTERPRISE_DATA_PLATFORM_MASTER_HANDOFF.md

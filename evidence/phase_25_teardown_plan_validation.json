@@ -1,0 +1,47 @@
+{
+  "phase": 25,
+  "step": "25.13A_DESTRUCTIVE_TEARDOWN_PLAN_VALIDATION",
+  "status": "PASS",
+  "checks": {
+    "readiness_18_pass": true,
+    "public_visual_pass": true,
+    "stream_paused": true,
+    "stream_bound_to_exact_profiles": true,
+    "target_profiles_present": true,
+    "isolated_dataset_singapore": true,
+    "isolated_dataset_single_table": true,
+    "free_instance_ready": true,
+    "free_instance_contains_only_phase25_database": true,
+    "accepted_bigquery_region_disjoint": true,
+    "exact_six_top_level_targets": true,
+    "service_api_disable_excluded": true,
+    "billing_mutation_excluded": true,
+    "phase26_not_started": true,
+    "credential_file_removed": true
+  },
+  "check_count": 15,
+  "top_level_delete_count": 6,
+  "delete_order_aliases": [
+    "DATASTREAM_STREAM",
+    "DATASTREAM_SOURCE_PROFILE",
+    "DATASTREAM_DEST_PROFILE",
+    "BIGQUERY_ISOLATED_DATASET",
+    "SPANNER_SYNTHETIC_DATABASE",
+    "SPANNER_FREE_INSTANCE"
+  ],
+  "nested_resources_removed_with_parent": {
+    "bigquery_table_count": 1,
+    "spanner_database_count": 1
+  },
+  "stream_state_before_teardown": "PAUSED",
+  "phase25_region": "asia-southeast1",
+  "accepted_platform_region": "asia-southeast3",
+  "service_apis_disabled": false,
+  "billing_mutation_planned": false,
+  "irreversible_free_instance_delete_last": true,
+  "destructive_execution_allowed": true,
+  "project_id_exposed": false,
+  "principal_exposed": false,
+  "raw_payload_exposed": false,
+  "phase26_status": "NOT_STARTED"
+}

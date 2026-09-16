@@ -1,0 +1,11 @@
+Phase 25 Step 25.10 initial backfill controlled failure/recovery
+
+25.10A preflight passed 10/10 with one NOT_STARTED stream, Singapore dataset, zero destination tables, and 5 synthetic source rows.
+The first 25.10B runtime started the stream successfully and Datastream created the destination table.
+The validator failed when the destination table existed but still had 0 rows: COUNT(*)=0 and SUM(amount_satang)=NULL; the parser incorrectly converted NULL to int.
+The runtime safety finally block paused the stream after the validator exception.
+Read-only recovery proved: stream=PAUSED, one destination table exists, aggregate row_count=0 / amount_sum=NULL, and the automatic backfill object state=COMPLETED.
+Google Datastream documents that COMPLETED means source backfill reading is complete, while data can still be loading to the destination.
+The stream uses BigQuery Merge with dataFreshness=900s, so destination visibility can lag by the configured freshness window.
+Recovery rule: do not recreate dataset/stream or re-run backfill. Fix NULL handling and verify paused in-flight/merge completion before any resume action.
+No raw company data or real banking data is involved.

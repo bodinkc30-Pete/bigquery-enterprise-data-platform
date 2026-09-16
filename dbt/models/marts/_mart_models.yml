@@ -1,0 +1,78 @@
+version: 2
+models:
+- name: mart_commerce_daily
+  description: Daily commerce mart keeping order-item-derived and shop-reported measures
+    semantically separate; observed_order_id_count is distinct within date and non-additive
+    across dates.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: date
+    data_tests:
+    - not_null
+- name: mart_marketing_daily
+  description: Daily marketing mart combining campaign, LIVE, and product-card aggregates
+    without inferred cross-source attribution.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: date
+    data_tests:
+    - not_null
+- name: mart_creator_daily
+  description: Daily creator mart combining creator-attributed commerce activity and
+    synthetic payment activity; observed_order_id_count is distinct within date+creator
+    and non-additive across grains.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: creator_key
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_creator')
+          field: creator_key
+  - name: date
+    data_tests:
+    - not_null
+- name: mart_payment_daily
+  description: Daily synthetic payment-operations mart by cycle, status, and type;
+    no real banking data or currency inference.
+  columns:
+  - name: date_key
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: post_date
+    data_tests:
+    - not_null
+  - name: payment_cycle
+    data_tests:
+    - not_null
+  - name: payment_status
+    data_tests:
+    - not_null
+  - name: payment_type
+    data_tests:
+    - not_null

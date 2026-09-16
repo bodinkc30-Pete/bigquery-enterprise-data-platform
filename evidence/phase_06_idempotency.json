@@ -1,0 +1,18 @@
+{
+  "phase": 6,
+  "status": "PASS",
+  "rerun_1": {
+    "objects_present": 10,
+    "versions_present": 10,
+    "every_object_single_version": true,
+    "sha256_roundtrip_verified": 10
+  },
+  "rerun_2": {
+    "objects_present": 10,
+    "versions_present": 10,
+    "every_object_single_version": true,
+    "sha256_roundtrip_verified": 10
+  },
+  "no_new_versions_on_rerun": true,
+  "upload_mode": "no-clobber"
+}

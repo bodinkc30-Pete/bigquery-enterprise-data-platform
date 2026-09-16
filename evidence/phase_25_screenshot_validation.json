@@ -1,0 +1,19 @@
+{
+  "phase": 25,
+  "status": "PASS",
+  "file": "phase_25_datastream_cdc_sanitized.png",
+  "width": 1440,
+  "height": 900,
+  "bytes": 63877,
+  "sha256": "58dc5b30fde57d79bcf81bdcde9a32c769d39d9103fb19e03eba7cd1d4558d09",
+  "privacy_scan_pass": true,
+  "raw_console_screenshot": false,
+  "aggregate_only": true,
+  "cdc_runtime_15_evidenced": true,
+  "targeted_21_evidenced": true,
+  "full_361_evidenced": true,
+  "accepted_integrity_evidenced": true,
+  "pre_teardown_only": true,
+  "phase25_cloud_resources_still_present": true,
+  "phase26_status": "NOT_STARTED"
+}

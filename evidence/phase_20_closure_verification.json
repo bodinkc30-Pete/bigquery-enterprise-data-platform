@@ -1,0 +1,88 @@
+{
+  "phase": 20,
+  "status": "PASS",
+  "checks": {
+    "status_sync_exact": true,
+    "contract_accepted": true,
+    "engineering_doc_accepted": true,
+    "acceptance_validation_pass": true,
+    "acceptance_record_exists": true,
+    "runtime_pass": true,
+    "terraform_zero_drift": true,
+    "public_screenshot_pass": true,
+    "postsync_targeted_22_pass": true,
+    "postsync_full_258_pass": true,
+    "asset_registry_exact_48": true,
+    "asset_ownership_retention_clean": true,
+    "controlled_asset_rows_zero": true,
+    "column_governance_exact_444": true,
+    "pii_financial_masking_metadata_present": true,
+    "controlled_column_rows_zero": true,
+    "lineage_exact_51": true,
+    "lineage_breakdown_exact": true,
+    "controlled_lineage_rows_zero": true,
+    "orphan_lineage_zero": true,
+    "source_to_mart_paths_live": true,
+    "native_metadata_32_of_32": true,
+    "governance_tables_live_exact": true,
+    "physical_design_exact": true,
+    "nine_marker_jobs_live": true,
+    "marker_jobs_done_error_free": true,
+    "accepted_order_rows_preserved": true,
+    "accepted_payment_rows_preserved": true,
+    "accepted_payment_amount_preserved": true,
+    "prior_histories_preserved": true,
+    "phase21_artifacts_absent": true,
+    "phase21_contract_boundary": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true,
+    "failure_recovery_evidence_exists": true,
+    "public_project_id_absent": true,
+    "public_job_ids_absent": true,
+    "public_service_account_absent": true
+  },
+  "check_count": 38,
+  "governance": {
+    "asset_count": 48,
+    "bigquery_asset_count": 32,
+    "external_asset_count": 16,
+    "column_count": 444,
+    "pii_columns": 12,
+    "financial_columns": 47,
+    "masking_required_columns": 12
+  },
+  "lineage": {
+    "edge_count": 51,
+    "source_to_gcs": 8,
+    "gcs_to_raw": 8,
+    "raw_to_staging": 8,
+    "dbt_dependencies": 27,
+    "source_to_mart_paths": {
+      "orders_to_commerce_mart": true,
+      "creator_payment_to_payment_mart": true,
+      "campaign_to_marketing_mart": true
+    }
+  },
+  "native_bigquery_metadata": {
+    "governed_table_count": 32,
+    "labels_and_descriptions_complete": true
+  },
+  "live_marker_job_count": 9,
+  "terraform_zero_drift": true,
+  "postsync_tests": {
+    "targeted": 22,
+    "full": 258
+  },
+  "live_integrity": {
+    "order_rows": 5249,
+    "payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "phase21_status": "NOT_STARTED",
+  "phase21_artifact_count": 0
+}

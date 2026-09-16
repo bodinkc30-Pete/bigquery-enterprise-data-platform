@@ -1,0 +1,50 @@
+{
+  "phase": 15,
+  "status": "PASS",
+  "checks": {
+    "contract_phase15": true,
+    "contract_design_status": true,
+    "portfolio_safe_scope": true,
+    "composer3_small_ephemeral": true,
+    "single_worker_cost_guardrail": true,
+    "budget_guardrail_350_thb": true,
+    "dag_python_syntax": true,
+    "dag_id_locked": true,
+    "four_bigquery_markers": true,
+    "controlled_failure_conf": true,
+    "required_services_locked": true,
+    "dag_project_id_not_hardcoded": true,
+    "terraform_required_api_management": true,
+    "terraform_least_privilege_roles": true,
+    "terraform_ephemeral_environment_flag": true,
+    "terraform_small_environment": true,
+    "composer_api_disabled_prebuild": true,
+    "compute_api_disabled_prebuild": true,
+    "composer_service_account_exists": true,
+    "composer_roles_not_preexisting": true,
+    "phase16_artifacts_absent": true,
+    "phase16_boundary_locked": true,
+    "environment_teardown_required": true,
+    "raw_company_upload_forbidden": true
+  },
+  "prebuild": {
+    "composer_api_enabled": false,
+    "compute_api_enabled": false,
+    "composer_service_account_exists": true,
+    "required_project_roles_preexisting": 0,
+    "phase16_artifact_count": 0
+  },
+  "design": {
+    "dag_marker_count": 4,
+    "required_service_count": 10,
+    "ephemeral_environment": true,
+    "environment_size": "small",
+    "min_workers": 1,
+    "max_workers": 1
+  },
+  "privacy": {
+    "project_id_exposed": false,
+    "real_bank_data_used": false,
+    "raw_company_values_in_public_evidence": false
+  }
+}

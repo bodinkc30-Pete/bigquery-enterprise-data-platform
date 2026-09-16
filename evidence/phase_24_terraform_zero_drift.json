@@ -1,0 +1,41 @@
+{
+  "phase": 24,
+  "status": "PASS",
+  "checks": {
+    "fmt_check_pass": true,
+    "terraform_validate_pass": true,
+    "post_teardown_zero_drift": true,
+    "guarded_teardown_plan_13_only": true,
+    "phase24_state_zero": true,
+    "phase24_bigquery_table_zero": true,
+    "runtime_semantics_pass": true,
+    "runtime_cleanup_pass": true,
+    "core_mart_rows_preserved": true,
+    "core_mart_amount_preserved": true,
+    "dq_history_preserved": true,
+    "reconciliation_history_preserved": true,
+    "phase24_flag_disabled": true,
+    "ephemeral_contract_locked": true,
+    "accepted_business_mutation_forbidden": true,
+    "billing_guardrails_locked": true,
+    "privacy_guardrails_locked": true,
+    "phase25_absent": true
+  },
+  "check_count": 18,
+  "terraform": {
+    "pre_teardown_destroy_count": 13,
+    "post_teardown_plan_exit": 0,
+    "phase24_state_resource_count": 0,
+    "zero_drift": true
+  },
+  "integrity": {
+    "core_rows": 685,
+    "mart_rows": 685,
+    "core_amount": "860004.99",
+    "mart_amount": "860004.99",
+    "dq_rows": 32,
+    "reconciliation_rows": 28
+  },
+  "phase24_bigquery_table_count": 0,
+  "phase25_artifact_count": 0
+}

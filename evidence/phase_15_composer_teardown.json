@@ -1,0 +1,24 @@
+{
+  "phase": 15,
+  "status": "PASS",
+  "checks": {
+    "environment_list_success": true,
+    "environment_absent": true,
+    "terraform_state_read_success": true,
+    "environment_absent_from_terraform_state": true,
+    "foundation_resources_retained": true,
+    "composer_api_retained": true,
+    "compute_api_retained": true
+  },
+  "environment_count": 0,
+  "terraform_environment_resource_count": 0,
+  "foundation_retained": true,
+  "cost_guardrail": {
+    "ephemeral_environment_running": false
+  },
+  "privacy": {
+    "project_id_exposed": false,
+    "bucket_name_exposed": false,
+    "service_account_email_exposed": false
+  }
+}

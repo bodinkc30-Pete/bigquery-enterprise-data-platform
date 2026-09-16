@@ -1,0 +1,31 @@
+project_id  = "<PROJECT_ID>"
+region      = "asia-southeast3"
+environment = "portfolio"
+
+enable_validation_resource = false
+
+enable_gcs_landing_zone               = false
+gcs_noncurrent_version_retention_days = 7
+
+enable_bigquery_raw_staging  = false
+bigquery_raw_dataset_id      = "raw"
+bigquery_staging_dataset_id = "staging"
+
+enable_bigquery_core     = false
+bigquery_core_dataset_id = "core"
+
+enable_bigquery_mart     = false
+bigquery_mart_dataset_id = "mart"
+
+enable_bigquery_audit     = false
+bigquery_audit_dataset_id = "audit"
+
+enable_bigquery_control     = false
+bigquery_control_dataset_id = "control"
+
+enable_composer_foundation  = false
+enable_composer_environment = false
+composer_environment_name    = "p08-composer-p15"
+composer_image_version       = "<EXPLICIT_COMPOSER_3_IMAGE>"
+
+enable_phase16_observability = false

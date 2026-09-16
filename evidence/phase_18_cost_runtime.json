@@ -1,0 +1,105 @@
+{
+  "phase": 18,
+  "status": "PASS",
+  "checks": {
+    "four_marker_jobs": true,
+    "wide_narrow_recovery_done": true,
+    "successful_cache_disabled": true,
+    "projection_processed_reduced": true,
+    "minimum_billing_interpreted": true,
+    "projection_billed_not_overclaimed": true,
+    "guard_rejected": true,
+    "guard_reject_job_error_free_charge": true,
+    "guard_recovery_success": true,
+    "information_schema_telemetry": true,
+    "waste_signals_complete": true,
+    "budget_live_verified": true,
+    "order_rows_preserved": true,
+    "payment_rows_preserved": true,
+    "payment_amount_preserved": true,
+    "prior_histories_preserved": true,
+    "phase19_absent": true
+  },
+  "actual_jobs": {
+    "guard_recovery": {
+      "processed": 3112501,
+      "billed": 10485760,
+      "cache_hit": false,
+      "state": "DONE",
+      "error": false,
+      "reservation_present": false,
+      "billed_to_processed_ratio": 3.37,
+      "nominal_reference_cost_usd": 5.9604645e-05
+    },
+    "guard_reject": {
+      "processed": 0,
+      "billed": 0,
+      "cache_hit": false,
+      "state": "DONE",
+      "error": true,
+      "reservation_present": false,
+      "billed_to_processed_ratio": null,
+      "nominal_reference_cost_usd": 0.0
+    },
+    "narrow": {
+      "processed": 465,
+      "billed": 10485760,
+      "cache_hit": false,
+      "state": "DONE",
+      "error": false,
+      "reservation_present": false,
+      "billed_to_processed_ratio": 22550.02,
+      "nominal_reference_cost_usd": 5.9604645e-05
+    },
+    "wide": {
+      "processed": 8903,
+      "billed": 10485760,
+      "cache_hit": false,
+      "state": "DONE",
+      "error": false,
+      "reservation_present": false,
+      "billed_to_processed_ratio": 1177.78,
+      "nominal_reference_cost_usd": 5.9604645e-05
+    }
+  },
+  "projection_pair": {
+    "processed_reduction_pct": 94.78,
+    "billed_reduction_pct": 0.0,
+    "minimum_billing_equalized": true
+  },
+  "guardrail": {
+    "reject_limit_bytes": 1000000,
+    "recovery_limit_bytes": 10485760,
+    "rejected": true,
+    "rejected_job_billed_bytes": 0,
+    "recovery_billed_bytes": 10485760
+  },
+  "waste_signals": {
+    "select_star_controlled_queries": 2,
+    "high_billed_to_processed_ratio_count": 3,
+    "maximum_bytes_guard_rejected": true,
+    "minimum_billing_dominated_pair": true
+  },
+  "pricing": {
+    "reference_usd_per_tib": 6.25,
+    "estimate_only": true,
+    "actual_invoice_unknown": true
+  },
+  "integrity": {
+    "order_rows": 5249,
+    "payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "phase19_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "billing_account_exposed": false,
+    "job_ids_exposed": false,
+    "query_text_exposed": false
+  }
+}

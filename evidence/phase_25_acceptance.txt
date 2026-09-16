@@ -1,0 +1,4 @@
+PHASE 25 ACCEPTED
+Synthetic Spanner -> Datastream -> isolated Singapore BigQuery MERGE CDC proven with backfill, INSERT/UPDATE/DELETE, controlled recovery, cost/privacy guardrails, 31 targeted tests, 371 full regression tests, guarded teardown, zero cloud residue, preserved accepted-platform integrity, and Terraform zero drift.
+Actual invoice/SKU billing remains unknown because no Billing Export dataset exists.
+Phase 26 NOT STARTED.

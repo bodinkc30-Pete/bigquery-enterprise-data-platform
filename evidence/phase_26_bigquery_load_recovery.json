@@ -1,0 +1,139 @@
+{
+  "phase": 26,
+  "step": "26.4A_R2_STATE_BASED_RECOVERY",
+  "status": "PASS",
+  "checks": {
+    "recovery_probe_pass": true,
+    "recovery_state_exact": true,
+    "live_state_still_matches_probe": true,
+    "daily_control_only_empty": true,
+    "manifest_24890_rows": true,
+    "local_validation_24_pass": true,
+    "checkpoint_ready": true,
+    "phase27_not_started": true,
+    "recovered_baseline_exact_counts": true,
+    "truncate_all_zero": true,
+    "reload_exact_counts": true,
+    "idempotent_fingerprints_10_of_10": true,
+    "final_total_rows_24890": true
+  },
+  "check_count": 13,
+  "passed": 13,
+  "recovered_table": "daily_control_totals",
+  "recovered_rows": 194,
+  "recovered_baseline_rows": {
+    "accounts": 450,
+    "customers": 300,
+    "merchants": 80,
+    "settlement_batches": 180,
+    "settlement_items": 3998,
+    "reversals": 120,
+    "payment_events": 14268,
+    "daily_control_totals": 194,
+    "refunds": 300,
+    "transactions": 5000
+  },
+  "final_rows": {
+    "daily_control_totals": 194,
+    "settlement_items": 3998,
+    "settlement_batches": 180,
+    "reversals": 120,
+    "refunds": 300,
+    "payment_events": 14268,
+    "transactions": 5000,
+    "customers": 300,
+    "accounts": 450,
+    "merchants": 80
+  },
+  "total_rows": 24890,
+  "first_fingerprints": {
+    "customers": {
+      "row_count": 300,
+      "fingerprint": "-5404794702809470384"
+    },
+    "accounts": {
+      "row_count": 450,
+      "fingerprint": "-2271617714132382317"
+    },
+    "merchants": {
+      "row_count": 80,
+      "fingerprint": "-7627375711955414242"
+    },
+    "transactions": {
+      "row_count": 5000,
+      "fingerprint": "6974401336447030210"
+    },
+    "payment_events": {
+      "row_count": 14268,
+      "fingerprint": "3236776256251589014"
+    },
+    "refunds": {
+      "row_count": 300,
+      "fingerprint": "-8559855261574712201"
+    },
+    "reversals": {
+      "row_count": 120,
+      "fingerprint": "-7492531384284604599"
+    },
+    "settlement_batches": {
+      "row_count": 180,
+      "fingerprint": "5524303971914315049"
+    },
+    "settlement_items": {
+      "row_count": 3998,
+      "fingerprint": "4418648026921548821"
+    },
+    "daily_control_totals": {
+      "row_count": 194,
+      "fingerprint": "-5424674762066285604"
+    }
+  },
+  "second_fingerprints": {
+    "customers": {
+      "row_count": 300,
+      "fingerprint": "-5404794702809470384"
+    },
+    "accounts": {
+      "row_count": 450,
+      "fingerprint": "-2271617714132382317"
+    },
+    "merchants": {
+      "row_count": 80,
+      "fingerprint": "-7627375711955414242"
+    },
+    "transactions": {
+      "row_count": 5000,
+      "fingerprint": "6974401336447030210"
+    },
+    "payment_events": {
+      "row_count": 14268,
+      "fingerprint": "3236776256251589014"
+    },
+    "refunds": {
+      "row_count": 300,
+      "fingerprint": "-8559855261574712201"
+    },
+    "reversals": {
+      "row_count": 120,
+      "fingerprint": "-7492531384284604599"
+    },
+    "settlement_batches": {
+      "row_count": 180,
+      "fingerprint": "5524303971914315049"
+    },
+    "settlement_items": {
+      "row_count": 3998,
+      "fingerprint": "4418648026921548821"
+    },
+    "daily_control_totals": {
+      "row_count": 194,
+      "fingerprint": "-5424674762066285604"
+    }
+  },
+  "idempotency_method": "RECOVER_MISSING_TABLE_THEN_TRUNCATE_ALL_ISOLATED_PHASE26_TABLES_AND_RELOAD",
+  "accepted_platform_mutated": false,
+  "raw_company_data_used": false,
+  "real_bank_data_used": false,
+  "project_id_exposed": false,
+  "phase27_status": "NOT_STARTED"
+}

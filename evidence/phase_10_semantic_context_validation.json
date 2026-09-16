@@ -1,0 +1,21 @@
+{
+  "phase": 10,
+  "status": "PASS",
+  "checks": {
+    "four_live_marts_in_contract": true,
+    "metric_ids_unique": true,
+    "all_metric_columns_live": true,
+    "all_metric_grains_live": true,
+    "all_metrics_from_contracted_marts": true,
+    "all_metrics_owned": true,
+    "all_metrics_portfolio_safe": true,
+    "currency_not_inferred": true,
+    "order_amount_not_cataloged": true,
+    "hosted_semantic_layer_not_required": true,
+    "four_domains_present": true
+  },
+  "entity_count": 5,
+  "metric_count": 18,
+  "missing_metric_column_count": 0,
+  "invalid_metric_grain_count": 0
+}

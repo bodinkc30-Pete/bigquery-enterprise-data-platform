@@ -1,0 +1,50 @@
+{
+  "phase": 25,
+  "step": "25.14A_POST_TEARDOWN_VERIFICATION",
+  "status": "PASS",
+  "checks": {
+    "teardown_runtime_8_pass": true,
+    "exact_datastream_stream_absent": true,
+    "exact_source_profile_absent": true,
+    "exact_destination_profile_absent": true,
+    "exact_bigquery_dataset_absent": true,
+    "free_spanner_instance_absent": true,
+    "synthetic_spanner_database_absent": true,
+    "terraform_fmt_pass": true,
+    "terraform_validate_pass": true,
+    "terraform_zero_drift": true,
+    "phase25_terraform_state_zero": true,
+    "accepted_integrity_preserved": true,
+    "spanner_api_left_enabled": true,
+    "datastream_api_left_enabled": true,
+    "phase26_artifacts_absent": true
+  },
+  "check_count": 15,
+  "cloud_target_absence": {
+    "stream": true,
+    "source_profile": true,
+    "destination_profile": true,
+    "dataset": true
+  },
+  "spanner_instance_absent": true,
+  "spanner_database_absent": true,
+  "terraform": {
+    "plan_exit": 0,
+    "zero_drift": true,
+    "phase25_state_count": 0
+  },
+  "integrity": {
+    "core_rows": 685,
+    "core_amount": "860004.99",
+    "mart_rows": 685,
+    "mart_amount": "860004.99",
+    "dq_rows": 32,
+    "reconciliation_rows": 28
+  },
+  "service_apis_left_enabled": true,
+  "phase26_artifact_count": 0,
+  "project_id_exposed": false,
+  "credential_exposed": false,
+  "raw_payload_exposed": false,
+  "phase26_status": "NOT_STARTED"
+}

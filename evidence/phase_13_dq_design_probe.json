@@ -1,0 +1,42 @@
+{
+  "phase": 13,
+  "status": "PASS",
+  "checks": {
+    "dup_order_item_keys": true,
+    "dup_payment_keys": true,
+    "invalid_quantity_rows": true,
+    "missing_payment_creator_fk_rows": true,
+    "missing_sku_fk_rows": true,
+    "null_order_item_keys": true,
+    "null_payment_keys": true,
+    "subtotal_formula_mismatch_rows": true,
+    "commerce_freshness_aligned": true,
+    "marketing_freshness_aligned": true,
+    "payment_freshness_aligned": true,
+    "commerce_row_reconciliation": true,
+    "commerce_units_reconciliation": true,
+    "payment_amount_reconciliation": true,
+    "payment_count_reconciliation": true
+  },
+  "observed_counts": {
+    "dup_order_item_keys": 0,
+    "dup_payment_keys": 0,
+    "invalid_quantity_rows": 0,
+    "missing_payment_creator_fk_rows": 0,
+    "missing_sku_fk_rows": 0,
+    "null_order_item_keys": 0,
+    "null_payment_keys": 0,
+    "subtotal_formula_mismatch_rows": 0
+  },
+  "freshness": {
+    "commerce_freshness_aligned": true,
+    "marketing_freshness_aligned": true,
+    "payment_freshness_aligned": true
+  },
+  "reconciliation": {
+    "commerce_row_reconciliation": true,
+    "commerce_units_reconciliation": true,
+    "payment_amount_reconciliation": true,
+    "payment_count_reconciliation": true
+  }
+}

@@ -1,0 +1,84 @@
+name: project08_bigquery
+version: '1.0.0'
+config-version: 2
+profile: project08_bigquery
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  phase11_lookback_days: 7
+  phase11_backfill_start_date: ""
+  phase27_lookback_days: 7
+  phase27_backfill_start_date: ""
+
+models:
+  project08_bigquery:
+    core:
+      +materialized: table
+      +schema: core
+      +tags: ["phase09", "core"]
+      +persist_docs:
+        relation: true
+      fact_order_item:
+        +partition_by: {field: order_date, data_type: date, granularity: day}
+        +cluster_by: [channel_key, sku_key, order_status]
+      fact_creator_payment:
+        +partition_by: {field: post_date, data_type: date, granularity: day}
+        +cluster_by: [creator_key, payment_status, payment_cycle]
+      fact_shop_daily:
+        +partition_by: {field: date, data_type: date, granularity: day}
+      fact_campaign_daily:
+        +partition_by: {field: date, data_type: date, granularity: day}
+      fact_live_daily:
+        +partition_by: {field: date, data_type: date, granularity: day}
+      fact_product_card_daily:
+        +partition_by: {field: date, data_type: date, granularity: day}
+    marts:
+      +materialized: incremental
+      +incremental_strategy: merge
+      +on_schema_change: fail
+      +schema: mart
+      +tags: ["phase10", "phase11", "mart"]
+      +persist_docs:
+        relation: true
+      mart_commerce_daily:
+        +unique_key: date_key
+        +partition_by: {field: date, data_type: date, granularity: day}
+      mart_marketing_daily:
+        +unique_key: date_key
+        +partition_by: {field: date, data_type: date, granularity: day}
+      mart_creator_daily:
+        +unique_key: [date_key, creator_key]
+        +partition_by: {field: date, data_type: date, granularity: day}
+        +cluster_by: [creator_key]
+      mart_payment_daily:
+        +unique_key: [date_key, payment_cycle, payment_status, payment_type]
+        +partition_by: {field: post_date, data_type: date, granularity: day}
+        +cluster_by: [payment_status, payment_cycle, payment_type]
+    financial_marts:
+      +materialized: incremental
+      +incremental_strategy: merge
+      +on_schema_change: fail
+      +schema: financial_mart_synth
+      +tags: ["phase27", "financial-mart", "synthetic-financial-operations"]
+      +persist_docs:
+        relation: true
+      mart_financial_ops_daily:
+        +unique_key: [business_date, currency]
+        +partition_by: {field: business_date, data_type: date, granularity: day}
+        +cluster_by: [currency]
+      mart_transaction_status_daily:
+        +unique_key: [business_date, currency, transaction_status]
+        +partition_by: {field: business_date, data_type: date, granularity: day}
+        +cluster_by: [currency, transaction_status]
+      mart_settlement_daily:
+        +unique_key: [settlement_date, currency]
+        +partition_by: {field: settlement_date, data_type: date, granularity: day}
+        +cluster_by: [currency]
+      mart_reconciliation_daily:
+        +unique_key: [business_date, currency, control_name]
+        +partition_by: {field: business_date, data_type: date, granularity: day}
+        +cluster_by: [currency, control_name, control_status]

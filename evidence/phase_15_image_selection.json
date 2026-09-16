@@ -1,0 +1,7 @@
+﻿{
+    "region":  "asia-southeast3",
+    "creation_disabled":  false,
+    "selected_image":  "composer-3-airflow-2.11.1-build.19",
+    "selected_is_default":  true,
+    "supported_composer3_count":  4
+}

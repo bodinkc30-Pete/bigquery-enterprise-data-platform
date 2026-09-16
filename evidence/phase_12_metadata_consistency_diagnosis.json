@@ -1,0 +1,61 @@
+{
+  "phase": 12,
+  "status": "PASS",
+  "classification": "METADATA_OBSERVATION_INCONSISTENCY",
+  "checks": {
+    "direct_table_counts_8_8_12_4": true,
+    "all_affected_assets_exist_directly": true,
+    "all_affected_local_schemas_match_directly": true,
+    "information_schema_disagrees_with_direct_api": true
+  },
+  "information_schema_counts": {
+    "raw": 8,
+    "staging": 6,
+    "core": 11,
+    "mart": 4
+  },
+  "direct_table_api_counts": {
+    "raw": 8,
+    "staging": 8,
+    "core": 12,
+    "mart": 4
+  },
+  "affected_assets": {
+    "raw.shop_daily": {
+      "exists_via_table_api": true,
+      "schema_matches_accepted": true,
+      "live_column_count": 18,
+      "expected_column_count": 18
+    },
+    "staging.stg_shop_daily": {
+      "exists_via_table_api": true,
+      "schema_matches_accepted": true,
+      "live_column_count": 22,
+      "expected_column_count": 22
+    },
+    "staging.stg_product_sku": {
+      "exists_via_table_api": true,
+      "schema_matches_accepted": true,
+      "live_column_count": 11,
+      "expected_column_count": 11
+    },
+    "staging.stg_product_card_daily": {
+      "exists_via_table_api": true,
+      "schema_matches_accepted": true,
+      "live_column_count": 20,
+      "expected_column_count": 20
+    },
+    "core.fact_shop_daily": {
+      "exists_via_table_api": true,
+      "schema_matches_accepted": true,
+      "live_column_count": 19,
+      "expected_column_count": 19
+    },
+    "core.fact_product_card_daily": {
+      "exists_via_table_api": true,
+      "schema_matches_accepted": true,
+      "live_column_count": 17,
+      "expected_column_count": 17
+    }
+  }
+}

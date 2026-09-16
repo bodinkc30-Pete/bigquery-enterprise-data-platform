@@ -1,0 +1,163 @@
+{
+  "phase": 7,
+  "status": "PASS",
+  "location": "asia-southeast3",
+  "raw_table_count": 8,
+  "staging_table_count": 8,
+  "core_dataset_absent": true,
+  "controlled_failure_recovery": {
+    "expected_failure_detected": true,
+    "failure_type": "schema_type_mismatch",
+    "temporary_probe_removed": true
+  },
+  "first_run": {
+    "orders": {
+      "expected_rows": 5249,
+      "raw_rows": 5249,
+      "staging_rows": 5249,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "shop_daily": {
+      "expected_rows": 273,
+      "raw_rows": 273,
+      "staging_rows": 273,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "campaign_daily": {
+      "expected_rows": 366,
+      "raw_rows": 366,
+      "staging_rows": 366,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "live_daily": {
+      "expected_rows": 224,
+      "raw_rows": 224,
+      "staging_rows": 224,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "product_card_daily": {
+      "expected_rows": 30,
+      "raw_rows": 30,
+      "staging_rows": 30,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "product_sku": {
+      "expected_rows": 15,
+      "raw_rows": 15,
+      "staging_rows": 15,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "creator": {
+      "expected_rows": 88,
+      "raw_rows": 88,
+      "staging_rows": 88,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "creator_payment": {
+      "expected_rows": 685,
+      "raw_rows": 685,
+      "staging_rows": 685,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    }
+  },
+  "second_run": {
+    "orders": {
+      "expected_rows": 5249,
+      "raw_rows": 5249,
+      "staging_rows": 5249,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "shop_daily": {
+      "expected_rows": 273,
+      "raw_rows": 273,
+      "staging_rows": 273,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "campaign_daily": {
+      "expected_rows": 366,
+      "raw_rows": 366,
+      "staging_rows": 366,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "live_daily": {
+      "expected_rows": 224,
+      "raw_rows": 224,
+      "staging_rows": 224,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "product_card_daily": {
+      "expected_rows": 30,
+      "raw_rows": 30,
+      "staging_rows": 30,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "product_sku": {
+      "expected_rows": 15,
+      "raw_rows": 15,
+      "staging_rows": 15,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "creator": {
+      "expected_rows": 88,
+      "raw_rows": 88,
+      "staging_rows": 88,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    },
+    "creator_payment": {
+      "expected_rows": 685,
+      "raw_rows": 685,
+      "staging_rows": 685,
+      "raw_schema_match": true,
+      "staging_schema_match": true,
+      "typed_or_metadata_null_failures": 0,
+      "status": "PASS"
+    }
+  },
+  "idempotent_fingerprints": true,
+  "total_expected_rows": 6930
+}

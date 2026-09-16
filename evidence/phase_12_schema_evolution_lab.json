@@ -1,0 +1,59 @@
+{
+  "phase": 12,
+  "status": "PASS",
+  "baseline_sha256": "f8cafa6c5af9a67d4baaa9176bea7d3cc887eabbf1a84488798bd40498310558",
+  "classifications": {
+    "add_nullable_destination_column": "COMPATIBLE",
+    "add_source_csv_column": "REVIEW_REQUIRED",
+    "missing_source_column": "BREAKING",
+    "renamed_source_column": "BREAKING",
+    "incompatible_datatype_change": "BREAKING",
+    "changed_business_meaning": "REVIEW_REQUIRED",
+    "unexpected_nested_structure": "BREAKING",
+    "csv_column_reorder": "BREAKING"
+  },
+  "classification_checks": {
+    "add_nullable_destination_column": true,
+    "add_source_csv_column": true,
+    "missing_source_column": true,
+    "renamed_source_column": true,
+    "incompatible_datatype_change": true,
+    "changed_business_meaning": true,
+    "unexpected_nested_structure": true,
+    "csv_column_reorder": true
+  },
+  "runtime_probes": {
+    "compatible_destination_projection": {
+      "expected_failure": false,
+      "observed_failure": false,
+      "pass": true
+    },
+    "missing_column_blocked": {
+      "expected_failure": true,
+      "observed_failure": true,
+      "pass": true
+    },
+    "renamed_column_blocked": {
+      "expected_failure": true,
+      "observed_failure": true,
+      "pass": true
+    },
+    "datatype_change_blocked": {
+      "expected_failure": true,
+      "observed_failure": true,
+      "pass": true
+    },
+    "nested_structure_blocked": {
+      "expected_failure": true,
+      "observed_failure": true,
+      "pass": true
+    }
+  },
+  "checks": {
+    "all_contract_classifications_match": true,
+    "all_bigquery_probes_match_expected_behavior": true,
+    "no_persistent_probe_tables": true,
+    "baseline_hash_present": true
+  },
+  "persistent_probe_table_count": 0
+}

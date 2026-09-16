@@ -1,0 +1,84 @@
+version: 2
+models:
+  - name: mart_financial_ops_daily
+    description: Synthetic daily financial operations aggregate by business date and currency.
+    columns:
+      - name: business_date
+        data_tests: [not_null]
+      - name: currency
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['THB','USD','SGD']}
+      - name: transaction_count
+        data_tests: [not_null]
+      - name: transaction_amount_minor
+        data_tests: [not_null]
+      - name: refund_count
+        data_tests: [not_null]
+      - name: reversal_count
+        data_tests: [not_null]
+      - name: settlement_item_count
+        data_tests: [not_null]
+
+  - name: mart_transaction_status_daily
+    description: Synthetic transaction status reporting by business date and currency.
+    columns:
+      - name: business_date
+        data_tests: [not_null]
+      - name: currency
+        data_tests: [not_null]
+      - name: transaction_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['COMPLETED','DECLINED','PENDING','CANCELLED']}
+      - name: transaction_count
+        data_tests: [not_null]
+      - name: transaction_amount_minor
+        data_tests: [not_null]
+
+  - name: mart_settlement_daily
+    description: Synthetic settlement batch-versus-item reporting and control mart.
+    columns:
+      - name: settlement_date
+        data_tests: [not_null]
+      - name: currency
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['THB','USD','SGD']}
+      - name: item_count_difference
+        data_tests: [not_null]
+      - name: net_amount_difference_minor
+        data_tests: [not_null]
+      - name: control_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['MATCHED']}
+
+  - name: mart_reconciliation_daily
+    description: Six synthetic expected-versus-actual financial control results by date and currency.
+    columns:
+      - name: business_date
+        data_tests: [not_null]
+      - name: currency
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['THB','USD','SGD']}
+      - name: control_name
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['FIN_REC_001','FIN_REC_002','FIN_REC_003','FIN_REC_004','FIN_REC_005','FIN_REC_006']}
+      - name: count_difference
+        data_tests: [not_null]
+      - name: amount_difference_minor
+        data_tests: [not_null]
+      - name: control_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: ['MATCHED']}

@@ -1,0 +1,98 @@
+{
+  "phase": 10,
+  "status": "PASS",
+  "location": "asia-southeast3",
+  "checks": {
+    "manifest_counts_match": true,
+    "first_run_4_models_pass": true,
+    "full_dbt_tests_62_pass": true,
+    "all_reconciliations_pass": true,
+    "all_mart_grains_unique": true,
+    "controlled_failure_detected": true,
+    "controlled_recovery_pass": true,
+    "second_run_4_models_pass": true,
+    "mart_fingerprints_idempotent": true,
+    "mart_row_counts_idempotent": true,
+    "core_fingerprints_preserved": true,
+    "mart_physical_design": true,
+    "relation_docs_persisted": true,
+    "docs_artifacts_generated": true,
+    "phase11_incremental_logic_absent": true
+  },
+  "manifest_counts": {
+    "models": 16,
+    "tests": 62,
+    "sources": 8
+  },
+  "first_run_summary": {
+    "total": 4,
+    "success": 4,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "test_summary": {
+    "total": 62,
+    "success": 62,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "second_run_summary": {
+    "total": 4,
+    "success": 4,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "reconciliations": {
+    "commerce": true,
+    "marketing": true,
+    "creator": true,
+    "payment": true
+  },
+  "grain_duplicate_groups": {
+    "mart_commerce_daily": 0,
+    "mart_marketing_daily": 0,
+    "mart_creator_daily": 0,
+    "mart_payment_daily": 0
+  },
+  "row_counts": {
+    "mart_commerce_daily": 354,
+    "mart_marketing_daily": 366,
+    "mart_creator_daily": 625,
+    "mart_payment_daily": 393
+  },
+  "physical_design": {
+    "mart_table_count": 4,
+    "partitioned_mart_count": 4,
+    "clustered_mart_count": 2,
+    "partition_fields": {
+      "mart_commerce_daily": "date",
+      "mart_creator_daily": "date",
+      "mart_marketing_daily": "date",
+      "mart_payment_daily": "post_date"
+    },
+    "cluster_fields": {
+      "mart_commerce_daily": [],
+      "mart_creator_daily": [
+        "creator_key"
+      ],
+      "mart_marketing_daily": [],
+      "mart_payment_daily": [
+        "payment_status",
+        "payment_cycle",
+        "payment_type"
+      ]
+    }
+  },
+  "relation_descriptions_persisted": 4,
+  "docs_artifacts": {
+    "manifest_json": true,
+    "catalog_json": true,
+    "index_html": true
+  },
+  "mart_fingerprint_differences": 0,
+  "mart_row_count_differences": 0,
+  "core_fingerprint_differences": 0
+}

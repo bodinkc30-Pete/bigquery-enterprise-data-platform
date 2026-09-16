@@ -1,0 +1,80 @@
+{
+  "phase": 9,
+  "status": "PASS",
+  "dbt_core_version": "1.12.4",
+  "dbt_bigquery_version": "1.12.0",
+  "location": "asia-southeast3",
+  "checks": {
+    "pre_run_gate_pass": true,
+    "controlled_failure_detected": true,
+    "controlled_recovery_pass": true,
+    "dbt_run_12_models_pass": true,
+    "dbt_tests_pass": true,
+    "manifest_counts_match": true,
+    "core_fingerprints_preserved": true,
+    "core_row_counts_preserved": true,
+    "physical_design_preserved": true,
+    "relation_docs_persisted": true,
+    "docs_artifacts_generated": true,
+    "mart_dataset_absent": true,
+    "no_extra_dbt_dataset": true
+  },
+  "manifest_counts": {
+    "models": 12,
+    "tests": 39,
+    "sources": 8
+  },
+  "run_summary": {
+    "total": 12,
+    "success": 12,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "test_summary": {
+    "total": 39,
+    "success": 39,
+    "error": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "physical_design": {
+    "core_table_count": 12,
+    "fact_table_count": 6,
+    "partitioned_fact_count": 6,
+    "clustered_fact_count": 2,
+    "partition_fields": {
+      "fact_campaign_daily": "date",
+      "fact_creator_payment": "post_date",
+      "fact_live_daily": "date",
+      "fact_order_item": "order_date",
+      "fact_product_card_daily": "date",
+      "fact_shop_daily": "date"
+    },
+    "cluster_fields": {
+      "fact_campaign_daily": [],
+      "fact_creator_payment": [
+        "creator_key",
+        "payment_status",
+        "payment_cycle"
+      ],
+      "fact_live_daily": [],
+      "fact_order_item": [
+        "channel_key",
+        "sku_key",
+        "order_status"
+      ],
+      "fact_product_card_daily": [],
+      "fact_shop_daily": []
+    }
+  },
+  "relation_descriptions_persisted": 12,
+  "docs_artifacts": {
+    "manifest_json": true,
+    "catalog_json": true,
+    "index_html": true
+  },
+  "core_model_count": 12,
+  "fingerprint_differences": 0,
+  "row_count_differences": 0
+}

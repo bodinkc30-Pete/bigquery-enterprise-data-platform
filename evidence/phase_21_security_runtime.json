@@ -1,0 +1,171 @@
+{
+  "phase": 21,
+  "status": "PASS",
+  "checks": {
+    "secured_rows_685": true,
+    "masked_rows_685": true,
+    "row_scope_subset": true,
+    "all_access_tests_pass": true,
+    "policy_tag_applied": true,
+    "zero_user_managed_keys": true,
+    "least_privilege_project_roles": true,
+    "scoped_impersonation_all_three": true,
+    "security_event_rows_exact": true,
+    "cloud_audit_log_probe": true,
+    "cloud_audit_roles_all_three": true,
+    "accepted_source_rows": true,
+    "accepted_mart_rows": true,
+    "accepted_amount_match": true,
+    "prior_histories_preserved": true,
+    "phase22_absent": true
+  },
+  "check_count": 16,
+  "infrastructure": {
+    "keyless_identities": 3,
+    "user_managed_key_count": 0,
+    "policy_tag_count": 1,
+    "secured_tables": 2,
+    "row_access_policies": 4
+  },
+  "native_dynamic_masking": {
+    "status": "ENTERPRISE_DESIGN_LAB_UNSUPPORTED",
+    "attempted": true,
+    "reason": "ORGANIZATION_REQUIRED"
+  },
+  "masking_fallback": {
+    "status": "IMPLEMENTED",
+    "mechanism": "SQL_MASKED_PROJECTION",
+    "analyst_masked_access": true
+  },
+  "row_security": {
+    "total_rows": 685,
+    "th_scope_rows": 499,
+    "analyst_visible": 499,
+    "viewer_visible": 499,
+    "finance_visible": 685
+  },
+  "column_security": {
+    "policy_tag_applied": true,
+    "analyst_protected_denied": true,
+    "viewer_protected_denied": true,
+    "finance_unmasked_allowed": true
+  },
+  "iam": {
+    "project_roles": {
+      "analyst": [
+        "roles/bigquery.jobUser"
+      ],
+      "finance": [
+        "roles/bigquery.jobUser"
+      ],
+      "viewer": [
+        "roles/bigquery.jobUser"
+      ]
+    },
+    "scoped_impersonation": {
+      "analyst": true,
+      "finance": true,
+      "viewer": true
+    },
+    "zero_user_managed_keys": true
+  },
+  "audit": {
+    "security_event_rows": 10,
+    "cloud_audit_log_entries": 100,
+    "roles_observed": [
+      "analyst",
+      "finance",
+      "viewer"
+    ]
+  },
+  "access_tests": {
+    "analyst_row_scope": {
+      "passed": true,
+      "role": "analyst",
+      "outcome": "ALLOWED",
+      "error_class": null,
+      "bytes_processed": 0
+    },
+    "viewer_row_scope": {
+      "passed": true,
+      "role": "viewer",
+      "outcome": "ALLOWED",
+      "error_class": null,
+      "bytes_processed": 0
+    },
+    "finance_full_scope": {
+      "passed": true,
+      "role": "finance",
+      "outcome": "ALLOWED",
+      "error_class": null,
+      "bytes_processed": 0
+    },
+    "analyst_protected_column_denied": {
+      "passed": true,
+      "role": "analyst",
+      "outcome": "DENIED",
+      "error_class": "ACCESS_DENIED",
+      "bytes_processed": 0
+    },
+    "viewer_protected_column_denied": {
+      "passed": true,
+      "role": "viewer",
+      "outcome": "DENIED",
+      "error_class": "ACCESS_DENIED",
+      "bytes_processed": 0
+    },
+    "finance_unmasked_allowed": {
+      "passed": true,
+      "role": "finance",
+      "outcome": "ALLOWED",
+      "error_class": null,
+      "bytes_processed": 0
+    },
+    "analyst_masked_projection": {
+      "passed": true,
+      "role": "analyst",
+      "outcome": "ALLOWED",
+      "error_class": null,
+      "bytes_processed": 0
+    },
+    "analyst_core_access_denied": {
+      "passed": true,
+      "role": "analyst",
+      "outcome": "DENIED",
+      "error_class": "ACCESS_DENIED",
+      "bytes_processed": 0
+    },
+    "finance_core_access_denied": {
+      "passed": true,
+      "role": "finance",
+      "outcome": "DENIED",
+      "error_class": "ACCESS_DENIED",
+      "bytes_processed": 0
+    },
+    "viewer_core_access_denied": {
+      "passed": true,
+      "role": "viewer",
+      "outcome": "DENIED",
+      "error_class": "ACCESS_DENIED",
+      "bytes_processed": 0
+    }
+  },
+  "integrity": {
+    "core_payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": "860004.99",
+    "mart_amount": "860004.99",
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "phase22_status": "NOT_STARTED",
+  "phase22_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "principal_emails_exposed": false,
+    "access_tokens_persisted": false,
+    "raw_company_data_used": false,
+    "real_bank_data_used": false
+  }
+}

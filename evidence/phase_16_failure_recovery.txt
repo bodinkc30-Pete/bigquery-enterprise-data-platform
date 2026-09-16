@@ -1,0 +1,28 @@
+﻿PHASE 16 - MONITORING / LOGGING / SLA - FAILURE / RECOVERY EVIDENCE
+
+1. Canonical status sync exact-match guard
+- Initial PowerShell exact-match helper failed before writing any canonical file.
+- Diagnosis: PowerShell string splitting around the markdown status line was unreliable.
+- Recovery: Python exact-count replacement was used; Phase 16 IN PROGRESS sync then passed.
+
+2. Terraform plan Windows argument transport
+- fmt and validate passed, but direct PowerShell terraform plan returned "Too many command line arguments".
+- No cloud mutation occurred.
+- Recovery: Python subprocess argument list produced a saved plan with exactly 6 add / 0 change / 0 destroy.
+
+3. Cloud Logging runtime flag mismatch
+- First runtime attempt wrote the idempotent Phase 16 BigQuery audit ledger, then gcloud logging write rejected --resource=global.
+- Diagnosis: installed gcloud uses --monitored-resource-type=global; global is also the default.
+- Recovery: flag was corrected and the entire transaction-safe/idempotent runtime was rerun.
+- Final evidence: 3 pipeline runs, 15 steps, OPEN->RESOLVED incident lifecycle, 3 cost rows, 3 structured logs.
+
+4. Controlled SLA breach
+- Baseline: SUCCESS / MET.
+- Controlled run: FAILED / BREACHED at sla_gate only; accepted CORE/MART were not modified.
+- Recovery: SUCCESS / MET with retry_count=1.
+- Cloud Logging recorded the breach and the live log-match alert policy/metric remained configured.
+
+5. Accepted-state validation
+- CORE/MART remain 685 rows and 860004.99 amount on both sides.
+- Phase 13 DQ history remains 32 rows; Phase 14 reconciliation remains 28 rows.
+- Terraform final plan reports zero drift.

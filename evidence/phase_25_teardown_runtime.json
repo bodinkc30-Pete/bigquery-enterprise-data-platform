@@ -1,0 +1,36 @@
+{
+  "phase": 25,
+  "step": "25.13B_ACTUAL_TEARDOWN",
+  "status": "PASS",
+  "checks": {
+    "all_six_targets_deleted": true,
+    "delete_order_exact": true,
+    "free_instance_deleted_last": true,
+    "service_apis_left_enabled": true,
+    "billing_mutation_not_performed": true,
+    "credential_file_removed": true,
+    "phase26_not_started": true,
+    "execution_failure_absent": true
+  },
+  "check_count": 8,
+  "deleted_target_count": 6,
+  "deleted_aliases": [
+    "DATASTREAM_STREAM",
+    "DATASTREAM_SOURCE_PROFILE",
+    "DATASTREAM_DEST_PROFILE",
+    "BIGQUERY_ISOLATED_DATASET",
+    "SPANNER_SYNTHETIC_DATABASE",
+    "SPANNER_FREE_INSTANCE"
+  ],
+  "runtime_seconds": 319.093,
+  "free_instance_entitlement_consumed_after_delete": true,
+  "service_apis_disabled": false,
+  "billing_mutation_performed": false,
+  "actual_invoice_known": false,
+  "actual_invoice_source": "NO_BILLING_EXPORT_DATASET",
+  "project_id_exposed": false,
+  "principal_exposed": false,
+  "credential_exposed": false,
+  "raw_payload_exposed": false,
+  "phase26_status": "NOT_STARTED"
+}

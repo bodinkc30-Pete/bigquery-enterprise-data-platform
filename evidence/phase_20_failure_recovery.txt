@@ -1,0 +1,8 @@
+Phase 20 Failure / Recovery Evidence
+
+1. Initial governance runtime used SQL as a Windows command-line argument. The asset-registry load exceeded the Windows command-length limit. BigQuery did not receive that oversized command successfully.
+2. A first exact-string transport patch was blocked by its guard because the expected function text did not match byte-for-byte. No file mutation occurred from that failed patch.
+3. The bq transport was changed to pass SQL via stdin. A direct SELECT 1 probe returned exit 0 before runtime retry.
+4. The first stdin runtime retry exceeded the remote tool response timeout. A live read-only probe afterwards showed 48 assets, 444 classified columns, 51 lineage edges, and zero controlled-test rows, proving the process had populated/recovered governance tables before the remote session ended.
+5. Public runtime evidence/native-metadata files were not yet written after that timeout, so the runtime is rerun idempotently using DELETE→INSERT transactions to complete metadata labeling, marker-job capture, validation, and public evidence rather than falsely accepting the partial result.
+6. The idempotent stdin rerun completed successfully. Final public runtime evidence reports 48 governed assets, 444 classified columns, 51 lineage edges, 32/32 BigQuery tables with labels/descriptions, clean baseline gates, controlled failure detection, full recovery, 9/9 marker jobs, preserved accepted data, and zero Phase 21 artifacts.

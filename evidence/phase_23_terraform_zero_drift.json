@@ -1,0 +1,14 @@
+{
+  "phase": 23,
+  "status": "PASS",
+  "checks": {
+    "fmt_check_pass": true,
+    "validate_pass": true,
+    "zero_drift": true,
+    "phase23_state_zero": true
+  },
+  "plan_exit": 0,
+  "zero_drift": true,
+  "phase23_state_resource_count": 0,
+  "cloud_resources_created": false
+}

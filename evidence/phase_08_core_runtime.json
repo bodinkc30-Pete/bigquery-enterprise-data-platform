@@ -1,0 +1,157 @@
+{
+  "phase": 8,
+  "status": "PASS",
+  "location": "asia-southeast3",
+  "core_model_count": 12,
+  "campaign_dimension_status": "OMITTED_NO_BUSINESS_KEY",
+  "controlled_failure_recovery": {
+    "expected_failure_detected": true,
+    "failure_type": "controlled_duplicate_grain_assert",
+    "actual_staging_order_grain_pass": true
+  },
+  "first_run": {
+    "status": "PASS",
+    "checks": {
+      "core_table_count_12": true,
+      "row_counts_match": true,
+      "all_grains_unique": true,
+      "all_fk_missing_zero": true,
+      "payment_dates_corrected": true,
+      "mart_dataset_absent": true
+    },
+    "row_counts": {
+      "dim_date": 366,
+      "dim_product": 11,
+      "dim_sku": 15,
+      "dim_channel": 4,
+      "dim_creator": 88,
+      "dim_payment_method": 3,
+      "fact_order_item": 5249,
+      "fact_shop_daily": 273,
+      "fact_campaign_daily": 366,
+      "fact_live_daily": 224,
+      "fact_product_card_daily": 30,
+      "fact_creator_payment": 685
+    },
+    "expected_row_counts": {
+      "dim_date": 366,
+      "dim_product": 11,
+      "dim_sku": 15,
+      "dim_channel": 4,
+      "dim_creator": 88,
+      "dim_payment_method": 3,
+      "fact_order_item": 5249,
+      "fact_shop_daily": 273,
+      "fact_campaign_daily": 366,
+      "fact_live_daily": 224,
+      "fact_product_card_daily": 30,
+      "fact_creator_payment": 685
+    },
+    "duplicate_counts": {
+      "dim_date": 0,
+      "dim_product": 0,
+      "dim_sku": 0,
+      "dim_channel": 0,
+      "dim_creator": 0,
+      "dim_payment_method": 0,
+      "fact_order_item": 0,
+      "fact_shop_daily": 0,
+      "fact_campaign_daily": 0,
+      "fact_live_daily": 0,
+      "fact_product_card_daily": 0,
+      "fact_creator_payment": 0
+    },
+    "fk_missing_counts": {
+      "sku_product": 0,
+      "order_sku": 0,
+      "order_product": 0,
+      "order_channel": 0,
+      "order_payment_method": 0,
+      "order_creator": 0,
+      "fact_order_item_date": 0,
+      "fact_shop_daily_date": 0,
+      "fact_campaign_daily_date": 0,
+      "fact_live_daily_date": 0,
+      "fact_product_card_daily_date": 0,
+      "fact_creator_payment_date": 0
+    },
+    "creator_payment_date_validation": {
+      "max_date": "2026-06-27",
+      "min_date": "2026-01-23",
+      "non_2026_rows": "0"
+    }
+  },
+  "second_run": {
+    "status": "PASS",
+    "checks": {
+      "core_table_count_12": true,
+      "row_counts_match": true,
+      "all_grains_unique": true,
+      "all_fk_missing_zero": true,
+      "payment_dates_corrected": true,
+      "mart_dataset_absent": true
+    },
+    "row_counts": {
+      "dim_date": 366,
+      "dim_product": 11,
+      "dim_sku": 15,
+      "dim_channel": 4,
+      "dim_creator": 88,
+      "dim_payment_method": 3,
+      "fact_order_item": 5249,
+      "fact_shop_daily": 273,
+      "fact_campaign_daily": 366,
+      "fact_live_daily": 224,
+      "fact_product_card_daily": 30,
+      "fact_creator_payment": 685
+    },
+    "expected_row_counts": {
+      "dim_date": 366,
+      "dim_product": 11,
+      "dim_sku": 15,
+      "dim_channel": 4,
+      "dim_creator": 88,
+      "dim_payment_method": 3,
+      "fact_order_item": 5249,
+      "fact_shop_daily": 273,
+      "fact_campaign_daily": 366,
+      "fact_live_daily": 224,
+      "fact_product_card_daily": 30,
+      "fact_creator_payment": 685
+    },
+    "duplicate_counts": {
+      "dim_date": 0,
+      "dim_product": 0,
+      "dim_sku": 0,
+      "dim_channel": 0,
+      "dim_creator": 0,
+      "dim_payment_method": 0,
+      "fact_order_item": 0,
+      "fact_shop_daily": 0,
+      "fact_campaign_daily": 0,
+      "fact_live_daily": 0,
+      "fact_product_card_daily": 0,
+      "fact_creator_payment": 0
+    },
+    "fk_missing_counts": {
+      "sku_product": 0,
+      "order_sku": 0,
+      "order_product": 0,
+      "order_channel": 0,
+      "order_payment_method": 0,
+      "order_creator": 0,
+      "fact_order_item_date": 0,
+      "fact_shop_daily_date": 0,
+      "fact_campaign_daily_date": 0,
+      "fact_live_daily_date": 0,
+      "fact_product_card_daily_date": 0,
+      "fact_creator_payment_date": 0
+    },
+    "creator_payment_date_validation": {
+      "max_date": "2026-06-27",
+      "min_date": "2026-01-23",
+      "non_2026_rows": "0"
+    }
+  },
+  "idempotent_fingerprints": true
+}

@@ -1,0 +1,137 @@
+{
+  "phase": 17,
+  "status": "PASS",
+  "checks": {
+    "five_marker_jobs": true,
+    "all_jobs_done": true,
+    "all_jobs_error_free": true,
+    "all_cache_disabled": true,
+    "partition_semantic_equivalence": true,
+    "partition_actual_plan_work_reduced": true,
+    "column_scope_equal": true,
+    "column_actual_scan_reduced": true,
+    "cluster_query_completed": true,
+    "query_plan_all_present": true,
+    "order_rows_preserved": true,
+    "payment_rows_preserved": true,
+    "payment_amount_preserved": true,
+    "phase13_history_preserved": true,
+    "phase14_history_preserved": true,
+    "phase16_history_preserved": true
+  },
+  "benchmark_date": "2026-08-13",
+  "actual_jobs": {
+    "cluster_aligned": {
+      "bytes_processed": 1455,
+      "bytes_billed": 10485760,
+      "total_slot_ms": 29,
+      "cache_hit": false,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "error": false
+    },
+    "column_narrow": {
+      "bytes_processed": 465,
+      "bytes_billed": 10485760,
+      "total_slot_ms": 34,
+      "cache_hit": false,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "error": false
+    },
+    "column_wide": {
+      "bytes_processed": 8903,
+      "bytes_billed": 10485760,
+      "total_slot_ms": 36,
+      "cache_hit": false,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "error": false
+    },
+    "partition_optimized": {
+      "bytes_processed": 360,
+      "bytes_billed": 10485760,
+      "total_slot_ms": 43,
+      "cache_hit": false,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "error": false
+    },
+    "partition_anti": {
+      "bytes_processed": 360,
+      "bytes_billed": 10485760,
+      "total_slot_ms": 64,
+      "cache_hit": false,
+      "state": "DONE",
+      "statement_type": "SELECT",
+      "error": false
+    }
+  },
+  "actual_reduction": {
+    "partition_bytes_saved": 0,
+    "partition_reduction_pct": 0.0,
+    "column_bytes_saved": 8438,
+    "column_reduction_pct": 94.78,
+    "cluster_reduction_observed_vs_partition_only": false
+  },
+  "query_plan_summary": {
+    "cluster_aligned": {
+      "stage_count": 1,
+      "records_read": 15,
+      "records_written": 1,
+      "parallel_inputs": 2
+    },
+    "column_narrow": {
+      "stage_count": 1,
+      "records_read": 15,
+      "records_written": 15,
+      "parallel_inputs": 2
+    },
+    "column_wide": {
+      "stage_count": 1,
+      "records_read": 15,
+      "records_written": 15,
+      "parallel_inputs": 2
+    },
+    "partition_optimized": {
+      "stage_count": 1,
+      "records_read": 15,
+      "records_written": 1,
+      "parallel_inputs": 2
+    },
+    "partition_anti": {
+      "stage_count": 2,
+      "records_read": 17,
+      "records_written": 3,
+      "parallel_inputs": 356
+    }
+  },
+  "semantic_validation": {
+    "partition_equivalent": true,
+    "column_row_scope_equal": true
+  },
+  "integrity": {
+    "order_rows": 5249,
+    "payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "clustering": {
+    "predicate_fields": [
+      "channel_key",
+      "order_status"
+    ],
+    "literal_exposed": false,
+    "measurable_reduction_required": false
+  },
+  "privacy": {
+    "project_id_exposed": false,
+    "job_ids_exposed": false,
+    "cluster_literal_exposed": false,
+    "business_row_values_exposed": false
+  }
+}

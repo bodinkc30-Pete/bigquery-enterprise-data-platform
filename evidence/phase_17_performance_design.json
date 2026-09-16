@@ -1,0 +1,56 @@
+{
+  "phase": 17,
+  "status": "PASS",
+  "checks": {
+    "contract_phase17": true,
+    "design_status": true,
+    "target_rows_expected": true,
+    "partition_field_exact": true,
+    "partition_day": true,
+    "cluster_fields_exact": true,
+    "semantic_equivalence": true,
+    "partition_dry_scan_reduced": true,
+    "column_dry_scan_reduced": true,
+    "phase18_artifacts_absent": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true
+  },
+  "table": {
+    "row_count": 5249,
+    "storage_bytes": 3112501,
+    "partition_field": "order_date",
+    "partition_type": "DAY",
+    "cluster_fields": [
+      "channel_key",
+      "sku_key",
+      "order_status"
+    ]
+  },
+  "date_range": {
+    "min_date": "2025-08-25",
+    "max_date": "2026-08-13",
+    "benchmark_date": "2026-08-13"
+  },
+  "dry_run_bytes": {
+    "partition_anti": 125976,
+    "partition_optimized": 360,
+    "column_wide": 8903,
+    "column_narrow": 465
+  },
+  "dry_run_reduction": {
+    "partition_bytes_saved": 125616,
+    "partition_reduction_pct": 99.71,
+    "column_bytes_saved": 8438,
+    "column_reduction_pct": 94.78
+  },
+  "semantic_equivalence": {
+    "row_count_equal": true,
+    "aggregate_equal": true
+  },
+  "phase18_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "cluster_literal_exposed": false,
+    "business_row_values_exposed": false
+  }
+}

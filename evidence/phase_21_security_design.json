@@ -1,0 +1,37 @@
+{
+  "phase": 21,
+  "status": "PASS",
+  "checks": {
+    "contract_phase21": true,
+    "canonical_prebuild_status": true,
+    "phase20_closed": true,
+    "active_operator_present": true,
+    "security_lab_prebuild_absent": true,
+    "phase21_identities_prebuild_absent": true,
+    "source_payment_rows_685": true,
+    "source_required_fields_present": true,
+    "provider_security_resources_supported": true,
+    "phase22_absent": true,
+    "no_phase22_scope": true,
+    "billing_upgrade_forbidden": true,
+    "billing_mutation_forbidden": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true
+  },
+  "check_count": 15,
+  "source_rows": 685,
+  "source_field_count": 12,
+  "required_services_enabled_prebuild": {
+    "datacatalog.googleapis.com": false,
+    "bigquerydatapolicy.googleapis.com": true,
+    "iamcredentials.googleapis.com": true
+  },
+  "security_lab_prebuild_absent": true,
+  "phase21_identities_prebuild_absent": true,
+  "phase22_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "operator_email_exposed": false,
+    "service_account_email_exposed": false
+  }
+}

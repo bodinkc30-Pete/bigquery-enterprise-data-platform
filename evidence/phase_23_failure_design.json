@@ -1,0 +1,40 @@
+{
+  "phase": 23,
+  "status": "PASS",
+  "checks": {
+    "contract_phase23": true,
+    "exactly_20_required_incidents": true,
+    "exactly_8_required_fields": true,
+    "live_incidents_subset": true,
+    "phase22_closed": true,
+    "accepted_business_mutation_forbidden": true,
+    "persistent_phase23_cloud_resources_forbidden": true,
+    "destructive_iam_forbidden": true,
+    "credential_corruption_forbidden": true,
+    "accepted_drop_forbidden": true,
+    "expensive_query_forbidden": true,
+    "core_rows_preserved": true,
+    "mart_rows_preserved": true,
+    "amounts_preserved": true,
+    "prior_histories_preserved": true,
+    "phase23_terraform_state_zero": true,
+    "phase24_absent": true,
+    "billing_guardrails_locked": true,
+    "privacy_guardrails_locked": true
+  },
+  "check_count": 19,
+  "required_incident_count": 20,
+  "live_bounded_incident_count": 5,
+  "baseline_integrity": {
+    "core_rows": 685,
+    "mart_rows": 685,
+    "core_amount": "860004.99",
+    "mart_amount": "860004.99",
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_runs": 3
+  },
+  "phase23_state_resource_count": 0,
+  "phase24_status": "NOT_STARTED",
+  "phase24_artifact_count": 0
+}

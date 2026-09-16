@@ -1,0 +1,79 @@
+{
+  "phase": 10,
+  "status": "PASS",
+  "checks": {
+    "first_build_job_count": true,
+    "first_build_all_done": true,
+    "first_build_no_db_errors": true,
+    "full_test_job_count": true,
+    "full_test_all_done": true,
+    "full_test_no_db_errors": true,
+    "controlled_failure_job_count": true,
+    "controlled_failure_all_done": true,
+    "controlled_failure_no_db_errors": true,
+    "controlled_recovery_job_count": true,
+    "controlled_recovery_all_done": true,
+    "controlled_recovery_no_db_errors": true,
+    "second_build_job_count": true,
+    "second_build_all_done": true,
+    "second_build_no_db_errors": true,
+    "build_jobs_present": true,
+    "second_build_jobs_present": true,
+    "test_jobs_present": true
+  },
+  "stages": {
+    "first_build": {
+      "job_count": 4,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 1346782,
+      "bytes_billed": 104857600,
+      "statement_types": {
+        "CREATE_TABLE_AS_SELECT": 4
+      }
+    },
+    "full_test": {
+      "job_count": 62,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 166383,
+      "bytes_billed": 188743680,
+      "statement_types": {
+        "SELECT": 62
+      }
+    },
+    "controlled_failure": {
+      "job_count": 1,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 0,
+      "bytes_billed": 0,
+      "statement_types": {
+        "SELECT": 1
+      }
+    },
+    "controlled_recovery": {
+      "job_count": 1,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 0,
+      "bytes_billed": 0,
+      "statement_types": {
+        "SELECT": 1
+      }
+    },
+    "second_build": {
+      "job_count": 4,
+      "all_done": true,
+      "error_job_count": 0,
+      "bytes_processed": 1346782,
+      "bytes_billed": 104857600,
+      "statement_types": {
+        "CREATE_TABLE_AS_SELECT": 4
+      }
+    }
+  },
+  "total_job_count": 72,
+  "total_error_job_count": 0,
+  "provenance": "dbt_invocation_id"
+}

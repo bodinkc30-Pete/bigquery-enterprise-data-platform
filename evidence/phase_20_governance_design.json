@@ -1,0 +1,102 @@
+{
+  "phase": 20,
+  "status": "PASS",
+  "checks": {
+    "contract_phase20": true,
+    "design_status": true,
+    "canonical_prebuild_status": true,
+    "accepted_table_counts_exact": true,
+    "accepted_table_total_32": true,
+    "accepted_columns_nonzero": true,
+    "governance_tables_prebuild_absent": true,
+    "manifest_exists": true,
+    "manifest_models_16": true,
+    "manifest_sources_8": true,
+    "manifest_edges_nonzero": true,
+    "required_metadata_fields_complete": true,
+    "phase19_benchmark_absent": true,
+    "phase21_absent": true,
+    "phase21_enforcement_boundary": true,
+    "raw_company_forbidden": true,
+    "real_bank_forbidden": true
+  },
+  "check_count": 17,
+  "accepted_tables": {
+    "raw": {
+      "count": 8,
+      "tables": [
+        "campaign_daily",
+        "creator",
+        "creator_payment",
+        "live_daily",
+        "orders",
+        "product_card_daily",
+        "product_sku",
+        "shop_daily"
+      ]
+    },
+    "staging": {
+      "count": 8,
+      "tables": [
+        "stg_campaign_daily",
+        "stg_creator",
+        "stg_creator_payment",
+        "stg_live_daily",
+        "stg_orders",
+        "stg_product_card_daily",
+        "stg_product_sku",
+        "stg_shop_daily"
+      ]
+    },
+    "core": {
+      "count": 12,
+      "tables": [
+        "dim_channel",
+        "dim_creator",
+        "dim_date",
+        "dim_payment_method",
+        "dim_product",
+        "dim_sku",
+        "fact_campaign_daily",
+        "fact_creator_payment",
+        "fact_live_daily",
+        "fact_order_item",
+        "fact_product_card_daily",
+        "fact_shop_daily"
+      ]
+    },
+    "mart": {
+      "count": 4,
+      "tables": [
+        "mart_commerce_daily",
+        "mart_creator_daily",
+        "mart_marketing_daily",
+        "mart_payment_daily"
+      ]
+    }
+  },
+  "accepted_table_total": 32,
+  "accepted_column_counts": {
+    "raw": 104,
+    "staging": 136,
+    "core": 135,
+    "mart": 69
+  },
+  "manifest": {
+    "model_count": 16,
+    "source_count": 8,
+    "dependency_edge_count": 27
+  },
+  "governance_tables_prebuild_absent": {
+    "data_asset_registry": true,
+    "column_governance": true,
+    "lineage_event": true
+  },
+  "phase19_benchmark_dataset_absent": true,
+  "phase21_artifact_count": 0,
+  "privacy": {
+    "project_id_exposed": false,
+    "service_account_exposed": false,
+    "raw_business_values_exposed": false
+  }
+}

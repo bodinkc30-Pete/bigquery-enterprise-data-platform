@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "deterministic_hash_differences": 0,
+  "payment_rows": 685,
+  "payment_min_date": "2026-01-23",
+  "payment_max_date": "2026-06-27",
+  "payment_non_2026_rows": 0
+}

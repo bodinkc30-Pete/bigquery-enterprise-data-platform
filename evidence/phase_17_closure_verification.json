@@ -1,0 +1,72 @@
+{
+  "phase": 17,
+  "status": "PASS",
+  "checks": {
+    "status_sync_exact": true,
+    "contract_accepted": true,
+    "engineering_doc_accepted": true,
+    "acceptance_validation_pass": true,
+    "acceptance_record_exists": true,
+    "design_and_runtime_pass": true,
+    "terraform_zero_drift": true,
+    "public_screenshot_pass": true,
+    "postsync_targeted_20_pass": true,
+    "postsync_full_194_pass": true,
+    "live_target_rows_exact": true,
+    "live_partition_exact": true,
+    "live_clustering_exact": true,
+    "fresh_partition_dry_scan_reduced": true,
+    "fresh_column_dry_scan_reduced": true,
+    "fresh_partition_semantics_equal": true,
+    "actual_partition_plan_reduced": true,
+    "actual_partition_bytes_truthful": true,
+    "actual_column_scan_reduced": true,
+    "five_live_marker_jobs": true,
+    "live_marker_jobs_done_error_free": true,
+    "live_marker_jobs_cache_disabled": true,
+    "live_payment_rows_preserved": true,
+    "live_payment_amount_preserved": true,
+    "phase13_history_preserved": true,
+    "phase14_history_preserved": true,
+    "phase16_history_preserved": true,
+    "clustering_claim_bounded": true,
+    "phase18_artifacts_absent": true,
+    "phase18_contract_boundary": true,
+    "phase19_contract_boundary": true,
+    "raw_company_upload_forbidden": true,
+    "real_bank_data_forbidden": true,
+    "failure_recovery_evidence_exists": true,
+    "public_project_id_absent": true,
+    "public_job_id_absent": true
+  },
+  "check_count": 36,
+  "live_target_rows": 5249,
+  "fresh_dry_run_bytes": {
+    "partition_anti": 125976,
+    "partition_optimized": 360,
+    "column_wide": 8903,
+    "column_narrow": 465
+  },
+  "actual_plan_stages": {
+    "anti": 2,
+    "optimized": 1
+  },
+  "actual_column_reduction_pct": 94.78,
+  "live_marker_job_count": 5,
+  "live_integrity": {
+    "payment_rows": 685,
+    "mart_payment_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28,
+    "phase16_run_rows": 3
+  },
+  "terraform_zero_drift": true,
+  "postsync_tests": {
+    "targeted": 20,
+    "full": 194
+  },
+  "phase18_status": "NOT_STARTED",
+  "phase18_artifact_count": 0
+}

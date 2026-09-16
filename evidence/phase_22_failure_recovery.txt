@@ -1,0 +1,10 @@
+Phase 22 Failure / Recovery Evidence
+
+1. Capability discovery found that the account can see a Google Cloud Organization, but Project 08 itself has no Organization ancestor. This explains why organization-scoped controls cannot be safely applied to the project in its current hierarchy.
+2. An Access Context Manager probe confirmed the API is disabled for Project 08. The prompt to enable it was declined; no API enablement occurred.
+3. Project reparenting, Organization mutation, Billing mutation, and paid-subscription changes were explicitly forbidden for Phase 22.
+4. Terraform enterprise-security resources were modeled disabled-by-default. Provider schema was inspected before authoring; fmt/validate passed and the normal plan remained zero drift with zero Phase 22 resources in state.
+5. The policy simulator used only synthetic documentation CIDRs and portfolio-safe role classes. No real network addresses, organization IDs, project IDs, or principal identifiers are stored in public evidence.
+6. Controlled failure changed the ingress default-deny outcome to ALLOW in memory only. The validator detected the unsafe policy and the arbitrary-identity scenario changed from DENY to ALLOW as expected.
+7. Recovery discarded the mutated in-memory policy and reloaded the canonical configuration. All seven baseline ALLOW/DENY scenarios returned to their expected outcomes and the canonical design file remained unchanged.
+8. Phase 22 therefore proves design, policy-as-code validation, failure detection/recovery, and deployment-readiness controls without claiming that VPC Service Controls were deployed.

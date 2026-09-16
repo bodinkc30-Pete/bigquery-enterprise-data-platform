@@ -1,0 +1,54 @@
+{
+  "phase": 27,
+  "step": "27_CONTROLLED_FAILURE_RECOVERY",
+  "status": "PASS",
+  "checks": {
+    "missing_settlement_item": true,
+    "duplicate_settlement_item": true,
+    "wrong_refund_amount": true,
+    "shifted_transaction_business_date": true,
+    "cross_currency_pollution_attempt": true,
+    "stale_daily_control_total": true,
+    "exact_six_scenarios": true,
+    "nonpersistent_query_only": true,
+    "phase26_not_mutated": true,
+    "accepted_marts_not_mutated": true
+  },
+  "check_count": 10,
+  "passed": 10,
+  "scenarios": {
+    "missing_settlement_item": {
+      "detected": 1,
+      "recovered": 0
+    },
+    "duplicate_settlement_item": {
+      "detected": 1,
+      "recovered": 0
+    },
+    "wrong_refund_amount": {
+      "detected": 1,
+      "recovered": 0
+    },
+    "shifted_transaction_business_date": {
+      "detected": 2,
+      "recovered": 0
+    },
+    "cross_currency_pollution_attempt": {
+      "detected": 60,
+      "recovered": 0
+    },
+    "stale_daily_control_total": {
+      "detected": 1,
+      "recovered": 0
+    }
+  },
+  "scenario_count": 6,
+  "persistent_probe_tables_created": false,
+  "accepted_phase26_mutated": false,
+  "accepted_commerce_mutated": false,
+  "phase27_marts_mutated_by_failure_probe": false,
+  "raw_company_data_used": false,
+  "real_bank_data_used": false,
+  "project_id_exposed": false,
+  "phase28_status": "NOT_STARTED"
+}

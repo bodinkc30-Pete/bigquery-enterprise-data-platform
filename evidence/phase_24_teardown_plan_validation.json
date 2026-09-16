@@ -1,0 +1,32 @@
+{
+  "phase": 24,
+  "status": "PASS",
+  "checks": {
+    "fmt_check_pass": true,
+    "terraform_validate_pass": true,
+    "phase24_flag_disabled": true,
+    "changes_present": true,
+    "destroy_only": true,
+    "only_phase24_addresses": true
+  },
+  "change_count": 13,
+  "creates": 0,
+  "updates": 0,
+  "deletes": 13,
+  "unsafe_non_phase24": 0,
+  "addresses": [
+    "google_bigquery_dataset_iam_member.phase24_worker_control_editor[0]",
+    "google_bigquery_table.phase24_stream_events[0]",
+    "google_project_iam_member.phase24_worker_roles[\"roles/dataflow.worker\"]",
+    "google_project_iam_member.phase24_worker_roles[\"roles/pubsub.subscriber\"]",
+    "google_project_service.phase24_dataflow[0]",
+    "google_pubsub_subscription.phase24_dataflow[0]",
+    "google_pubsub_subscription.phase24_validation[0]",
+    "google_pubsub_subscription_iam_member.phase24_worker_subscription_viewer[0]",
+    "google_pubsub_topic.phase24_events[0]",
+    "google_pubsub_topic_iam_member.phase24_worker_topic_viewer[0]",
+    "google_service_account.phase24_stream[0]",
+    "google_service_account_iam_member.phase24_operator_act_as[0]",
+    "google_storage_bucket_iam_member.phase24_worker_temp_object_admin[0]"
+  ]
+}

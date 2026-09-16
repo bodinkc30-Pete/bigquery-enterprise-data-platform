@@ -1,0 +1,54 @@
+{
+  "phase": 16,
+  "status": "PASS",
+  "checks": {
+    "three_pipeline_runs": true,
+    "fifteen_pipeline_steps": true,
+    "incident_open_resolved": true,
+    "three_cost_metrics": true,
+    "three_marker_jobs": true,
+    "three_logging_events": true,
+    "logging_breach_observed": true,
+    "logging_metric_live": true,
+    "alert_policy_live": true,
+    "core_mart_integrity": true,
+    "prior_controls_preserved": true
+  },
+  "pipeline": {
+    "run_count": 3,
+    "success_runs": 2,
+    "sla_breached_runs": 1,
+    "step_count": 15,
+    "failed_steps": 1
+  },
+  "incident": {
+    "event_count": 2,
+    "open": 1,
+    "resolved": 1
+  },
+  "cost_telemetry": {
+    "rows": 3,
+    "marker_job_count": 3,
+    "total_bytes_processed": 7425,
+    "total_bytes_billed": 31457280
+  },
+  "logging": {
+    "event_count": 3,
+    "sla_breach_events": 1,
+    "metric_live": true,
+    "alert_policy_live": true
+  },
+  "integrity": {
+    "core_rows": 685,
+    "mart_rows": 685,
+    "core_amount": 860004.99,
+    "mart_amount": 860004.99,
+    "dq_rows": 32,
+    "reconciliation_rows": 28
+  },
+  "privacy": {
+    "project_id_exposed": false,
+    "service_account_email_exposed": false,
+    "raw_business_values_exposed": false
+  }
+}

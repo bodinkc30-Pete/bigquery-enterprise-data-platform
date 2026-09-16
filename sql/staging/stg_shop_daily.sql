@@ -1,0 +1,25 @@
+CREATE OR REPLACE TABLE `{{PROJECT_ID}}.staging.stg_shop_daily` AS
+SELECT
+  SAFE_CAST(`date` AS DATE) AS `date`,
+  SAFE_CAST(`gmv` AS NUMERIC) AS `gmv`,
+  SAFE_CAST(`orders` AS INT64) AS `orders`,
+  SAFE_CAST(`customers` AS INT64) AS `customers`,
+  SAFE_CAST(`units_sold` AS INT64) AS `units_sold`,
+  SAFE_CAST(`refund_amount` AS NUMERIC) AS `refund_amount`,
+  SAFE_CAST(`sku_orders` AS INT64) AS `sku_orders`,
+  SAFE_CAST(`revenue` AS NUMERIC) AS `revenue`,
+  SAFE_CAST(`page_views` AS INT64) AS `page_views`,
+  SAFE_CAST(`visitors` AS INT64) AS `visitors`,
+  SAFE_CAST(`conversion_rate` AS NUMERIC) AS `conversion_rate`,
+  SAFE_CAST(`product_impressions` AS INT64) AS `product_impressions`,
+  SAFE_CAST(`unique_product_impressions` AS INT64) AS `unique_product_impressions`,
+  SAFE_CAST(`product_clicks` AS INT64) AS `product_clicks`,
+  SAFE_CAST(`unique_product_clicks` AS INT64) AS `unique_product_clicks`,
+  SAFE_CAST(`aov` AS NUMERIC) AS `aov`,
+  SAFE_CAST(`live_creator_gmv` AS NUMERIC) AS `live_creator_gmv`,
+  SAFE_CAST(`video_affiliate_gmv` AS NUMERIC) AS `video_affiliate_gmv`,
+  CURRENT_TIMESTAMP() AS `_ingested_at`,
+  'shop_daily_synthetic.csv' AS `_source_file`,
+  'phase07-bootstrap-v1' AS `_run_id`,
+  TO_HEX(SHA256(CONCAT(COALESCE(`date`, ''), COALESCE(`gmv`, ''), COALESCE(`orders`, ''), COALESCE(`customers`, ''), COALESCE(`units_sold`, ''), COALESCE(`refund_amount`, ''), COALESCE(`sku_orders`, ''), COALESCE(`revenue`, ''), COALESCE(`page_views`, ''), COALESCE(`visitors`, ''), COALESCE(`conversion_rate`, ''), COALESCE(`product_impressions`, ''), COALESCE(`unique_product_impressions`, ''), COALESCE(`product_clicks`, ''), COALESCE(`unique_product_clicks`, ''), COALESCE(`aov`, ''), COALESCE(`live_creator_gmv`, ''), COALESCE(`video_affiliate_gmv`, '')))) AS `_record_hash`
+FROM `{{PROJECT_ID}}.raw.shop_daily`;

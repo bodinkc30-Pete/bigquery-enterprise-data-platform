@@ -1,0 +1,60 @@
+{
+  "phase": 15,
+  "status": "PASS",
+  "environment": {
+    "state": "RUNNING",
+    "image_version": "composer-3-airflow-2.11.1-build.19",
+    "size": "small",
+    "ephemeral": true
+  },
+  "dag": {
+    "dag_id": "p08_phase15_managed_orchestration",
+    "run_states": {
+      "baseline": "success",
+      "controlled_failure": "failed",
+      "recovery": "success"
+    },
+    "baseline_tasks": {
+      "core_payment_gate": "success",
+      "mart_payment_gate": "success",
+      "reconciliation_gate": "success",
+      "dq_gate": "success",
+      "controlled_gate": "success",
+      "finalize": "success"
+    },
+    "controlled_failure_tasks": {
+      "reconciliation_gate": "success",
+      "controlled_gate": "failed",
+      "finalize": "upstream_failed",
+      "core_payment_gate": "success",
+      "dq_gate": "success",
+      "mart_payment_gate": "success"
+    },
+    "recovery_tasks": {
+      "core_payment_gate": "success",
+      "reconciliation_gate": "success",
+      "mart_payment_gate": "success",
+      "dq_gate": "success",
+      "controlled_gate": "success",
+      "finalize": "success"
+    }
+  },
+  "integrity": {
+    "core_payment_rows": 685,
+    "core_payment_amount": 860004.99,
+    "mart_payment_rows": 685,
+    "mart_payment_amount": 860004.99,
+    "dq_audit_rows": 32,
+    "reconciliation_rows": 28,
+    "core_mart_count_match": true,
+    "core_mart_amount_match": true,
+    "phase13_audit_preserved": true,
+    "phase14_reconciliation_preserved": true
+  },
+  "privacy": {
+    "project_id_exposed": false,
+    "service_account_email_exposed": false,
+    "composer_bucket_exposed": false,
+    "raw_company_values_exposed": false
+  }
+}

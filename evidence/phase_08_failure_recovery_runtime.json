@@ -1,0 +1,5 @@
+{
+  "expected_failure_detected": true,
+  "failure_type": "controlled_duplicate_grain_assert",
+  "actual_staging_order_grain_pass": true
+}
