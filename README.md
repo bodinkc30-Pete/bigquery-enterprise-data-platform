@@ -1,13 +1,32 @@
-﻿# BigQuery Enterprise Data Platform on Google Cloud
+# BigQuery Enterprise Data Platform on Google Cloud
 
-Production-oriented Data Engineering portfolio project centered on Google Cloud and BigQuery.
+Production-oriented **Data Engineering** portfolio centered on **Google Cloud + BigQuery**, with SQL/dbt transformation, Terraform infrastructure, Python engineering utilities, Data Quality, reconciliation, security/governance, observability, and CI/CD.
 
-> This repository is the **sanitized public portfolio edition**. It contains representative engineering code, synthetic/portfolio-safe datasets, infrastructure definitions, and publication-safe evidence. Confidential source metadata, raw company data, PII, credentials, private runtime artifacts, and the private working history are intentionally excluded.
+> This is the **sanitized public portfolio edition**. It contains representative engineering code, synthetic/portfolio-safe datasets, infrastructure definitions, and publication-safe evidence. Raw company data, PII, credentials, confidential client metrics, private runtime artifacts, and the private working history are intentionally excluded.
+
+## Recruiter / Hiring Manager Snapshot
+
+**Core skills demonstrated:** `Google Cloud` · `BigQuery` · `SQL` · `dbt-bigquery` · `Terraform` · `Python` · `Data Modeling` · `Data Quality` · `Reconciliation` · `CI/CD` · `Security & Governance` · `Monitoring & Recovery`
+
+This repository is designed to answer a practical hiring question: **“What Data Engineer responsibilities can this candidate demonstrate with inspectable evidence?”**
+
+| Common Data Engineer expectation | Skills demonstrated | Inspectable evidence |
+|---|---|---|
+| Build a cloud data warehouse | GCP, BigQuery, GCS, RAW → STAGING → CORE → MART | [`terraform/phase07_bigquery.tf`](terraform/phase07_bigquery.tf), [`sql/staging/stg_orders.sql`](sql/staging/stg_orders.sql) |
+| Write production-oriented SQL and data models | BigQuery SQL, dbt-bigquery, dimensional modeling, marts | [`dbt/models/marts/mart_commerce_daily.sql`](dbt/models/marts/mart_commerce_daily.sql), [`dbt/models/financial_marts/mart_reconciliation_daily.sql`](dbt/models/financial_marts/mart_reconciliation_daily.sql) |
+| Build reliable incremental pipelines | Incremental processing, idempotency, late-arriving data, recovery | [`dbt/macros/phase11_incremental_window.sql`](dbt/macros/phase11_incremental_window.sql), [`sql/phase11/late_arriving_recovery.sql`](sql/phase11/late_arriving_recovery.sql), [`evidence/phase_11_incremental_runtime.json`](evidence/phase_11_incremental_runtime.json) |
+| Enforce Data Quality and reconciliation | DQ rules, dbt tests, payment/control reconciliation | [`sql/audit/phase13_dq_rules.sql`](sql/audit/phase13_dq_rules.sql), [`evidence/phase_13_dq_runtime.json`](evidence/phase_13_dq_runtime.json), [`evidence/phase_14_reconciliation_runtime.json`](evidence/phase_14_reconciliation_runtime.json) |
+| Optimize BigQuery workloads | Partitioning, clustering, query optimization, cost controls | [`evidence/phase_08_physical_design.json`](evidence/phase_08_physical_design.json), [`sql/phase18/wasteful_query_detection.sql`](sql/phase18/wasteful_query_detection.sql) |
+| Manage infrastructure as code | Terraform / HCL, repeatable GCP/BigQuery provisioning | [`terraform/`](terraform/) |
+| Secure and govern enterprise data | IAM/security patterns, governance, masking concepts, metadata/lineage | [`terraform/phase20_governance.tf`](terraform/phase20_governance.tf), [`terraform/phase21_security.tf`](terraform/phase21_security.tf), [`terraform/phase22_enterprise_security.tf`](terraform/phase22_enterprise_security.tf) |
+| Monitor, diagnose, and recover | Observability, failure detection, troubleshooting, recovery evidence | [`terraform/phase16_observability.tf`](terraform/phase16_observability.tf), [`evidence/phase_16_observability_runtime.json`](evidence/phase_16_observability_runtime.json), [`evidence/phase_08_failure_recovery_runtime.json`](evidence/phase_08_failure_recovery_runtime.json) |
+| Use Python for Data Engineering automation | Synthetic-data generation, privacy validation, validation utilities | [`src/generators/portfolio_safe_generator.py`](src/generators/portfolio_safe_generator.py), [`src/privacy/phase03_privacy_validator.py`](src/privacy/phase03_privacy_validator.py) |
+| Apply engineering quality gates | GitHub Actions, automated validation, publication/privacy guard | [`.github/workflows/public-ci.yml`](.github/workflows/public-ci.yml), [`tools/publication_guard.py`](tools/publication_guard.py) |
 
 ## What this project demonstrates
 
-- GCS-style landing and BigQuery RAW → STAGING → CORE → MART architecture
-- dbt-bigquery transformation and semantic modeling patterns
+- GCS-style landing and BigQuery **RAW → STAGING → CORE → MART** architecture
+- **BigQuery SQL + dbt-bigquery** transformation and semantic modeling patterns
 - Incremental MERGE, idempotency, late-arriving data, and schema evolution
 - Partitioning, clustering, query optimization, and cost engineering
 - Data Quality, payment reconciliation, and control-total patterns
@@ -18,7 +37,7 @@ Production-oriented Data Engineering portfolio project centered on Google Cloud 
 
 ## Verified engineering evidence
 
-The canonical build was accepted through **32/32 Definition-of-Done gates**, **12/12 live runtime checks**, **464 public-safe regression tests** with **1 intentional skip**, and Hosted CI PASS. Evidence included here is curated for public review and contains no raw company or real banking data.
+The canonical build was accepted through **32/32 Definition-of-Done gates**, **12/12 live runtime checks**, regression testing, and Hosted CI PASS. Evidence included here is curated for public review and contains no raw company or real banking data.
 
 ## Architecture
 
@@ -45,7 +64,7 @@ flowchart LR
 ## Repository map
 
 - `dbt/` — dbt-bigquery models and tests
-- `sql/` — warehouse SQL patterns
+- `sql/` — BigQuery/warehouse SQL patterns
 - `terraform/` — BigQuery/GCP infrastructure definitions
 - `src/` — synthetic generation, privacy, and validation utilities
 - `data/` — synthetic / portfolio-safe datasets only
@@ -58,4 +77,4 @@ Business workflows may be inspired by real commerce operations, but this public 
 
 ## Portfolio purpose
 
-The repository is designed for technical review during Data Engineer interviews: architecture, SQL/dbt modeling, reliability controls, BigQuery engineering, security/governance, Terraform, CI/CD, and evidence-based validation can be inspected without exposing confidential operational data.
+The repository is optimized for technical review for **Data Engineer / GCP-BigQuery Data Engineer** roles. The goal is not to make one language look dominant; it is to make the actual engineering capabilities and their evidence easy to inspect.
