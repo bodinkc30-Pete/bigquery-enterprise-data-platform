@@ -1,12 +1,12 @@
 {
   "purpose": "SANITIZED_PUBLIC_PORTFOLIO_SNAPSHOT",
   "status": "PASS",
-  "generated_at_utc": "2026-09-16T16:37:46.509593+00:00",
+  "generated_at_utc": "2026-09-16T18:42:08.594191+00:00",
   "history_included": false,
   "private_runtime_included": false,
   "raw_company_data_included": false,
   "real_bank_data_included": false,
-  "file_count": 272,
+  "file_count": 273,
   "files": [
     {
       "path": ".gitattributes",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "240f79a73898aa401aab31b7b0dc3e4a6461d162384de4c1b28af68a90955a48"
+      "sha256": "b9f09ebf03c55347c3ba795bc9716641b5d8f1c732dd7a25e165475d37aac9c9"
     },
     {
       "path": "data/financial_ops_synth/accounts.csv",
@@ -291,6 +291,10 @@
     {
       "path": "docs/assets/screenshots/03_payment_reconciliation.png",
       "sha256": "0d943c2a6b45e52890c5fafb7bb28e506ec8a4a42373c8e793246496e0abddd5"
+    },
+    {
+      "path": "docs/assets/screenshots/03a_data_quality_runtime.png",
+      "sha256": "cf6837c9cd3eb8441b2072c367449ee6bc906cad4432e7c8f57bc8d0adb6b4a7"
     },
     {
       "path": "docs/assets/screenshots/04_operational_observability.png",
