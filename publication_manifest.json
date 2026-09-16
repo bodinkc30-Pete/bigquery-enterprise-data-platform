@@ -1,13 +1,17 @@
 {
   "purpose": "SANITIZED_PUBLIC_PORTFOLIO_SNAPSHOT",
   "status": "PASS",
-  "generated_at_utc": "2026-09-16T08:57:55.440967+00:00",
+  "generated_at_utc": "2026-09-16T16:37:46.509593+00:00",
   "history_included": false,
   "private_runtime_included": false,
   "raw_company_data_included": false,
   "real_bank_data_included": false,
-  "file_count": 259,
+  "file_count": 272,
   "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "fce9bfe5116bcd80cd5e65f14fbe8fa40b8d5b2b8f9587bc1ad3bc14741a0f14"
+    },
     {
       "path": ".github/workflows/public-ci.yml",
       "sha256": "5500d4cec4d96e612df9c163f33871bfd3cebfa0bdb151d95efa222c4cfb1b45"
@@ -15,6 +19,14 @@
     {
       "path": ".gitignore",
       "sha256": "b97ec0abc0fbe40e4cde16b9acad6ffc9a113d0c8234bc901282b4d7a8eea6a2"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "sha256": "f4f81f08ff4264844bb40e2e1a047077b2f8c006ecbd9d85aa2d9d40c6e8f744"
+    },
+    {
+      "path": "README.md",
+      "sha256": "240f79a73898aa401aab31b7b0dc3e4a6461d162384de4c1b28af68a90955a48"
     },
     {
       "path": "data/financial_ops_synth/accounts.csv",
@@ -190,11 +202,11 @@
     },
     {
       "path": "dbt/models/marts/mart_commerce_daily.sql",
-      "sha256": "30dc3a9312ab87f6f08b2d331caf8daf08debb59e5645e0c452b718e80132bdb"
+      "sha256": "1f2b52dd43111587cf840c5ad532b1cd670f4b115953863883c9f9a403fec256"
     },
     {
       "path": "dbt/models/marts/mart_creator_daily.sql",
-      "sha256": "bcc07f6c57e4da42f8e1576594337091089d49db446dfdaf765eee7f516211b8"
+      "sha256": "7e1e2102f0cbb1742892e9e00dbd93890042cb9ef72b6e202e4d548d751bb7a8"
     },
     {
       "path": "dbt/models/marts/mart_marketing_daily.sql",
@@ -267,6 +279,54 @@
     {
       "path": "dbt/tests/phase27_transaction_status_grain.sql",
       "sha256": "91f32d4fb8e30977ed583e239a518b6a992a69af71c4aa867ff04561385a75f5"
+    },
+    {
+      "path": "docs/assets/screenshots/01_dbt_semantic_runtime.png",
+      "sha256": "81562b602cf02262ed3b5a0c1c815ac8a40062a7c7024f5921a9e6e47d8f37fb"
+    },
+    {
+      "path": "docs/assets/screenshots/02_incremental_merge_runtime.png",
+      "sha256": "6988045ba89e3c3d84b3be0aa1729b24199bba92a8eb539fd1b0f451f4bb3333"
+    },
+    {
+      "path": "docs/assets/screenshots/03_payment_reconciliation.png",
+      "sha256": "0d943c2a6b45e52890c5fafb7bb28e506ec8a4a42373c8e793246496e0abddd5"
+    },
+    {
+      "path": "docs/assets/screenshots/04_operational_observability.png",
+      "sha256": "71d3db4fbc7663c2c3bb9c557ad2677d1f0d6d498c4f8168f58582203c5a2342"
+    },
+    {
+      "path": "docs/assets/screenshots/05_bigquery_performance.png",
+      "sha256": "8df07fa938667ca8dd8dd13c4b1dcaa820eb0788c28404a05e66f140ee75d84f"
+    },
+    {
+      "path": "docs/assets/screenshots/06_bigquery_cost_engineering.png",
+      "sha256": "9aaed89a3f1d9aa7e74360f1b98a97cd27869c24956458025c72bad152353f1e"
+    },
+    {
+      "path": "docs/assets/screenshots/07_governance_metadata_lineage.png",
+      "sha256": "be88b87229246e78c08f839d31b65eb5aa694a985ed58d6bb5f534329e71aefb"
+    },
+    {
+      "path": "docs/assets/screenshots/08_enterprise_security.png",
+      "sha256": "736721bfcbe398477d4a3d0b9fd59cf7e07e7471c12aa6e66ce2107724f644f0"
+    },
+    {
+      "path": "docs/assets/screenshots/09_failure_troubleshooting_recovery.png",
+      "sha256": "63f6e064c4c8750e732d8ca4c536e2070cb3b0a08dd4296414c9e5cd9b3e403b"
+    },
+    {
+      "path": "docs/assets/screenshots/10_synthetic_financial_mart.png",
+      "sha256": "5b680902a6eabd5c924940fb807d7a4416ca247de513e01800e2e48eb50a537e"
+    },
+    {
+      "path": "docs/assets/screenshots/11_cicd.png",
+      "sha256": "360e82228b715338d989aab20e7266c01708aac6fffa63e07c9df51e33877a81"
+    },
+    {
+      "path": "docs/assets/screenshots/12_final_acceptance.png",
+      "sha256": "50eb49d4488175f3311cc66b357559e5a6e586c04d8c2c5338c9ea75140e9408"
     },
     {
       "path": "evidence/phase_06_gcs_security_runtime.json",
@@ -741,14 +801,6 @@
       "sha256": "7635afca64a3c0da668e7bf57cac29017a810c44cc2ba2d59650048caed28765"
     },
     {
-      "path": "PUBLICATION.md",
-      "sha256": "f4f81f08ff4264844bb40e2e1a047077b2f8c006ecbd9d85aa2d9d40c6e8f744"
-    },
-    {
-      "path": "README.md",
-      "sha256": "baba92e250d234ee48983fee68a35244fff48a221aa0a847179957da158812c9"
-    },
-    {
       "path": "sql/audit/phase13_dq_rules.sql",
       "sha256": "bb6c352a0a1db6ac6297f01186d485d78302625591b41f7519c6f635c6a138e3"
     },
@@ -871,6 +923,10 @@
     {
       "path": "terraform/.terraform.lock.hcl",
       "sha256": "456d7cd88d38392a53f4d8bce32f22b66443f4abb3ec89feef8ea6323cd927ca"
+    },
+    {
+      "path": "terraform/README.md",
+      "sha256": "749dd4b8825a0d31ec964dea9d7a5f28d0cf22a76730f0b10de8e0fac630626c"
     },
     {
       "path": "terraform/main.tf",
@@ -1025,10 +1081,6 @@
       "sha256": "a60a038a12ff8ab17621dfdeb9672da47b12eff2a860d94eae560caba1ae27d5"
     },
     {
-      "path": "terraform/README.md",
-      "sha256": "749dd4b8825a0d31ec964dea9d7a5f28d0cf22a76730f0b10de8e0fac630626c"
-    },
-    {
       "path": "terraform/terraform.tfvars.example",
       "sha256": "208bba9d260997e621ba228d3fb63eed7819b2224df37d3f6e2f2131e6132686"
     },
@@ -1042,7 +1094,7 @@
     },
     {
       "path": "tools/publication_guard.py",
-      "sha256": "865eca8912b4ab072f0b31fd09e5bb19cf6104a7fd52bd840a09af7d2eab1910"
+      "sha256": "72211418df7e51e38dc3c8994220f8f030521c8a0fbff30c71143cc8cae9d668"
     }
   ]
 }

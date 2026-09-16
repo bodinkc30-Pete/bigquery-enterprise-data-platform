@@ -39,6 +39,20 @@ This repository is designed to answer a practical hiring question: **“What Dat
 
 The canonical build was accepted through **32/32 Definition-of-Done gates**, **12/12 live runtime checks**, regression testing, and Hosted CI PASS. Evidence included here is curated for public review and contains no raw company or real banking data.
 
+## Visual Engineering Evidence
+
+These portfolio-safe screenshots summarize runtime, controls, recovery, security, and delivery evidence from the canonical build. They are visual entry points; the linked SQL, dbt, Terraform, JSON evidence, and CI logs remain the inspectable source evidence.
+
+<table>
+<tr><td><b>dbt-bigquery semantic runtime</b><br><sub>Models, tests, semantic contracts, zero drift.</sub><br><img src="docs/assets/screenshots/01_dbt_semantic_runtime.png" alt="dbt-bigquery semantic runtime evidence"></td><td><b>Incremental MERGE & late-arriving recovery</b><br><sub>MERGE, idempotency, lookback window, backfill.</sub><br><img src="docs/assets/screenshots/02_incremental_merge_runtime.png" alt="Incremental MERGE evidence"></td></tr>
+<tr><td><b>Payment reconciliation</b><br><sub>Control totals, mismatch detection, recovery.</sub><br><img src="docs/assets/screenshots/03_payment_reconciliation.png" alt="Payment reconciliation evidence"></td><td><b>Operational observability</b><br><sub>Monitoring, SLA breach detection, incident lifecycle.</sub><br><img src="docs/assets/screenshots/04_operational_observability.png" alt="Operational observability evidence"></td></tr>
+<tr><td><b>BigQuery performance engineering</b><br><sub>Partition pruning, column pruning, query-plan evidence.</sub><br><img src="docs/assets/screenshots/05_bigquery_performance.png" alt="BigQuery performance evidence"></td><td><b>BigQuery cost engineering</b><br><sub>Processed/billed bytes, guardrails, cost telemetry.</sub><br><img src="docs/assets/screenshots/06_bigquery_cost_engineering.png" alt="BigQuery cost engineering evidence"></td></tr>
+<tr><td><b>Governance, metadata & lineage</b><br><sub>Classification, lineage paths, metadata validation.</sub><br><img src="docs/assets/screenshots/07_governance_metadata_lineage.png" alt="Governance metadata lineage evidence"></td><td><b>Enterprise security design</b><br><sub>Restricted services, private-access policy, failure recovery.</sub><br><img src="docs/assets/screenshots/08_enterprise_security.png" alt="Enterprise security evidence"></td></tr>
+<tr><td><b>Failure / troubleshooting / recovery</b><br><sub>Break → detect → diagnose → recover → validate.</sub><br><img src="docs/assets/screenshots/09_failure_troubleshooting_recovery.png" alt="Failure recovery evidence"></td><td><b>Synthetic financial reporting mart</b><br><sub>Incremental marts, reconciliation controls, anomalies = 0.</sub><br><img src="docs/assets/screenshots/10_synthetic_financial_mart.png" alt="Synthetic financial mart evidence"></td></tr>
+<tr><td><b>CI/CD quality gates</b><br><sub>Hosted CI, release blocking/recovery, Terraform validation.</sub><br><img src="docs/assets/screenshots/11_cicd.png" alt="CI CD evidence"></td><td><b>Final production acceptance</b><br><sub>Fresh runtime, full regression, zero drift, final controls.</sub><br><img src="docs/assets/screenshots/12_final_acceptance.png" alt="Final acceptance evidence"></td></tr>
+</table>
+
+> **Privacy boundary:** all screenshots shown here are sanitized/public-safe summaries. They exclude project IDs, bucket names, principals, credentials, private run IDs, raw company data, PII, row-level payloads, and real banking data.
 ## Architecture
 
 ```mermaid
